@@ -964,14 +964,14 @@ a:hover {
     -ms-flex-order: 1;
     order: 1;
     font-size: 40px;
-    margin-bottom: 20px
+    margin-bottom: 12px
 }
 
 .hero-content h1.animated {
-    -webkit-animation-duration: 2000ms;
-    animation-duration: 2000ms;
-    -webkit-animation-delay: 2200ms;
-    animation-delay: 2200ms
+    -webkit-animation-duration: 1200ms;
+    animation-duration: 1200ms;
+    -webkit-animation-delay: 1000ms;
+    animation-delay: 1000ms
 }
 
 @media (min-width: 500px) {
@@ -996,7 +996,7 @@ a:hover {
     .hero-content h1 {
         -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
-        order: 2;
+        order: 1;
         margin-bottom: 57px;
         max-width: 700px
     }
@@ -1028,10 +1028,10 @@ a:hover {
 }
 
 .hero-content .hero-subtitle.animated {
-    -webkit-animation-duration: 1200ms;
-    animation-duration: 1200ms;
-    -webkit-animation-delay: 1000ms;
-    animation-delay: 1000ms
+    -webkit-animation-duration: 2000ms;
+    animation-duration: 2000ms;
+    -webkit-animation-delay: 2200ms;
+    animation-delay: 2200ms
 }
 
 @media (min-width: 500px) {
@@ -1047,7 +1047,7 @@ a:hover {
         order: 1;
         max-width: 560px;
         font-size: 20px;
-        margin-bottom: 12px
+        margin-bottom: 20px
     }
 }
 
