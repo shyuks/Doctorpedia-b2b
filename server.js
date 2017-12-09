@@ -18,8 +18,12 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
-app.listen(3030, function() {
-    console.log('Listening On http://localhost:3030/');
+app.get('/2', function(req, res) {
+    res.sendFile(path.join(__dirname, './public/index2.html'));
+});
+
+app.listen(8080, function() {
+    console.log('Listening On http://localhost:8080/');
 });
 
 // app.listen(8080, '192.241.231.251', function() {
