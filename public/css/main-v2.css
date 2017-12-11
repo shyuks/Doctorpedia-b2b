@@ -601,7 +601,7 @@ a:hover {
 .focus-features .features-item,
 .focus-our-mission .our-mission-item {
     color: #364156;
-    background: url(../images/nav_bg_active_underline.png) left bottom no-repeat;
+    background: url(../images/nav_bg_active_underline_blue.png) left bottom no-repeat;
     background-size: 100% 3px
 }
 
@@ -659,7 +659,7 @@ a:hover {
 }
 
 .nav-cta-link span {
-    background: transparent url(../images/why_doctorpedia.png) center center no-repeat;
+    background: transparent url(../images/why_doctorpedia_blue.png) center center no-repeat;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -1316,7 +1316,7 @@ a:hover {
     width: 270px;
     height: 75px;
     margin-top: 30px;
-    background: url(../images/scroll-cta-sml-wide.png) left top no-repeat;
+    background: url(../images/scroll-cta-sml-wide_blue.png) left top no-repeat;
     background-size: 170px auto
 }
 
@@ -1664,7 +1664,7 @@ a:hover {
         bottom: 0;
         left: 0;
         right: 0;
-        background: url(../images/ipad_call_outs.png) top center no-repeat;
+        background: url(../images/ipad_call_outs_blue.png) top center no-repeat;
         opacity: 0
     }
     .animated .section6-image-overlay {
@@ -2279,18 +2279,19 @@ a:hover {
 }
 
 .tier-action.bg-grey {
-    background-color: #828787
+    background: #7ca9d9;
+    background: -webkit-gradient(linear, left top, right top, from(#b3cceb), color-stop(99%, #7ca9d9));
+    background: linear-gradient(to right, #b3cceb 0%, #7ca9d9 99%)
 }
 
 .tier-action.bg-grad {
-    /* background: #fea42a; */
-    /* background: -webkit-gradient(linear, left top, right top, from(#fc62a8), color-stop(99%, #fea42a)); */
-    /* background: linear-gradient(to right, #fc62a8 0%, #fea42a 99%) */
-    background-color: #7ca9d9
+    background: #828787;
+    background: -webkit-gradient(linear, left top, right top, from(#7ca9d9), color-stop(99%, #828787));
+    background: linear-gradient(to right, #7ca9d9 0%, #828787 99%)
 }
 
 .tier-action.bg-lightblue {
-    background-color: #b3cceb
+    background-color: #7ca9d9
 }
 
 .tier-action .btn-link {
