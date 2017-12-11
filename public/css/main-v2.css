@@ -2697,7 +2697,7 @@ a:hover {
 .modal-close:hover {
     -webkit-transition: all 300ms ease-in-out 0ms;
     transition: all 300ms ease-in-out 0ms;
-    background-image: url(/images/close_hover.png)
+    background-image: url(/images/close_hover_blue.png)
 }
 
 .modal-content {
@@ -2880,7 +2880,7 @@ a:hover {
 
 .video-modal .videoWrapper {
     position: relative;
-    padding-bottom: 51.25%;
+    padding-bottom: 52.5%;
     padding-top: 25px;
     height: 0
 }
