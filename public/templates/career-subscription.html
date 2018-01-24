@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Doctorpedia</title>
+    <meta name="description" content="Doctorpedia, the Future of Healthcare Management">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="keywords" content="Doctorpedia, healthcare management, health, personalized care, medical, professionals">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+    <link rel="stylesheet" href="../css/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+
+    <link rel="stylesheet" href="
+    http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">    
+    <style>
+
+        #temp {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            position: relative;
+            background-color: #2f4266;
+            color: white; 
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        }
+
+        .ivi {
+            text-align: center;
+            height: 5px;
+            width: 100%;
+            color: black;
+            position: absolute;
+            z-index: 200;
+            background: linear-gradient(to right, #ff5e62, #ff9966);
+            background-color: linear-gradient(to right, #ff5e62, #ff9966);
+        }
+
+        .nav-wrap {
+            background-color: white;
+            width: 100%;
+            position: fixed;  
+            height: 100px;          
+            border-bottom: 5px solid #ff5e62;
+        }
+
+        #career-container {
+            padding-top: 100px;
+            padding-right: 60px;
+            padding-left: 60px;
+            text-align: center;
+        }
+
+        #career-container p {
+            font-size: 24px;
+            color: white;
+            font-style: normal;
+            font-weight: 200;
+            margin-top: 7%;
+            margin-right: 20%;
+            margin-left: 20%;
+        }
+
+        .career-form {
+            position: relative;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            text-align: center;
+        }
+
+        .career-form h4 {
+            font-size: 28px;
+        }
+
+        .form-desc {
+            text-align: center;
+            font-size: 20px;
+            padding: 20px;
+        }
+        
+        .form-desc p {
+            padding-bottom: 20px;
+            margin-right: 30%;
+            margin-left: 30%;
+            
+        }
+
+        .outter-input {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            max-width: 400px;
+            padding: 1.4rem 2rem 1.6rem;
+            background-color: rgba(46, 149, 245, 0.8);
+            display: flex;
+        }
+
+        .outter-input input {
+            width: 100%;
+            border-style: none;
+            background: transparent;
+            outline: none;
+            vertical-align: middle;
+            flex-grow: 1;
+            font-size: 2.4rem;
+            color: white;
+        }
+
+        .outter-input button {
+            vertical-align: middle;
+            font-size: 2.4rem;
+            padding: 0;
+            background: none;
+            border: none;
+            outline: none;
+        }
+
+        @keyframes gradient { 
+            0% {
+                background-position: 0 0;
+                }
+            100% {
+                background-position: 100% 0;
+                }
+          }
+
+        .outter-input::after {
+            content: "";
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            z-index: 999;
+            height: 6px;
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px;
+            background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6);
+            animation: gradient 3s linear infinite;
+        }
+
+        ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: white;
+
+        }
+
+        #footer {
+            padding: 80px;
+            margin: auto;
+            text-align: center;
+            width: 100%;
+        }
+
+        .footer-img {
+            background: url('../images/doctorpedialogo_white.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 64px;
+            margin-bottom: 20px;    
+
+        }
+
+        /* .why-doctorpedia {
+            background: url('../images/why_doctorpedia.png');
+            background-size: cover;
+            width: 20px;
+            height: 20px;
+            background-position: center;
+        } */
+
+
+
+    </style>
+</head>
+
+<body id="temp">
+    <main id="main">
+        <div class="scrolled nav-wrap">
+            <nav id="main-nav" class="nav">
+                <div class="nav-logo">
+                    <a href="/2"><img class="nav-logo-img" src="../images/Doctorpedia_logo_nav_lrg.png"></a>
+                </div>
+                <ul role="menu" aria-label="Page menu" class="nav-menu">
+                    <!-- <li role="none" cl ass="our-mission-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="#our-mission">Our Mission</a></li>
+                    <li role="none" class="features-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="#features">Features</a></li>
+                    <li role="none" class="reserve-spot-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="#reserve-spot">Partner with Doctorpedia</a></li> -->
+                </ul>
+                <div class="nav-cta" mobile-hide-block><a class="nav-cta-link benefits" href="/mdinvest">Careers<span class="nav-cta-link-text"></span></a></div>
+            </nav>
+        </div>
+        <div aria-label="Mobile Page menu" class="mobile-menu-wrap">
+            <div class="nav-logo">
+                <a class="mobile-logo" href="/"><img class="mobile-logo-logo-img" src="../images/doctorpedia_logo_gradient_lrg.png"></a>
+            </div>
+            <a href="javascript:void(0);" class="mobile-menu-btn-open"></a>
+            <div class="mobile-menu hide">
+                <div class="mobile-menu-logo">
+                    <a class="mobile-menu-logo-link" href="/"><img class="mobile-logo-logo-img" src="../images/doctorpedia_logo_white_lrg.png"></a>
+                </div>
+                <a href="javascript:void(0);" class="mobile-menu-btn-close"></a>
+                <div class="menu-holder">
+                    <ul role="menu" aria-label="Page menu" class="mobile-menu-nav">
+                        <li role="none" class="our-mission-item mobile-menu-nav-item"><a role="menuitem" class="mobile-menu-nav-link" href="#our-mission">Our Mission</a></li>
+                        <li role="none" class="features-item mobile-menu-nav-item"><a role="menuitem" class="mobile-menu-nav-link" href="#features">Features</a></li>
+                        <li role="none" class="reserve-spot-item mobile-menu-nav-item"><a role="menuitem" class="mobile-menu-nav-link" href="#reserve-spot">Partner with Doctorpedia</a></li>
+                    </ul>
+                    <ul class="sub-menu">
+                        <li><a class="sub-menu-link about-us" href="#about-us">About Us</a></li>
+                        <li><a class="sub-menu-link contactus" href="javascript:void(0);">Contact</a></li>
+                        <li><a class="sub-menu-link privacy" href="javascript:void(0);">Privacy Policy</a></li>
+                        <li><a class="sub-menu-link terms" href="javascript:void(0);">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+        <!-- <div class="ivi"></div> -->
+
+
+        <section id="career-container">
+            <p>Thank you for your interest in our investor program. Here is a 2-step authentication process to release documents to your local machine. We will need you to follow the steps below in order to continue with our investor programme.
+            </p>
+        </section>
+
+        <section class="career-form">
+            <div class="form-desc">
+                <h4>Step 1</h4>
+                <p>You will need to enter a valid email address you currently have access to. After submitting via the form below (can take up to 2 hours), you will recieve a unique token.</p>
+            </div>
+            <form method="POST">
+                <div class="outter-input">
+                    <input type="text" placeholder="What's your email?" name="email" id="email-field" value="" />
+                    <button id="email-submit">
+                        <i class="icon ion-android-arrow-forward"></i>
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section id="half-rules">
+            <hr style="color: white; background-color:white; width: 60%; height: 1px;" />
+        </section>
+
+        <section class="career-form">
+                <div class="form-desc">
+                    <h4>Step 2</h4>
+                    <p>Upon receiving your access token, please enter the unique code below for access to our documents page.</p>
+                </div>
+                <form method="POST">
+                    <div class="outter-input">
+                        <input type="text" placeholder="Validate Token" name="token" id="token-field" value="" />
+                        <button type="submit" id="token-submit">
+                            <i class="icon ion-android-arrow-forward"></i>
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+        <section id="footer">
+            <div class="footer-img">
+            </div>
+            <span>&copy; All Rights Reserved 2018</span>
+        </section>
+
+    </main>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script src="../scripts/build.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#email-submit').on('click', function() {
+                if ($('#email-field').val().length === 0) {
+                    alert('ur email is empty');
+                }
+            })
+
+            $('#token-submit').on('click', function() {
+                console.log('shit')
+                if ($('#token-field').val().length <= 5) {
+                    alert('invalid token');
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
