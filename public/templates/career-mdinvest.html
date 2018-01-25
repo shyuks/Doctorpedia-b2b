@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Doctorpedia</title>
+    <meta name="description" content="Doctorpedia, the Future of Healthcare Management">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="keywords" content="Doctorpedia, healthcare management, health, personalized care, medical, professionals">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+    <link rel="stylesheet" href="../css/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <style>
+
+        #temp {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            position: relative;
+            background-color: #2f4266;
+            color: white; 
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        }
+
+        .ivi {
+            text-align: center;
+            height: 5px;
+            width: 100%;
+            color: black;
+            position: absolute;
+            z-index: 200;
+            background: linear-gradient(to right, #ff5e62, #ff9966);
+            background-color: linear-gradient(to right, #ff5e62, #ff9966);
+        }
+
+        .nav-wrap {
+            background-color: white;
+            width: 100%;
+            position: fixed;  
+            height: 100px;          
+            border-bottom: 5px solid #ff5e62;
+        }
+
+        #career-container {
+            padding-top: 100px;
+            padding-right: 60px;
+            padding-left: 60px;
+            padding-bottom: 80px;
+            text-align: center;
+        }
+
+        #career-container p {
+            font-size: 24px;
+            color: white;
+            font-style: normal;
+            font-weight: 200;
+            margin: 120px;
+        }
+
+        #career-videos {
+            width: 100%;
+            text-align: center;
+            position: relative;
+        }
+
+        .career-videos-align {
+        }
+
+        .learning-video {
+            border: 1px solid black;
+            position: relative;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            padding-bottom: 260px;
+            background-color: white;
+        }
+
+        .learning-video-1 {
+            background: url('../images/hero.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+        .learning-video-2 {
+            background: url('../images/desktop_limitless_reach.png');
+            background-position: center;
+            background-size: cover;
+        }
+        .learning-video-3 {
+            background: url('../images/desktop_more_time.png');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .icon-1 {
+            position: relative;
+            margin: auto;
+            margin-bottom: 20px;
+            background: url('../images/icons/icon_treatment.png');   
+            width: 64px;
+            height: 64px;   
+            background-position: center;
+            background-size: cover;         
+        }
+
+        .icon-2 {
+            position: relative;
+            margin: auto;
+            margin-bottom: 20px;
+            background: url('../images/icons/icon_non_profit.png');   
+            width: 64px;
+            height: 64px;   
+            background-position: center;
+            background-size: cover;         
+        }
+
+        .icon-3 {
+            position: relative;
+            margin: auto;
+            margin-bottom: 20px;
+            background: url('../images/icons/icon_hospitals.png');   
+            width: 64px;
+            height: 64px;   
+            background-position: center;
+            background-size: cover;         
+        }
+
+        .achievement {
+            position: absolute;
+            background-color: #ff9966;
+            border: 1px solid #ff9966; 
+            padding: 30px;
+            top: 88%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            
+            left: 77%;
+        }
+
+        .steps {
+            font-size: 16px;
+            padding: 10px;  
+        }
+
+        #career-continue {
+            position: relative;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .continue-btn {
+            position: relative;
+            text-align: center;
+            border: 1px solid #ff9966;
+            background-color: linear-gradient(to right, #ff5e62, #ff9966);
+            background: #ff9966;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            color: white;
+            width: 20%;
+            margin: auto;
+            padding: 20px;
+            margin-top: 80px;
+        }
+
+        spane {
+            font-size: 20px;
+            letter-spacing: 1px;
+        }
+
+        .learn-btn {
+            position: relative;
+            text-align: center;
+            border: 1px solid #ff5e62;
+            background-color: linear-gradient(to right, #ff5e62, #ff9966);
+            background: #ff5e62;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            color: white;
+            width: 20%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        #footer {
+            padding: 80px;
+            margin: auto;
+            text-align: center;
+            width: 100%;
+        }
+
+        .footer-img {
+            background: url('../images/doctorpedialogo_white.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 64px;
+            margin-bottom: 20px;    
+
+        }
+
+        /* .why-doctorpedia {
+            background: url('../images/why_doctorpedia.png');
+            background-size: cover;
+            width: 20px;
+            height: 20px;
+            background-position: center;
+        } */
+
+
+
+    </style>
+</head>
+
+<body id="temp">
+    <main id="main">
+        <div class="scrolled nav-wrap">
+            <nav id="main-nav" class="nav">
+                <div class="nav-logo">
+                    <a href="/2"><img class="nav-logo-img" src="../images/Doctorpedia_logo_nav_lrg.png"></a>
+                </div>
+                <ul role="menu" aria-label="Page menu" class="nav-menu">
+                    <!-- <li role="none" class="our-mission-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="#our-mission">Our Mission</a></li>
+                    <li role="none" class="features-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="#features">Features</a></li>
+                    <li role="none" class="reserve-spot-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="#reserve-spot">Partner with Doctorpedia</a></li> -->
+                </ul>
+                <div class="nav-cta" mobile-hide-block><a class="nav-cta-link benefits" href="/mdinvest/register">Subscribe<span class="nav-cta-link-text"></span></a></div>
+            </nav>
+        </div>
+        <div aria-label="Mobile Page menu" class="mobile-menu-wrap">
+            <div class="nav-logo">
+                <a class="mobile-logo" href="/"><img class="mobile-logo-logo-img" src="../images/doctorpedia_logo_gradient_lrg.png"></a>
+            </div>
+            <a href="javascript:void(0);" class="mobile-menu-btn-open"></a>
+            <div class="mobile-menu hide">
+                <div class="mobile-menu-logo">
+                    <a class="mobile-menu-logo-link" href="/"><img class="mobile-logo-logo-img" src="../images/doctorpedia_logo_white_lrg.png"></a>
+                </div>
+                <a href="javascript:void(0);" class="mobile-menu-btn-close"></a>
+                <div class="menu-holder">
+                    <ul role="menu" aria-label="Page menu" class="mobile-menu-nav">
+                        <li role="none" class="our-mission-item mobile-menu-nav-item"><a role="menuitem" class="mobile-menu-nav-link" href="#our-mission">Our Mission</a></li>
+                        <li role="none" class="features-item mobile-menu-nav-item"><a role="menuitem" class="mobile-menu-nav-link" href="#features">Features</a></li>
+                        <li role="none" class="reserve-spot-item mobile-menu-nav-item"><a role="menuitem" class="mobile-menu-nav-link" href="#reserve-spot">Partner with Doctorpedia</a></li>
+                    </ul>
+                    <ul class="sub-menu">
+                        <li><a class="sub-menu-link about-us" href="#about-us">About Us</a></li>
+                        <li><a class="sub-menu-link contactus" href="javascript:void(0);">Contact</a></li>
+                        <li><a class="sub-menu-link privacy" href="javascript:void(0);">Privacy Policy</a></li>
+                        <li><a class="sub-menu-link terms" href="javascript:void(0);">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+        <!-- <div class="ivi"></div> -->
+
+
+        <section id="career-container">
+            <p>Welcome to the Doctorpedia Medical Doctor Investor Program page. We have prepared a series of videos to help introduce you to our platform, company and this specific investment program. Please feel free to contact our Director of Medical Investsments team at any step of the process if you have questions or care to learn more.
+            </p>
+        </section>
+
+        <section id="career-videos">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="icon-1"></div>                        
+                        <div class="learning-video learning-video-1">
+                            <div class="achievement"></div>
+                        </div>
+                        <div class="steps step-1"><h4>Step 1</h4> <br> Watch our corporate overview video that contains in-depth analysis of how our branch operates. This ethnic is very important to us and are rules that fulfill our business needs as a whole.</div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="icon-2"></div>                        
+                        <div class=" learning-video learning-video-2">
+
+                                <div class="achievement"></div>
+                            
+                        </div>
+                        <div class="steps step-1"><h4>Step 2</h4> <br> View our product model concerning important standards in this medical trend, in terms of how we create a robust network of medical professionals and applications. We are proud to say this is the future of medical technology..</div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="icon-3"></div>                        
+                        <div class="learning-video learning-video-3">
+
+                                <div class="achievement"></div>
+                            
+                        </div>
+                        <div class="steps step-1"><h4>Step 3</h4> <br> Take a look at our doctor investor webinar, learn some of our most valuable insights based on getting started with our investing programs and how we can connect.</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="career-continue">
+            <a href="/mdinvest/register"><div class="continue-btn">
+                <spane>Learn More</spane></div> </a>
+            <div class="learn-btn"><spane>Contact Us</spane></div>  
+            <div class="why-doctorpedia"></div>          
+        </section>
+
+        <section id="footer">
+            <div class="footer-img">
+            </div>
+            <span>&copy; All Rights Reserved 2018</span>
+        </section>
+
+    </main>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script src="../scripts/build.min.js"></script>
+</body>
+
+</html>
