@@ -22,6 +22,14 @@ app.get('/2', function(req, res) {
     res.sendFile(path.join(__dirname, './public/index2.html'));
 });
 
+app.get('/3', function(req, res) {
+    res.sendFile(path.join(__dirname, './public/index3.html'));
+});
+
+app.get('/domains', function(req, res) {
+    res.sendFile(path.join(__dirname, './public/domains.html'));
+});
+
 app.listen(8080, function() {
     console.log('Listening On http://localhost:8080/');
 });

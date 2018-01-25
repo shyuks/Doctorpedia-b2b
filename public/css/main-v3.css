@@ -1243,7 +1243,9 @@ a:hover {
 }
 
 .section3 {
-    overflow: hidden
+    overflow: hidden;
+    background: -webkit-gradient(linear, left top, left bottom, from(#dcdfe5), color-stop(50%, #e7eaf1), to(#dcdfe5));
+    background: linear-gradient(to bottom, #dcdfe5 0%, #e7eaf1 50%, #dcdfe5 100%);
 }
 
 .section3-left {
@@ -1368,9 +1370,9 @@ a:hover {
     -webkit-box-direction: normal;
     -ms-flex-flow: column nowrap;
     flex-flow: column nowrap;
-    background: #dcdfe5;
+    /* background: #dcdfe5;
     background: -webkit-gradient(linear, left top, left bottom, from(#dcdfe5), color-stop(50%, #e7eaf1), to(#dcdfe5));
-    background: linear-gradient(to bottom, #dcdfe5 0%, #e7eaf1 50%, #dcdfe5 100%);
+    background: linear-gradient(to bottom, #dcdfe5 0%, #e7eaf1 50%, #dcdfe5 100%); */
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#dcdfe5', endColorstr='#dcdfe5', GradientType=0);
     padding: 40px 20px 0
 }
@@ -1490,7 +1492,9 @@ a:hover {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-    flex-direction: column
+    flex-direction: column;
+    background: -webkit-gradient(linear, left top, left bottom, from(#dcdfe5), color-stop(50%, #e7eaf1), to(#dcdfe5));
+    background: linear-gradient(to bottom, #dcdfe5 0%, #e7eaf1 50%, #dcdfe5 100%);
 }
 
 @media (min-width: 1024px) {
@@ -1959,7 +1963,7 @@ a:hover {
 }
 
 .section8 .btn-link span {
-    background-image: url(../images/arrow-white-down.png)
+    background-image: url(../images/arrow-white-right.png)
 }
 
 .section8-left {
@@ -1981,23 +1985,13 @@ a:hover {
     order: 2
 }
 
-.section8-left ul {
-    color: #47484a
-}
-
-.section8-left ul li h1 {
-    font-size: 20px;
+.section8-left p {
     color: #47484a
 }
 
 @media (min-width: 700px) {
-    .section8-left ul {
+    .section8-left p {
         font-size: 28px;
-    }
-
-    .section8-left ul li h1 {
-        font-size: 28px;
-        padding: 10px 0px;
     }
 }
 
@@ -2022,14 +2016,10 @@ a:hover {
         /* padding: 200px 12% */
     }
 
-    .section8-left ul {
+    .section8-left p {
         font-size: 30px;
     }
 
-    .section8-left ul li h1 {
-        font-size: 30px;
-        padding: 10px 0px;
-    }
 }
 
 .section8-left-content {
@@ -2039,15 +2029,6 @@ a:hover {
 @media (min-width: 1024px) {
     .section8-left-content p {
         font-size: 20px
-    }
-
-    .section8-left ul {
-        font-size: 30px;
-    }
-
-    .section8-left ul li h1 {
-        font-size: 30px;
-        padding: 10px 0px;
     }
 }
 
@@ -2059,13 +2040,13 @@ a:hover {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
-    background: url(../images/desktop_limitless_reach.png) top center no-repeat;
-    background-size: cover
+    background: url(../images/domains.png) top center no-repeat;
+    background-size: cover;
 }
 
 @media (min-width: 768px) {
     .section8-right {
-        height: 510px
+        height: 510px;
     }
 }
 
@@ -2077,15 +2058,8 @@ a:hover {
     }
 }
 
-@media (min-width: 1200px) {
-    .section8-right {
-        padding: 200px 12%
-    }
-}
-
 .section9 {
     padding: 70px 20px 60px 20px;
-    background-color: #e7eaf1;
     outline: 0
 }
 
@@ -2149,7 +2123,7 @@ a:hover {
 
 .tier {
     max-width: 260px;
-    margin: 0 auto
+    margin: 0 auto;
 }
 
 @media (min-width: 768px) {
@@ -2177,7 +2151,7 @@ a:hover {
 }
 
 .tier-body {
-    background-color: #fff;
+    background-color: #e7eaf1;
     padding: 20px 20px 0;
     height: 90px;
     text-align: center
@@ -2789,57 +2763,49 @@ a:hover {
 
 .benefits-modal h2,
 .terms-modal h2,
-.privacy-modal h2,
-.library-modal h2 {
+.privacy-modal h2 {
     margin-top: 10px;
     font-size: 23px;
     line-height: 26px
 }
 
 .privacy-modal .modal-content,
-.terms-modal .modal-content,
-.library-modal .modal-content {
+.terms-modal .modal-content {
     max-height: 470px;
     padding: 20px 10px 20px 20px
 }
 
 .privacy-modal .modal-content h1,
-.terms-modal .modal-content h1, 
-.library-modal .modal-content h1 {
+.terms-modal .modal-content h1 {
     line-height: 1em;
     font-size: 30px;
     padding-right: 10px
 }
 
 .privacy-modal .modal-content h2,
-.terms-modal .modal-content h2, 
-.library-modal .modal-content h2 {
+.terms-modal .modal-content h2 {
     padding-top: 15px;
     line-height: 1.2em
 }
 
 .privacy-modal .modal-content p,
-.terms-modal .modal-content p,
-.library-modal .modal-content p {
+.terms-modal .modal-content p {
     margin-bottom: 0
 }
 
 .privacy-modal .modal-content a,
-.terms-modal .modal-content a, 
-.library-modal .modal-content a {
+.terms-modal .modal-content a {
     color: #7d8ca9
 }
 
 .privacy-modal .modal-content strong,
-.terms-modal .modal-content strong, 
-.library -modal .modal-content strong {
+.terms-modal .modal-content strong {
     font-weight: bold;
     color: #617292
 }
 
 .privacy-modal .modal-content .modal-body,
-.terms-modal .modal-content .modal-body, 
-.library-modal .modal-content .modal-body {
+.terms-modal .modal-content .modal-body {
     padding-right: 10px;
     max-height: 290px;
     overflow: scroll
@@ -2847,21 +2813,18 @@ a:hover {
 
 @media (min-width: 700px) {
     .privacy-modal .modal-content,
-    .terms-modal .modal-content,
-    .library-modal .modal-content {
+    .terms-modal .modal-content {
         padding: 50px 30px 50px 60px;
         max-width: 680px;
         max-height: 680px
     }
     .privacy-modal .modal-content h1,
-    .terms-modal .modal-content h1,
-    .library-modal .modal-content h1 {
+    .terms-modal .modal-content h1 {
         font-size: 45px;
         padding-right: 30px
     }
     .privacy-modal .modal-content .modal-body,
-    .terms-modal .modal-content .modal-body,
-    .library-modal .modal-content .modal-body {
+    .terms-modal .modal-content .modal-body {
         padding-right: 30px
     }
 }

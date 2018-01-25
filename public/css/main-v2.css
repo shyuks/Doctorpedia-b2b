@@ -273,7 +273,7 @@ body {
     position: relative;
     background: #fff;
     font-family: "PlainLight", sans-serif;
-    color: #47484a;
+    color: #7d8ca9;
     font-size: 16px;
     line-height: 1.5em;
     min-width: 320px
@@ -294,7 +294,7 @@ h1 {
     font-size: 28px;
     line-height: 1em;
     font-weight: bold;
-    color: #7ca9d9;
+    color: #364156;
     margin-top: 0
 }
 
@@ -349,9 +349,9 @@ a:hover {
 }
 
 .btn-link {
-    background: #b3cceb;
-    background: -webkit-gradient(linear, left top, right top, from(#b3cceb), color-stop(99%, #7ca9d9));
-    background: linear-gradient(to right, #b3cceb 0%, #7ca9d9 99%);
+    background: #8f70f6;
+    background: -webkit-gradient(linear, left top, right top, from(#8f70f6), color-stop(99%, #43c6d7));
+    background: linear-gradient(to right, #8f70f6 0%, #43c6d7 99%);
     padding: 14px 70px 18px 28px;
     font-size: 18px;
     line-height: 1em;
@@ -601,7 +601,7 @@ a:hover {
 .focus-features .features-item,
 .focus-our-mission .our-mission-item {
     color: #364156;
-    background: url(../images/nav_bg_active_underline_blue.png) left bottom no-repeat;
+    background: url(../images/nav_bg_active_underline.png) left bottom no-repeat;
     background-size: 100% 3px
 }
 
@@ -610,13 +610,13 @@ a:hover {
     font-family: "PlainLight", sans-serif;
     font-weight: 600;
     font-size: 17px;
-    color: #828787;
+    color: #364156;
     text-decoration: none;
     line-height: 80px
 }
 
 .nav-menu-link:hover {
-    color: #b3cceb
+    color: #8893a8
 }
 
 .nav-cta {
@@ -659,7 +659,7 @@ a:hover {
 }
 
 .nav-cta-link span {
-    background: transparent url(../images/why_doctorpedia_blue.png) center center no-repeat;
+    background: transparent url(../images/why_doctorpedia.png) center center no-repeat;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -675,9 +675,9 @@ a:hover {
     color: #fff;
     -webkit-transition: all 300ms ease-out 0ms;
     transition: all 300ms ease-out 0ms;
-    background: #7ca9d9;
-    background: -webkit-gradient(linear, left top, right top, from(#b3cceb), color-stop(99%, #7ca9d9));
-    background: linear-gradient(to right, #b3cceb 0%, #7ca9d9 99%)
+    background: #fea42a;
+    background: -webkit-gradient(linear, left top, right top, from(#fc62a8), color-stop(99%, #fea42a));
+    background: linear-gradient(to right, #fc62a8 0%, #fea42a 99%)
 }
 
 .mobile-menu-wrap {
@@ -726,9 +726,9 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #b3cceb;
-    background: -webkit-gradient(linear, left top, right top, from(#b3cceb), color-stop(99%, #7ca9d9));
-    background: linear-gradient(to right, #b3cceb 0%, #7ca9d9 99%)
+    background: #fea42a;
+    background: -webkit-gradient(linear, left top, right top, from(#fc62a8), color-stop(99%, #fea42a));
+    background: linear-gradient(to right, #fc62a8 0%, #fea42a 99%)
 }
 
 .mobile-menu .mobile-menu-btn-close {
@@ -1021,7 +1021,7 @@ a:hover {
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
     order: 2;
-    color: #47484a;
+    color: #fda07e;
     font-size: 18px;
     line-height: 1.25;
     margin: 0
@@ -1087,12 +1087,12 @@ a:hover {
 
 .mission {
     background: #2f4266;
-    background: linear-gradient(135deg, #2e5363 0%, #47484a 99%);
+    background: linear-gradient(135deg, #2f4266 0%, #202e49 99%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#2f4266', endColorstr='#202e49', GradientType=1)
 }
 
 .mission h1 {
-    color: white;
+    color: #678cf6;
     font-size: 30px;
     line-height: 1.3em;
     text-align: center
@@ -1119,7 +1119,7 @@ a:hover {
 .mission-intro {
     font-size: 17px;
     line-height: 1.3em;
-    color: #b3cceb;
+    color: #99aed7;
     text-align: center
 }
 
@@ -1316,7 +1316,7 @@ a:hover {
     width: 270px;
     height: 75px;
     margin-top: 30px;
-    background: url(../images/scroll-cta-sml-wide_blue.png) left top no-repeat;
+    background: url(../images/scroll-cta-sml-wide.png) left top no-repeat;
     background-size: 170px auto
 }
 
@@ -1328,11 +1328,7 @@ a:hover {
 }
 
 .section3-right-content {
-    padding: 40px 20px 20px;
-}
-
-.section3-right ul {
-    margin: 0
+    padding: 40px 20px 20px
 }
 
 @media (min-width: 700px) {
@@ -1664,7 +1660,7 @@ a:hover {
         bottom: 0;
         left: 0;
         right: 0;
-        background: url(../images/ipad_call_outs_blue.png) top center no-repeat;
+        background: url(../images/ipad_call_outs.png) top center no-repeat;
         opacity: 0
     }
     .animated .section6-image-overlay {
@@ -1724,7 +1720,7 @@ a:hover {
     line-height: 1.2em;
     font-size: 22px;
     margin-top: 0;
-    color: #5c9fb1;
+    color: #43c7d8;
     font-weight: 300
 }
 
@@ -1981,15 +1977,6 @@ a:hover {
     order: 2
 }
 
-.section8-left ul {
-    color: #47484a
-}
-
-.section8-left ul li h1 {
-    font-size: 20px;
-    color: #47484a
-}
-
 @media (min-width: 700px) {
     .section8-left ul {
         font-size: 28px;
@@ -2203,9 +2190,9 @@ a:hover {
     height: 4px;
     background-color: #FFF;
     border: 0;
-    background: #b3cceb;
-    background: -webkit-gradient(linear, left top, right top, from(#b3cceb), color-stop(99%, #7ca9d9));
-    background: linear-gradient(to right, #b3cceb 0%, #7ca9d9 99%)
+    background: #fea42a;
+    background: -webkit-gradient(linear, left top, right top, from(#fc62a8), color-stop(99%, #fea42a));
+    background: linear-gradient(to right, #fc62a8 0%, #fea42a 99%)
 }
 
 @media (min-width: 768px) {
@@ -2231,8 +2218,7 @@ a:hover {
 
 .tier-title {
     font-size: 20px;
-    margin-bottom: 20px;
-    color: #47484a;
+    margin-bottom: 20px
 }
 
 @media (min-width: 768px) {
@@ -2279,24 +2265,22 @@ a:hover {
 }
 
 .tier-action.bg-grey {
-    background: #7ca9d9;
-    background: -webkit-gradient(linear, left top, right top, from(#b3cceb), color-stop(99%, #7ca9d9));
-    background: linear-gradient(to right, #b3cceb 0%, #7ca9d9 99%)
+    background-color: #bbceda
 }
 
 .tier-action.bg-grad {
-    background: #828787;
-    background: -webkit-gradient(linear, left top, right top, from(#7ca9d9), color-stop(99%, #828787));
-    background: linear-gradient(to right, #7ca9d9 0%, #828787 99%)
+    background: #fea42a;
+    background: -webkit-gradient(linear, left top, right top, from(#fc62a8), color-stop(99%, #fea42a));
+    background: linear-gradient(to right, #fc62a8 0%, #fea42a 99%)
 }
 
 .tier-action.bg-lightblue {
-    background-color: #7ca9d9
+    background-color: #87bde1
 }
 
 .tier-action .btn-link {
     position: relative;
-    color: #7ca9d9;
+    color: #6c98e7;
     background: #fff;
     padding: 0 35px 3px 20px;
     font-size: 14px;
@@ -2353,9 +2337,9 @@ a:hover {
 
 .section10 {
     padding: 60px 20px;
-    background: #5c9fb1;
-    background: -webkit-gradient(linear, left top, right top, from(#5c9fb1), color-stop(99%, #43c6d7));
-    background: linear-gradient(to right, #5c9fb1 0%, #43c6d7 99%)
+    background: #8f70f6;
+    background: -webkit-gradient(linear, left top, right top, from(#8f70f6), color-stop(99%, #43c6d7));
+    background: linear-gradient(to right, #8f70f6 0%, #43c6d7 99%)
 }
 
 @media (min-width: 375px) {
@@ -2439,9 +2423,9 @@ a:hover {
 
 .section10-cta .btn-link {
     position: relative;
-    background: #b3cceb;
-    background: -webkit-gradient(linear, left top, right top, from(#b3cceb), to(#7ca9d9));
-    background: linear-gradient(to right, #b3cceb 0%, #7ca9d9 100%);
+    background: #fd8fa4;
+    background: -webkit-gradient(linear, left top, right top, from(#fd8fa4), to(#feb55b));
+    background: linear-gradient(to right, #fd8fa4 0%, #feb55b 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fd8fa4', endColorstr='#feb55b', GradientType=1);
     -webkit-box-shadow: 0px 22px 59px 10px rgba(22, 50, 112, 0.3);
     box-shadow: 0px 22px 59px 10px rgba(22, 50, 112, 0.3);
@@ -2697,7 +2681,7 @@ a:hover {
 .modal-close:hover {
     -webkit-transition: all 300ms ease-in-out 0ms;
     transition: all 300ms ease-in-out 0ms;
-    background-image: url(/images/close_hover_blue.png)
+    background-image: url(/images/close_hover.png)
 }
 
 .modal-content {
@@ -2724,7 +2708,7 @@ a:hover {
     font-family: "PlainBlack", sans-serif;
     font-size: 20px;
     line-height: 2em;
-    color: #5c9fb1;
+    color: #4abeda;
     padding: 0;
     margin: 0
 }
