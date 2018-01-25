@@ -16,16 +16,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, './public/index.html'));
+    res.sendFile(path.join(__dirname, './public/index3.html'));
 });
 
 app.get('/2', function(req, res) {
     res.sendFile(path.join(__dirname, './public/index2.html'));
 });
 
-app.get('/3', function(req, res) {
-    res.sendFile(path.join(__dirname, './public/index3.html'));
-});
+// app.get('/3', function(req, res) {
+//     res.sendFile(path.join(__dirname, './public/index3.html'));
+// });
 
 app.get('/domains', function(req, res) {
     res.sendFile(path.join(__dirname, './public/domains.html'));
