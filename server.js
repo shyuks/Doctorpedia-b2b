@@ -23,7 +23,6 @@ app.get('/2', function(req, res) {
     res.sendFile(path.join(__dirname, './public/index2.html'));
 });
 
-<<<<<<< HEAD
 app.get('/3', function(req, res) {
     res.sendFile(path.join(__dirname, './public/index3.html'));
 });
@@ -32,7 +31,6 @@ app.get('/domains', function(req, res) {
     res.sendFile(path.join(__dirname, './public/domains.html'));
 });
 
-=======
 app.get('/mdinvest', function(req, res) {
     res.sendFile(path.join(__dirname, './public/templates/career-mdinvest.html'))
 });
@@ -96,7 +94,6 @@ app.post('/mdinvest/register/', function(req, res) {
 
 
 
->>>>>>> cdb5a9e9c6d8c3a1b952279dee5563c93ead7a56
 app.listen(8080, function() {
     console.log('Listening On http://localhost:8080/');
 });
