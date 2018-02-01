@@ -18,6 +18,11 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     
+
+        
+
+    <link rel="stylesheet" href="
+    http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">    
     <style>
 
         #temp {
@@ -25,8 +30,8 @@
             height: 100%;
             margin: 0px;
             position: relative;
-            background-color: #2f4266;
-            color: white; 
+            background-color: white;
+            color: black; 
             font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
         }
 
@@ -45,8 +50,15 @@
             background-color: white;
             width: 100%;
             position: fixed;  
-            height: 100px;          
-            border-bottom: 5px solid #ff5e62;
+            height: 85px !important;          
+            border-bottom: 5px solid #7ca9d9;
+        }
+
+        .invest-selected {
+            background-color: #7ca9d9 !important; 
+            color: white !important;
+            width: 140px;
+            text-align: center;
         }
 
         #career-container {
@@ -59,7 +71,7 @@
 
         #career-container p {
             font-size: 24px;
-            color: white;
+            color: black;
             font-style: normal;
             font-weight: 200;
             margin: 120px;
@@ -102,7 +114,7 @@
             position: relative;
             margin: auto;
             margin-bottom: 20px;
-            background: url('../images/icons/icon_treatment.png');   
+            background: url('../images/icons/icon_treatment_blue.png');   
             width: 64px;
             height: 64px;   
             background-position: center;
@@ -113,7 +125,7 @@
             position: relative;
             margin: auto;
             margin-bottom: 20px;
-            background: url('../images/icons/icon_non_profit.png');   
+            background: url('../images/icons/icon_non_profit_blue.png');   
             width: 64px;
             height: 64px;   
             background-position: center;
@@ -124,7 +136,7 @@
             position: relative;
             margin: auto;
             margin-bottom: 20px;
-            background: url('../images/icons/icon_hospitals.png');   
+            background: url('../images/icons/icon_hospitals_blue.png');   
             width: 64px;
             height: 64px;   
             background-position: center;
@@ -133,8 +145,8 @@
 
         .achievement {
             position: absolute;
-            background-color: #ff9966;
-            border: 1px solid #ff9966; 
+            background-color: #7ca9d9;
+            border: 1px solid #7ca9d9; 
             padding: 30px;
             top: 88%;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -156,15 +168,17 @@
         .continue-btn {
             position: relative;
             text-align: center;
-            border: 1px solid #ff9966;
+            border: 1px solid #7ca9d9;
             background-color: linear-gradient(to right, #ff5e62, #ff9966);
-            background: #ff9966;
+            background: #7ca9d9;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             color: white;
             width: 20%;
             margin: auto;
             padding: 20px;
             margin-top: 80px;
+            border-radius: 32px;
+            
         }
 
         spane {
@@ -193,12 +207,11 @@
         }
 
         .footer-img {
-            background: url('../images/doctorpedialogo_white.png');
+            background: url('../images/logo_doctorpedia.png');
             background-position: center;
             background-repeat: no-repeat;
-            height: 64px;
-            margin-bottom: 20px;    
-
+            height: 72px;
+            margin-bottom: 20px;   
         }
 
         /* .why-doctorpedia {
@@ -209,7 +222,23 @@
             background-position: center;
         } */
 
+        .modal-content {
+            background-color: #2f4266;
+            color: white;
+        }
 
+        .overlay-play {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.4);
+            width: 100%;
+            height: 100%;
+        }
+        .icon-play {
+            font-size: 100px;
+            position: relative;
+            padding-top: 50px;
+            color: #7ca9d9; 
+        }
 
     </style>
 </head>
@@ -219,19 +248,19 @@
         <div class="scrolled nav-wrap">
             <nav id="main-nav" class="nav">
                 <div class="nav-logo">
-                    <a href="/"><img class="nav-logo-img" src="../images/Doctorpedia_logo_nav_lrg.png"></a>
+                    <a href="/"><img class="nav-logo-img" src="../images/logo_doctorpedia.png"></a>
                 </div>
                 <ul role="menu" aria-label="Page menu" class="nav-menu">
-                    <!-- <li role="none" class="our-mission-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="#our-mission">Our Mission</a></li>
-                    <li role="none" class="features-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="#features">Features</a></li>
-                    <li role="none" class="reserve-spot-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="#reserve-spot">Partner with Doctorpedia</a></li> -->
+                    <li role="none" class="our-mission-item nav-menu-item"><a role="menuitem" class=" nav-menu-link learn-link" href="/mdinvest">Overview</a></li>
+                    <li role="none" class="features-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="/mdinvest/register">Access</a></li>
+                    <li role="none" class="reserve-spot-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="/mdinvest/documents">Documents</a></li>
                 </ul>
-                <div class="nav-cta" mobile-hide-block><a class="nav-cta-link benefits" href="/mdinvest/register">Subscribe<span class="nav-cta-link-text"></span></a></div>
+                <div class="nav-cta" mobile-hide-block><a class="nav-cta-link benefits contactus" href="#">Contact Us<span class="nav-cta-link-text"></span></a></div>
             </nav>
         </div>
         <div aria-label="Mobile Page menu" class="mobile-menu-wrap">
             <div class="nav-logo">
-                <a class="mobile-logo" href="/"><img class="mobile-logo-logo-img" src="../images/doctorpedia_logo_gradient_lrg.png"></a>
+                <a class="mobile-logo" href="/"><img class="mobile-logo-logo-img" src="../images/doctorpedialogo_white.png"></a>
             </div>
             <a href="javascript:void(0);" class="mobile-menu-btn-open"></a>
             <div class="mobile-menu hide">
@@ -268,29 +297,38 @@
                 <div class="row">
 
                     <div class="col-lg-4 col-md-4 col-sm-4">
-                            <div class="icon-1"></div>                        
-                        <div class="learning-video learning-video-1">
-                            <div class="achievement"></div>
-                        </div>
-                        <div class="steps step-1"><h4>Step 1</h4> <br> Watch our corporate overview video that contains in-depth analysis of how our branch operates. This ethnic is very important to us and are rules that fulfill our business needs as a whole.</div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4">
-                            <div class="icon-2"></div>                        
-                        <div class=" learning-video learning-video-2">
-
-                                <div class="achievement"></div>
+                            <!-- <div class="icon-1"></div>                         -->
+                        <div class="learning-video learning-video-1 watch-video-1">
+                            <div class="overlay-play">
+                                <div class="icon-play ion-ios-play"></div>
+                            </div>
+                            
+                            <!-- <div class="achievement"></div> -->
                             
                         </div>
-                        <div class="steps step-1"><h4>Step 2</h4> <br> View our product model concerning important standards in this medical trend, in terms of how we create a robust network of medical professionals and applications. We are proud to say this is the future of medical technology..</div>
+                        <div class="steps step-1"><h4>Company Video</h4> <br> Watch our corporate overview video that contains in-depth analysis of how our branch operates. This ethnic is very important to us and are rules that fulfill our business needs as a whole.</div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4">
-                            <div class="icon-3"></div>                        
-                        <div class="learning-video learning-video-3">
-
-                                <div class="achievement"></div>
+                            <!-- <div class="icon-2"></div>                         -->
+                        <div class=" learning-video learning-video-2 watch-video-2">
+                            <div class="overlay-play">
+                                <div class="icon-play ion-ios-play"></div>
+                            </div>
+                            <!-- <div class="achievement"></div> -->
                             
                         </div>
-                        <div class="steps step-1"><h4>Step 3</h4> <br> Take a look at our doctor investor webinar, learn some of our most valuable insights based on getting started with our investing programs and how we can connect.</div>
+                        <div class="steps step-1"><h4>Product Video</h4> <br> View our product model concerning important standards in this medical trend, in terms of how we create a robust network of medical professionals and applications. We are proud to say this is the future of medical technology..</div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                            <!-- <div class="icon-3"></div>                         -->
+                        <div class="learning-video learning-video-3 watch-video">
+                            <div class="overlay-play">
+                                <div class="icon-play ion-ios-play"></div>
+                            </div>
+                                <!-- <div class="achievement"></div> -->
+                            
+                        </div>
+                        <div class="steps step-1"><h4>Doctorpedia Webinar</h4> <br> Take a look at our doctor investor webinar, learn some of our most valuable insights based on getting started with our investing programs and how we can connect.</div>
                     </div>
 
                 </div>
@@ -300,7 +338,7 @@
         <section id="career-continue">
             <a href="/mdinvest/register"><div class="continue-btn">
                 <spane>Learn More</spane></div> </a>
-            <div class="learn-btn"><spane>Contact Us</spane></div>  
+            <!-- <div class="learn-btn"><spane>Contact Us</spane></div>   -->
             <div class="why-doctorpedia"></div>          
         </section>
 
@@ -310,9 +348,166 @@
             <span>&copy; All Rights Reserved 2018</span>
         </section>
 
+        <div id="video-modal-1" class="modal-wrap video-modal hide">
+            <div class="modal-outter">
+                <div class="modal-close">CLOSE MODAL</div>
+                <div class="modal-content">
+                    <div class="videoWrapper">
+                        <iframe src="https://player.vimeo.com/video/243253752" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <p><a href="https://vimeo.com/243253752">Doctorpedia</a> from <a href="https://vimeo.com/user24848345">Doctorpedia</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="video-modal-2" class="modal-wrap video-modal hide">
+            <div class="modal-outter">
+                <div class="modal-close">CLOSE MODAL</div>
+                <div class="modal-content">
+                    <div class="videoWrapper">
+                        <iframe src="https://player.vimeo.com/video/245983336" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <p><a href="https://vimeo.com/243253752">Doctorpedia</a> from <a href="https://vimeo.com/user24848345">Doctorpedia</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="video-modal-3" class="modal-wrap video-modal hide">
+            <div class="modal-outter">
+                <div class="modal-close">CLOSE MODAL</div>
+                <div class="modal-content">
+                    <div class="videoWrapper">
+                        <iframe src="https://player.vimeo.com/video/243253752" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <p><a href="https://vimeo.com/243253752">Doctorpedia</a> from <a href="https://vimeo.com/user24848345">Doctorpedia</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <iframe src="https://player.vimeo.com/video/76979871" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+
+  
+        <div id="contactus" class="modal-wrap contact-modal hide">
+            <div class="modal-outter">
+                <div class="close-contactus modal-close">CLOSE MODAL</div>
+                <div class="modal-content">
+                    <h1 style="color: white;">Contact Us</h1>
+                    <div class="modal-body">
+                        <p class="address">5792 West Jefferson Blvd.
+                            <br>Los Angeles, CA 90016</p>
+                        <p class="email"><a href="mailto:partners@doctorpedia.com" style="color: white;">partners@doctorpedia.com</a></p>
+                        <p class="telephon">310.780.2178</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <script src="../scripts/build.min.js"></script>
+    <script src="../scripts/greg-script.js"></script>
+    
+    <script>
+
+    $(document).ready(function() {
+
+        var $document = $(document);
+        var $body = $(document.body);
+
+        var $videoModal_1 = $('#video-modal-1');
+        var $videoModal_2 = $('#video-modal-2');
+        var $videoModal_3 = $('#video-modal-3');        
+
+        function closeVideoModal() {
+            if (!$videoModal_1.hasClass('hide')) {
+                $videoModal_1.addClass('hide');
+                $body.removeClass('stop-scrolling');
+            }
+
+            if (!$videoModal_2.hasClass('hide')) {
+                $videoModal_2.addClass('hide');
+                $body.removeClass('stop-scrolling');
+            }
+
+            if (!$videoModal_3.hasClass('hide')) {
+                $videoModal_3.addClass('hide');
+                $body.removeClass('stop-scrolling');
+            }
+        }
+
+        function openVideoModal1() {
+            $videoModal_1.removeClass('hide');
+            $body.addClass('stop-scrolling');
+        }
+
+        function openVideoModal2() {
+            $videoModal_2.removeClass('hide');
+            $body.addClass('stop-scrolling');
+        }
+
+        $('.watch-video-1').click(function(){
+            openVideoModal1();
+        });
+
+        $('.watch-video-2').click(function(){
+            openVideoModal2();
+        });
+
+
+        $videoModal_1.on('click', '.modal-close', function(){
+            closeVideoModal();
+        });
+
+        $videoModal_2.on('click', '.modal-close', function(){
+            closeVideoModal();
+        });
+
+        $body.on('click', '.video-modal', function(){
+            closeVideoModal();
+        });
+
+        $(".section9-tiers").owlCarousel({
+            dotsEach: true,
+            center: true,
+            responsive:{
+                0:{
+                items:1
+                },
+                1024:{
+                center: false,
+                dots: false,
+                items:3
+                }
+            }
+        });
+        
+        
+    // contact us modal
+    var $contactusModal = $('#contactus');
+    function closeContactusModal() {
+        if (!$contactusModal.hasClass('hide')) {
+        $contactusModal.addClass('hide');
+        $body.removeClass('stop-scrolling');
+        }
+    }
+    function openContactusModal() {
+        $contactusModal.removeClass('hide');
+        $body.addClass('stop-scrolling');
+    }
+
+    $body.on('click', '.contactus', function(){
+        openContactusModal();
+    });
+
+    $contactusModal.on('click', '.modal-close', function(){
+        closeContactusModal();
+    });
+
+    $body.on('click', '.contact-modal', function(){
+        closeContactusModal();
+    });
+    })
+        
+    </script>
 </body>
 
 </html>

@@ -20,7 +20,7 @@
     
 
     <link rel="stylesheet" href="
-    http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">    
+    http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">    
     <style>
 
         #temp {
@@ -28,8 +28,8 @@
             height: 100%;
             margin: 0px;
             position: relative;
-            background-color: #2f4266;
-            color: white; 
+            background-color: white;
+            color: black; 
             font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
         }
 
@@ -48,8 +48,15 @@
             background-color: white;
             width: 100%;
             position: fixed;  
-            height: 100px;          
-            border-bottom: 5px solid #ff5e62;
+            height: 85px !important;          
+            border-bottom: 5px solid #7ca9d9;
+        }
+
+        .invest-selected {
+            background-color: #7ca9d9 !important; 
+            color: white !important;
+            width: 140px;
+            text-align: center;
         }
 
         #career-container {
@@ -61,7 +68,7 @@
 
         #career-container p {
             font-size: 24px;
-            color: white;
+            color: black;
             font-style: normal;
             font-weight: 200;
             margin-top: 7%;
@@ -83,20 +90,20 @@
         }
 
         .footer-img {
-            background: url('../images/doctorpedialogo_white.png');
+            background: url('../images/logo_doctorpedia.png');
             background-position: center;
             background-repeat: no-repeat;
-            margin-bottom: 20px;    
-            height: 64px;
+            height: 72px;
+            margin-bottom: 20px;   
         }
 
 
         .document {
             position: relative;
             text-align: center;
-            border: 1px solid #ff9966;
-            background-color: linear-gradient(to right, #ff5e62, #ff9966);
-            background: linear-gradient(to right, #ff5e62, #ff9966);
+            /* border: 1px solid #23527c; */
+            background-color: #7ca9d9 !important;
+            background: #7ca9d9 !important;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             color: white;
             width: 50%;
@@ -105,6 +112,23 @@
             margin-top: 80px;
         }
 
+        .document a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .modal-content {
+            background-color: #2f4266;
+            color: white;
+        }
+
+
+        .icon {
+            font-size: 20px;
+            align-content: center;
+            color: white;
+            padding-left: 10px;
+        }
         /* .why-doctorpedia {
             background: url('../images/why_doctorpedia.png');
             background-size: cover;
@@ -123,19 +147,20 @@
         <div class="scrolled nav-wrap">
             <nav id="main-nav" class="nav">
                 <div class="nav-logo">
-                    <a href="/"><img class="nav-logo-img" src="../images/Doctorpedia_logo_nav_lrg.png"></a>
+                    <a href="/"><img class="nav-logo-img" src="../images/logo_doctorpedia.png"></a>
                 </div>
                 <ul role="menu" aria-label="Page menu" class="nav-menu">
-                    <!-- <li role="none" cl ass="our-mission-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="#our-mission">Our Mission</a></li>
-                    <li role="none" class="features-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="#features">Features</a></li>
-                    <li role="none" class="reserve-spot-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="#reserve-spot">Partner with Doctorpedia</a></li> -->
+                    <li role="none" class="our-mission-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="/mdinvest">Overview</a></li>
+                    <li role="none" class="features-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="/mdinvest/register">Access</a></li>
+                    <li role="none" class="reserve-spot-item nav-menu-item"><a role="menuitem" class="doc-link nav-menu-link" href="/mdinvest/documents">Documents</a></li>
                 </ul>
-                <div class="nav-cta" mobile-hide-block><a class="nav-cta-link benefits" href="/mdinvest">Careers<span class="nav-cta-link-text"></span></a></div>
+                <div class="nav-cta" mobile-hide-block><a class="nav-cta-link benefits contactus" href="#">Contact Us<span class="nav-cta-link-text"></span></a></div>
+
             </nav>
         </div>
         <div aria-label="Mobile Page menu" class="mobile-menu-wrap">
             <div class="nav-logo">
-                <a class="mobile-logo" href="/"><img class="mobile-logo-logo-img" src="../images/doctorpedia_logo_gradient_lrg.png"></a>
+                <a class="mobile-logo" href="/"><img class="mobile-logo-logo-img" src="../images/doctorpedialogo_white.png"></a>
             </div>
             <a href="javascript:void(0);" class="mobile-menu-btn-open"></a>
             <div class="mobile-menu hide">
@@ -170,10 +195,18 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-2 col-sm-2"></div>
                     <div class="col-lg-4 col-md-4 col-sm-4">
-                        <div class="document">Document 1</div>
+                        <div class="document">
+                            <a href="../images/doctorpedia_logo_white_lrg.png" download>Download                    <i class="icon ion-ios-arrow-thin-down"></i>
+                            </a>
+                        </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4">
-                        <div class="document">Document 2</div>                        
+                        <div class="document">
+                            <a href="../images/doctorpedia_logo_white_lrg.png" download>
+                                <a href="../images/doctorpedia_logo_white_lrg.png" download>Download                    <i class="icon ion-ios-arrow-thin-down"></i>
+                                </a>
+                            </a>
+                        </div>                        
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-2"></div>
                 </div>
@@ -185,10 +218,20 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-2 col-sm-2"></div>
                     <div class="col-lg-4 col-md-4 col-sm-4">
-                        <div class="document">Document 3</div>
+                        <div class="document">
+                            <a href="../images/doctorpedia_logo_white_lrg.png" download>
+                                <a href="../images/doctorpedia_logo_white_lrg.png" download>Download                    <i class="icon ion-ios-arrow-thin-down"></i>
+                                </a>
+                            </a>
+                        </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4">
-                        <div class="document">Document 4</div>
+                        <div class="document">
+                            <a href="../images/doctorpedia_logo_white_lrg.png" download>
+                                <a href="../images/doctorpedia_logo_white_lrg.png" download>Download                    <i class="icon ion-ios-arrow-thin-down"></i>
+                                </a>
+                            </a>
+                        </div>
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-2"></div>
                 </div>
@@ -201,10 +244,59 @@
             <span>&copy; All Rights Reserved 2018</span>
         </section>
 
+        <div id="contactus" class="modal-wrap contact-modal hide">
+            <div class="modal-outter">
+                <div class="close-contactus modal-close">CLOSE MODAL</div>
+                <div class="modal-content">
+                    <h1 style="color: white;">Contact Us</h1>
+                    <div class="modal-body">
+                        <p class="address">5792 West Jefferson Blvd.
+                            <br>Los Angeles, CA 90016</p>
+                        <p class="email"><a href="mailto:partners@doctorpedia.com" style="color: white;">partners@doctorpedia.com</a></p>
+                        <p class="telephon">310.780.2178</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <script src="../scripts/build.min.js"></script>
+    <script src="../scripts/greg-script.js"></script>
     <script>
+        $(document).ready(function() {
+
+
+        var $document = $(document);
+        var $body = $(document.body);
+
+            // contact us modal
+            var $contactusModal = $('#contactus');
+            function closeContactusModal() {
+                if (!$contactusModal.hasClass('hide')) {
+                $contactusModal.addClass('hide');
+                $body.removeClass('stop-scrolling');
+                }
+            }
+            function openContactusModal() {
+                $contactusModal.removeClass('hide');
+                $body.addClass('stop-scrolling');
+            }
+
+            $body.on('click', '.contactus', function(){
+                openContactusModal();
+            });
+
+            $contactusModal.on('click', '.modal-close', function(){
+                closeContactusModal();
+            });
+
+            $body.on('click', '.contact-modal', function(){
+                closeContactusModal();
+            });
+
+    })
+    </script>
 
 </body>
 
