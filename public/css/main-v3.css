@@ -365,6 +365,22 @@ a:hover {
     white-space: nowrap
 }
 
+.universal-holder {
+    background: #b3cceb;
+    background: -webkit-gradient(linear, left top, right top, from(#b3cceb), color-stop(99%, #7ca9d9));
+    background: linear-gradient(to right, #b3cceb 0%, #7ca9d9 99%);
+    font-size: 18px;
+    line-height: 1em;
+    border-radius: 41px;
+    position: relative;
+    font-family: "PlainLight", sans-serif;
+    display: inline-block;
+    background-color: #aaf;
+    text-decoration: none;
+    color: #fff;
+    white-space: nowrap
+}
+
 @media (min-width: 1024px) {
     .btn-link {
         padding: 20px 90px 24px 35px;
@@ -1080,7 +1096,7 @@ a:hover {
         display: inline-block;
         width: 65px;
         height: 170px;
-        margin-top: 50px;
+        margin-top: 100px;
         background: url(../images/scroll_down_arrow_lrg.png) left top no-repeat
     }
 }

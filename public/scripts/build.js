@@ -601,6 +601,14 @@ $(document).ready(function(){
     $body.addClass('stop-scrolling');
   }
 
+  // nav-cta-link benefits
+
+  // $()
+
+  $('.ambig').on('click', '.lems', function(){
+    openBenefitsModal();
+  });
+
   $('.nav-cta').on('click', '.benefits', function(){
     openBenefitsModal();
   });

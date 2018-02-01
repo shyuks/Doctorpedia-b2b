@@ -20,7 +20,7 @@
     
 
     <link rel="stylesheet" href="
-    http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">    
+    http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">    
     <style>
 
         #temp {
@@ -28,8 +28,8 @@
             height: 100%;
             margin: 0px;
             position: relative;
-            background-color: #2f4266;
-            color: white; 
+            background-color: white;
+            color: black; 
             font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
         }
 
@@ -48,8 +48,16 @@
             background-color: white;
             width: 100%;
             position: fixed;  
-            height: 100px;          
-            border-bottom: 5px solid #ff5e62;
+            height: 85px !important;          
+            border-bottom: 5px solid #7ca9d9;
+        }
+
+
+        .invest-selected {
+            background-color: #7ca9d9 !important; 
+            color: white !important;
+            width: 140px;
+            text-align: center;
         }
 
         #career-container {
@@ -61,7 +69,7 @@
 
         #career-container p {
             font-size: 24px;
-            color: white;
+            color: black;
             font-style: normal;
             font-weight: 200;
             margin-top: 7%;
@@ -99,8 +107,9 @@
             margin: 0 auto;
             max-width: 400px;
             padding: 1.4rem 2rem 1.6rem;
-            background-color: rgba(46, 149, 245, 0.8);
+            background-color: #7ca9d9 !important;
             display: flex;
+            border-radius: 12px;
         }
 
         .outter-input input {
@@ -131,20 +140,20 @@
                 background-position: 100% 0;
                 }
           }
-
+/* 
         .outter-input::after {
             content: "";
             position: absolute;
             left: 0px;
             right: 0px;
             bottom: 0px;
-            z-index: 999;
+            z-index: 1;
             height: 6px;
-            border-bottom-left-radius: 2px;
-            border-bottom-right-radius: 2px;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
             background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6);
             animation: gradient 3s linear infinite;
-        }
+        } */
 
         ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
             color: white;
@@ -159,14 +168,47 @@
         }
 
         .footer-img {
-            background: url('../images/doctorpedialogo_white.png');
+            background: url('../images/logo_doctorpedia.png');
             background-position: center;
             background-repeat: no-repeat;
-            height: 64px;
-            margin-bottom: 20px;    
-
+            height: 72px;
+            margin-bottom: 20px;   
         }
 
+        .input-rows {
+            padding-bottom: 16px;
+        }
+
+        #career-continue {
+            position: relative;
+            text-align: center;
+        }
+
+        .continue-btn {
+            position: relative;
+            text-align: center;
+            border: 1px solid #7ca9d9 !important;
+            background-color: linear-gradient(to right, #ff5e62, #ff9966);
+            background: #7ca9d9 !important;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            color: white;
+            width: 25%;
+            margin: auto;
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 32px;
+            font-size: 2.4rem;
+        }
+
+        .icon {
+            font-size: 36px;
+            color: white;
+        }
+
+        .modal-content {
+            background-color: #2f4266;
+            color: white;
+        }
         /* .why-doctorpedia {
             background: url('../images/why_doctorpedia.png');
             background-size: cover;
@@ -185,19 +227,20 @@
         <div class="scrolled nav-wrap">
             <nav id="main-nav" class="nav">
                 <div class="nav-logo">
-                    <a href="/"><img class="nav-logo-img" src="../images/Doctorpedia_logo_nav_lrg.png"></a>
+                    <a href="/"><img class="nav-logo-img" src="../images/logo_doctorpedia.png"></a>
                 </div>
                 <ul role="menu" aria-label="Page menu" class="nav-menu">
-                    <!-- <li role="none" cl ass="our-mission-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="#our-mission">Our Mission</a></li>
-                    <li role="none" class="features-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="#features">Features</a></li>
-                    <li role="none" class="reserve-spot-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="#reserve-spot">Partner with Doctorpedia</a></li> -->
+                    <li role="none" class="our-mission-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="/mdinvest">Overview</a></li>
+                    <li role="none" class="features-item nav-menu-item"><a role="menuitem" class="sub-link nav-menu-link" href="/mdinvest/register">Access</a></li>
+                    <li role="none" class="reserve-spot-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="/mdinvest/documents">Documents</a></li>
                 </ul>
-                <div class="nav-cta" mobile-hide-block><a class="nav-cta-link benefits" href="/mdinvest">Careers<span class="nav-cta-link-text"></span></a></div>
+                <div class="nav-cta" mobile-hide-block><a class="nav-cta-link benefits contactus" href="#">Contact Us<span class="nav-cta-link-text"></span></a></div>
+
             </nav>
         </div>
         <div aria-label="Mobile Page menu" class="mobile-menu-wrap">
             <div class="nav-logo">
-                <a class="mobile-logo" href="/"><img class="mobile-logo-logo-img" src="../images/doctorpedia_logo_gradient_lrg.png"></a>
+                <a class="mobile-logo" href="/"><img class="mobile-logo-logo-img" src="../images/doctorpedialogo_white.png"></a>
             </div>
             <a href="javascript:void(0);" class="mobile-menu-btn-open"></a>
             <div class="mobile-menu hide">
@@ -235,11 +278,58 @@
                 <p>You will need to enter a valid email address you currently have access to. After submitting via the form below (can take up to 2 hours), you will recieve a unique token.</p>
             </div>
             <form method="POST">
-                <div class="outter-input">
-                    <input type="text" placeholder="What's your email?" name="email" id="email-field" value="" />
-                    <button id="email-submit">
-                        <i class="icon ion-android-arrow-forward"></i>
-                    </button>
+                <div class="row input-rows">
+                    <div class="col-lg-2 col-md-2 col-sm-2"></div>
+                    
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="outter-input">
+                            <input type="text" placeholder="First Name" name="firstName" id="first-name" value="" />
+                            <!-- <button id="email-submit">
+                                <i class="icon ion-android-arrow-forward"></i>
+                            </button> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="outter-input">
+                            <input type="text" placeholder="Last Name" name="lastName" id="last-name" value="" />
+                            <!-- <button id="email-submit">
+                                <i class="icon ion-android-arrow-forward"></i>
+                            </button> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2"></div>
+                </div>
+                <div class="row input-rows">
+                    <div class="col-lg-2 col-md-2 col-sm-2"></div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="outter-input">
+                            <input type="text" placeholder="Email Address" name="email" id="email-field" value="" />
+                            <!-- <button id="email-submit">
+                                <i class="icon ion-android-arrow-forward"></i>
+                            </button> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="outter-input">
+                            <input type="text" placeholder="Speciality" name="profession" id="specialization" value="" />
+                            <!-- <button id="email-submit">
+                                <i class="icon ion-android-arrow-forward"></i>
+                            </button> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2"></div>
+                </div>
+                <div class="row input-rows">
+                    <div class="col-lg-2 col-md-2 col-sm-2"></div>
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                        <section id="career-continue">
+                            <a href="#"><div class="continue-btn">
+                                <spane id="valid-register">Submit</spane></div> </a>
+                            <!-- <div class="learn-btn"><spane>Contact Us</spane></div>   -->
+                            <div class="why-doctorpedia"></div>          
+                        </section>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2"></div>
                 </div>
             </form>
         </section>
@@ -250,14 +340,14 @@
 
         <section class="career-form">
                 <div class="form-desc">
-                    <h4>Step 2</h4>
-                    <p>Upon receiving your access token, please enter the unique code below for access to our documents page.</p>
+                    <h8>Step 2</h4>
+                    <p>Upon receiving your access token, please enter the unique code below for access to our documents page. If you do not see your token email, please check your spam folder.</p>
                 </div>
                 <form method="POST">
                     <div class="outter-input">
                         <input type="text" placeholder="Validate Token" name="token" id="token-field" value="" />
                         <button type="submit" id="token-submit">
-                            <i class="icon ion-android-arrow-forward"></i>
+                            <i class="icon ion-ios-arrow-thin-right"></i>
                         </button>
                     </div>
                 </form>
@@ -269,14 +359,69 @@
             <span>&copy; All Rights Reserved 2018</span>
         </section>
 
+        <div id="contactus" class="modal-wrap contact-modal hide">
+            <div class="modal-outter">
+                <div class="close-contactus modal-close">CLOSE MODAL</div>
+                <div class="modal-content">
+                    <h1 style="color: white;">Contact Us</h1>
+                    <div class="modal-body">
+                        <p class="address">5792 West Jefferson Blvd.
+                            <br>Los Angeles, CA 90016</p>
+                        <p class="email"><a href="mailto:partners@doctorpedia.com" style="color: white;">partners@doctorpedia.com</a></p>
+                        <p class="telephon">310.780.2178</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="errorModal" class="modal-wrap contact-modal hide">
+                <div class="modal-outter">
+                    <div class="close-contactus modal-close">CLOSE MODAL</div>
+                    <div class="modal-content">
+                        <h1 style="color: white;">ERROR!</h1>
+                        <div class="modal-body">
+                            <div>
+                                Oops, please enter information into all fields!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
     </main>
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <script src="../scripts/build.min.js"></script>
+    <script src="../scripts/greg-script.js"></script>
+
     <script>
         $(document).ready(function() {
-            $('#email-submit').on('click', function() {
-                if ($('#email-field').val().length === 0) {
-                    alert('ur email is empty');
+
+
+            var $document = $(document);
+            var $body = $(document.body);
+            var $error = $('#errorModal');
+
+            function closeErrorModal() {
+                if (!$error.hasClass('hide')) {
+                $error.addClass('hide');
+                $body.removeClass('stop-scrolling');
+                }
+            }
+
+            function openErrorModal() {
+                $error.removeClass('hide');
+                $body.addClass('stop-scrolling');
+            }
+
+            $error.on('click', '.modal-close', function(){
+                closeErrorModal();
+            });
+
+            $('#valid-register').on('click', function() {
+                if ( $('#first-name').val().length <= 1 || $('#last-name').val().length <= 1 || $('#email-field').val() <= 3 ) {
+
+                    openErrorModal();
                 }
             })
 
@@ -286,7 +431,37 @@
                     alert('invalid token');
                 }
             })
+
+
+             // contact us modal
+            var $contactusModal = $('#contactus');
+
+            function closeContactusModal() {
+                if (!$contactusModal.hasClass('hide')) {
+                $contactusModal.addClass('hide');
+                $body.removeClass('stop-scrolling');
+                }
+            }
+            function openContactusModal() {
+                $contactusModal.removeClass('hide');
+                $body.addClass('stop-scrolling');
+            }
+
+            $body.on('click', '.contactus', function(){
+                openContactusModal();
+            });
+
+            $contactusModal.on('click', '.modal-close', function(){
+                closeContactusModal();
+            });
+
+            $body.on('click', '.contact-modal', function(){
+                closeContactusModal();
+            });
+
         })
+
+        
     </script>
 </body>
 

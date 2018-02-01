@@ -31,29 +31,36 @@ app.get('/domains', function(req, res) {
     res.sendFile(path.join(__dirname, './public/domains.html'));
 });
 
+// MDInvestor Routes
 app.get('/mdinvest', function(req, res) {
     res.sendFile(path.join(__dirname, './public/templates/career-mdinvest.html'))
 });
-
 app.get('/mdinvest/register/', function(req, res) {
     res.sendFile(path.join(__dirname, './public/templates/career-subscription.html'));
 })
-
 app.get('/mdinvest/documents', function(req, res) {
     res.sendFile(path.join(__dirname, './public/templates/career-documents.html'))
 });
 
+// Investor forms
 app.post('/mdinvest/register/', function(req, res) {
-
     var email = {
         emailAddress: '',
         emailLength: 0 
     };
+
     var token = { 
         token: undefined,
         tokenLength: 0
     };
-    
+
+    var name = {
+        firstName: '',
+        lastName: '',
+        speciality: '',
+    };
+
+
     console.log('email: ', req.body.email);
     console.log('token: ', req.body.token);
 
@@ -70,9 +77,7 @@ app.post('/mdinvest/register/', function(req, res) {
     console.log('email2: ', email.emailAddress);
     console.log('token2: ', token.token);
 
-    if ( /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email.emailAddress) && token.token === undefined) {
-
-        console.log('afasdjfalksjdfklasdf');
+    if ( /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email.emailAddress) && token.token === undefined) {        
         sendmail({
             from: 'team@doctorpedia.com',
             to: email.emailAddress,
@@ -91,8 +96,6 @@ app.post('/mdinvest/register/', function(req, res) {
     }   
 
 })
-
-
 
 app.listen(8080, function() {
     console.log('Listening On http://localhost:8080/');
