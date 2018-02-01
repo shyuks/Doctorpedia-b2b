@@ -2044,9 +2044,9 @@ a:hover {
     background-size: cover;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 600px) {
     .section8-right {
-        height: 510px;
+        min-height: 450px
     }
 }
 
@@ -2054,7 +2054,7 @@ a:hover {
     .section8-right {
         width: 50%;
         padding: 80px 10%;
-        height: auto
+        min-height: 700px
     }
 }
 

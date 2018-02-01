@@ -531,7 +531,7 @@ a:hover {
 #main-filter-btns {
     text-align: center;
     border: 1px solid black;
-    padding: 1rem 0rem;
+    padding: 1rem;
     background-color: #7ca9d9
 }
 
@@ -557,13 +557,6 @@ a:hover {
 
     .domainColumnTwo {
         padding-left: 0px !important;
-    }
-}
-
-@media (min-width: 992px) {
-
-    #main-filter-btns {
-        padding: 1rem 5rem;
     }
 }
 
