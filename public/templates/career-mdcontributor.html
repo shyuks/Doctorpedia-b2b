@@ -25,220 +25,245 @@
     http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">    
     <style>
 
-        #temp {
-            width: 100%;
-            height: 100%;
-            margin: 0px;
-            position: relative;
-            background-color: white;
-            color: black; 
-            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-        }
 
-        .ivi {
-            text-align: center;
-            height: 5px;
-            width: 100%;
-            color: black;
-            position: absolute;
-            z-index: 200;
-            background: linear-gradient(to right, #ff5e62, #ff9966);
-            background-color: linear-gradient(to right, #ff5e62, #ff9966);
-        }
+#temp {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    position: relative;
+    background-color: white;
+    color: black; 
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
 
-        .nav-wrap {
-            background-color: white;
-            width: 100%;
-            position: fixed;  
-            height: 85px !important;          
-            border-bottom: 5px solid #7ca9d9;
-        }
+.ivi {
+    text-align: center;
+    height: 5px;
+    width: 100%;
+    color: black;
+    position: absolute;
+    z-index: 200;
+    background: linear-gradient(to right, #ff5e62, #ff9966);
+    background-color: linear-gradient(to right, #ff5e62, #ff9966);
+}
 
-        .invest-selected {
-            background-color: #7ca9d9 !important; 
-            color: white !important;
-            width: 140px;
-            text-align: center;
-        }
+.nav-wrap {
+    background-color: white;
+    width: 100%;
+    position: fixed;  
+    height: 85px !important;          
+    border-bottom: 5px solid #7ca9d9;
+}
 
-        #career-container {
-            padding-top: 100px;
-            padding-right: 60px;
-            padding-left: 60px;
-            padding-bottom: 80px;
-            text-align: center;
-        }
+.invest-selected {
+    background-color: #7ca9d9 !important; 
+    color: white !important;
+    width: 140px;
+    text-align: center;
+}
 
-        #career-container p {
-            font-size: 24px;
-            color: black;
-            font-style: normal;
-            font-weight: 200;
-            margin: 120px;
-        }
+#career-container {
+    padding-top: 100px;
+    padding-right: 60px;
+    padding-left: 60px;
+    padding-bottom: 80px;
+    text-align: center;
+}
 
-        #career-videos {
-            width: 100%;
-            text-align: center;
-            position: relative;
-        }
+#career-container p {
+    font-size: 24px;
+    color: black;
+    font-style: normal;
+    font-weight: 200;
+    margin: 120px;
+}
 
-        .career-videos-align {
-        }
+#career-videos {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
 
-        .learning-video {
-            border: 1px solid black;
-            position: relative;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            padding-bottom: 260px;
-            background-color: white;
-        }
+.career-videos-align {
+}
 
-        .learning-video-1 {
-            background: url('../images/hero.jpg');
-            background-position: center;
-            background-size: cover;
-        }
-        .learning-video-2 {
-            background: url('../images/desktop_limitless_reach.png');
-            background-position: center;
-            background-size: cover;
-        }
-        .learning-video-3 {
-            background: url('../images/desktop_more_time.png');
-            background-position: center;
-            background-size: cover;
-        }
+.learning-video {
+    border: 1px solid black;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-bottom: 260px;
+    background-color: white;
+}
 
-        .icon-1 {
-            position: relative;
-            margin: auto;
-            margin-bottom: 20px;
-            background: url('../images/icons/icon_treatment_blue.png');   
-            width: 64px;
-            height: 64px;   
-            background-position: center;
-            background-size: cover;         
-        }
+.learning-video-1 {
+    background: url('../images/hero.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.learning-video-2 {
+    background: url('../images/desktop_limitless_reach.png');
+    background-position: center;
+    background-size: cover;
+}
+.learning-video-3 {
+    background: url('../images/desktop_more_time.png');
+    background-position: center;
+    background-size: cover;
+}
 
-        .icon-2 {
-            position: relative;
-            margin: auto;
-            margin-bottom: 20px;
-            background: url('../images/icons/icon_non_profit_blue.png');   
-            width: 64px;
-            height: 64px;   
-            background-position: center;
-            background-size: cover;         
-        }
+.icon-1 {
+    position: relative;
+    margin: auto;
+    margin-bottom: 20px;
+    background: url('../images/icons/icon_treatment_blue.png');   
+    width: 64px;
+    height: 64px;   
+    background-position: center;
+    background-size: cover;         
+}
 
-        .icon-3 {
-            position: relative;
-            margin: auto;
-            margin-bottom: 20px;
-            background: url('../images/icons/icon_hospitals_blue.png');   
-            width: 64px;
-            height: 64px;   
-            background-position: center;
-            background-size: cover;         
-        }
+.icon-2 {
+    position: relative;
+    margin: auto;
+    margin-bottom: 20px;
+    background: url('../images/icons/icon_non_profit_blue.png');   
+    width: 64px;
+    height: 64px;   
+    background-position: center;
+    background-size: cover;         
+}
 
-        .achievement {
-            position: absolute;
-            background-color: #7ca9d9;
-            border: 1px solid #7ca9d9; 
-            padding: 30px;
-            top: 88%;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            
-            left: 77%;
-        }
+.icon-3 {
+    position: relative;
+    margin: auto;
+    margin-bottom: 20px;
+    background: url('../images/icons/icon_hospitals_blue.png');   
+    width: 64px;
+    height: 64px;   
+    background-position: center;
+    background-size: cover;         
+}
 
-        .steps {
-            font-size: 16px;
-            padding: 10px;  
-        }
+.achievement {
+    position: absolute;
+    background-color: #7ca9d9;
+    border: 1px solid #7ca9d9; 
+    padding: 30px;
+    top: 88%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+    left: 77%;
+}
 
-        #career-continue {
-            position: relative;
-            text-align: center;
-            padding-top: 80px;
-        }
+.steps {
+    font-size: 16px;
+    padding: 10px;  
+}
 
-        .continue-btn {
-            position: relative;
-            text-align: center;
-            border: 1px solid #7ca9d9;
-            background-color: linear-gradient(to right, #ff5e62, #ff9966);
-            background: #7ca9d9;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            color: white;
-            width: 20%;
-            margin: auto;
-            padding: 20px;
-            margin-top: 80px;
-            border-radius: 32px;
-            
-        }
+#career-continue {
+    position: relative;
+    text-align: center;
+    padding-top: 80px;
+}
 
-        spane {
-            font-size: 20px;
-            letter-spacing: 1px;
-        }
+.continue-btn {
+    position: relative;
+    text-align: center;
+    border: 1px solid #7ca9d9;
+    background-color: linear-gradient(to right, #ff5e62, #ff9966);
+    background: #7ca9d9;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: white;
+    width: 20%;
+    margin: auto;
+    padding: 20px;
+    margin-top: 80px;
+    border-radius: 32px;
+    
+}
 
-        .learn-btn {
-            position: relative;
-            text-align: center;
-            border: 1px solid #ff5e62;
-            background-color: linear-gradient(to right, #ff5e62, #ff9966);
-            background: #ff5e62;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            color: white;
-            width: 20%;
-            margin: auto;
-            padding: 20px;
-        }
+spane {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
 
-        #footer {
-            padding: 80px;
-            margin: auto;
-            text-align: center;
-            width: 100%;
-        }
+.learn-btn {
+    position: relative;
+    text-align: center;
+    border: 1px solid #ff5e62;
+    background-color: linear-gradient(to right, #ff5e62, #ff9966);
+    background: #ff5e62;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: white;
+    width: 20%;
+    margin: auto;
+    padding: 20px;
+}
 
-        .footer-img {
-            background: url('../images/logo_doctorpedia.png');
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 72px;
-            margin-bottom: 20px;   
-        }
+#footer {
+    padding: 80px;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
 
-        /* .why-doctorpedia {
-            background: url('../images/why_doctorpedia.png');
-            background-size: cover;
-            width: 20px;
-            height: 20px;
-            background-position: center;
-        } */
+.footer-img {
+    background: url('../images/logo_doctorpedia.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 72px;
+    margin-bottom: 20px;   
+}
 
-        .modal-content {
-            background-color: #2f4266;
-            color: white;
-        }
+/* .why-doctorpedia {
+    background: url('../images/why_doctorpedia.png');
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    background-position: center;
+} */
 
-        .overlay-play {
-            position: absolute;
-            background-color: rgba(0, 0, 0, 0.4);
-            width: 100%;
-            height: 100%;
-        }
-        .icon-play {
-            font-size: 100px;
-            position: relative;
-            padding-top: 50px;
-            color: #7ca9d9; 
-        }
+.modal-content {
+    background-color: #2f4266;
+    color: white;
+}
+
+.overlay-play {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+}
+.icon-play {
+    font-size: 100px;
+    position: relative;
+    padding-top: 50px;
+    color: #7ca9d9; 
+}
+
+.mobile-logo img {
+    width: 48px !important;
+}
+.mobile-menu-btn-open {
+    display: none !important;
+}
+
+@media (max-width: 900px) {
+    #career-container p {
+        font-size: 18px;
+        margin: 10px;
+    }
+    .steps {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+    .continue-btn {
+        width: 80%;
+    }
+    .footer-img {
+        display: none;
+    }
+}
 
     </style>
 </head>
@@ -260,12 +285,12 @@
         </div>
         <div aria-label="Mobile Page menu" class="mobile-menu-wrap">
             <div class="nav-logo">
-                <a class="mobile-logo" href="/"><img class="mobile-logo-logo-img" src="../images/doctorpedialogo_white.png"></a>
+                <a class="mobile-logo" href="/"><img class="mobile-logo-logo-img" src="../images/favicon.png"></a>
             </div>
             <a href="javascript:void(0);" class="mobile-menu-btn-open"></a>
             <div class="mobile-menu hide">
                 <div class="mobile-menu-logo">
-                    <a class="mobile-menu-logo-link" href="/"><img class="mobile-logo-logo-img" src="../images/doctorpedia_logo_white_lrg.png"></a>
+                    <a class="mobile-menu-logo-link" href="/"><img class="mobile-logo-logo-img" src="../images/favicon.png"></a>
                 </div>
                 <a href="javascript:void(0);" class="mobile-menu-btn-close"></a>
                 <div class="menu-holder">

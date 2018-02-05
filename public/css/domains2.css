@@ -60,6 +60,7 @@
 
 .card-description {
     position: relative;
+    
     font-size: 12px;
 }
 
@@ -71,7 +72,33 @@
     max-width: 100%;
 }
 
+.header-nav-img-mobile {
+    background: url('../images/doctorpedialogo_white.png');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    width: 220px;
+    height: 32px;
+}
+
+.side-bar-nav-mobile {
+    display: none;
+    position: fixed;
+    background-color: #7ca9d9;
+    text-align: center;
+    height: 120px;
+    width: 100%;
+    top: 0;
+    right: 0;
+    float: right;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
+}
+
 .side-bar-nav {
+    display: block;
     position: fixed;    
     text-align: center;
     background-color: #7ca9d9;
@@ -88,6 +115,13 @@
     margin: 20px;
 }
 
+.tools-mobile {
+    display: inline-block;
+}
+
+.alphabeta-mobile {
+}
+
 .alphabeta {
     padding-top: 60px;
     color: white;
@@ -96,6 +130,12 @@
 
 .alphabeta span {
     cursor: pointer;
+    padding: 3px;
+}
+.alphabeta-mobile span {
+    cursor: pointer;
+    padding: 5px;
+    color: white;
 }
 
 .nav-footer {
@@ -104,4 +144,13 @@
     top: 80%;
     width: 100%;
     color: white;
+}
+
+@media (max-width: 998px) {
+    .side-bar-nav {
+        display: none;
+    }
+    .side-bar-nav-mobile {
+        display: block;
+    }
 }

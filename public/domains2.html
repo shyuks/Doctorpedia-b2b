@@ -23,55 +23,86 @@
 
     <main id="main">
 
-
         <section id="cards-background">
-
             <div id="cards-top"></div>
-            
             <div class="container-fluid no-padding">
                 <div class="row no-padding">
                     <span id="domain-cards"></span>                        
                 </div>
             </div>
-
-
         </section>
 
         <div class="side-bar-nav">
-                <div class="tools">
-                    <a href="/"><div class="header-nav-img"></div></a> 
-                    <div class="alphabeta">
-                        <span id="clickA">A</span>
-                        <span id="clickB">B</span>
-                        <span id="clickC">C</span>
-                        <span id="clickD">D</span>
-                        <span id="clickE">E</span>
-                        <span id="clickF">F</span>
-                        <span id="clickG">G</span>
-                        <span id="clickH">H</span>
-                        <span id="clickI">I</span>
-                        <span id="clickJ">J</span>
-                        <span id="clickK">K</span>
-                        <span id="clickL">L</span>
-                        <span id="clickM">M</span>
-                        <span id="clickN">N</span>
-                        <span id="clickO">O</span>
-                        <span id="clickP">P</span>
-                        <span id="clickQ">Q</span>
-                        <span id="clickR">R</span>
-                        <span id="clickS">S</span>
-                        <span id="clickT">T</span>
-                        <span id="clickU">U</span>
-                        <span id="clickV">V</span>
-                        <span id="clickW">W</span>
-                        <span id="clickX">X</span>
-                        <span id="clickY">Y</span>
-                        <span id="clickZ">Z</span>
-                    </div>
+            <div class="tools">
+                <a href="/"><div class="header-nav-img"></div></a> 
+                <div class="alphabeta">
+                    <span class="clickA">A</span>
+                    <span class="clickB">B</span>
+                    <span class="clickC">C</span>
+                    <span class="clickD">D</span>
+                    <span class="clickE">E</span>
+                    <span class="clickF">F</span>
+                    <span class="clickG">G</span>
+                    <span class="clickH">H</span>
+                    <span class="clickI">I</span>
+                    <span class="clickJ">J</span>
+                    <span class="clickK">K</span>
+                    <span class="clickL">L</span>
+                    <span class="clickM">M</span>
+                    <span class="clickN">N</span>
+                    <span class="clickO">O</span>
+                    <span class="clickP">P</span>
+                    <span class="clickQ">Q</span>
+                    <span class="clickR">R</span>
+                    <span class="clickS">S</span>
+                    <span class="clickT">T</span>
+                    <span class="clickU">U</span>
+                    <span class="clickV">V</span>
+                    <span class="clickW">W</span>
+                    <span class="clickX">X</span>
+                    <span class="clickY">Y</span>
+                    <span class="clickZ">Z</span>
                 </div>
-                <div class="nav-footer">Over 2,000 domains for your investments!</div>
-                
             </div>
+            <div class="nav-footer">Over 2,000 domains for your investments!</div>
+        </div>
+
+        <div class="side-bar-nav-mobile">
+            <div class="tools-mobile">
+                <a href="/"><div class="header-nav-img-mobile"></div></a> 
+                <div class="alphabeta-mobile">
+                    <span class="clickA">A</span>
+                    <span class="clickB">B</span>
+                    <span class="clickC">C</span>
+                    <span class="clickD">D</span>
+                    <span class="clickE">E</span>
+                    <span class="clickF">F</span>
+                    <span class="clickG">G</span>
+                    <span class="clickH">H</span>
+                    <span class="clickI">I</span>
+                    <span class="clickJ">J</span>
+                    <span class="clickK">K</span>
+                    <span class="clickL">L</span>
+                    <span class="clickM">M</span>
+                    <span class="clickN">N</span>
+                    <span class="clickO">O</span>
+                    <span class="clickP">P</span>
+                    <span class="clickQ">Q</span>
+                    <span class="clickR">R</span>
+                    <span class="clickS">S</span>
+                    <span class="clickT">T</span>
+                    <span class="clickU">U</span>
+                    <span class="clickV">V</span>
+                    <span class="clickW">W</span>
+                    <span class="clickX">X</span>
+                    <span class="clickY">Y</span>
+                    <span class="clickZ">Z</span>
+                </div>
+            </div>
+            <!-- <div class="nav-footer">Over 2,000 domains for your investments!</div> -->
+        </div>
+
+
     </main>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -2344,117 +2375,114 @@
             return card;
         }
 
-        $("#clickA").on('click', function() {
+        $(".clickA").on('click', function() {
             $(".card-style").remove();
             mapCards(domainsA);
         })
-        $("#clickB").on('click', function() {
+        $(".clickB").on('click', function() {
             $(".card-style").remove();
             mapCards(domainsB);
         })
-        $("#clickC").on('click', function() {
+        $(".clickC").on('click', function() {
             $(".card-style").remove();
             mapCards(domainsC);
         })
-        $("#clickD").on('click', function() {
+        $(".clickD").on('click', function() {
             $(".card-style").remove();
             mapCards(domainsD);
         })
-        $("#clickE").on('click', function() {
+        $(".clickE").on('click', function() {
             $(".card-style").remove();
             mapCards(domainsE);
         })
-        $("#clickF").on('click', function() {
+        $(".clickF").on('click', function() {
             $(".card-style").remove();
             mapCards(domainsF);
         })
-        $("#clickG").on('click', function() {
+        $(".clickG").on('click', function() {
             $(".card-style").remove();
             mapCards(domainsG);
         })
-        $("#clickH").on('click', function() {
+        $(".clickH").on('click', function() {
             $(".card-style").remove();
             mapCards(domainsH);
         })
-        $("#clickI").on('click', function() {
+        $(".clickI").on('click', function() {
             $(".card-style").remove();
             mapCards(domainsI);
         })
-        $("#clickJ").on('click', function() {
+        $(".clickJ").on('click', function() {
             $(".card-style").remove();
             mapCards(domainsJ);
         })
-        $("#clickK").on('click', function() {
+        $(".clickK").on('click', function() {
             $(".card-style").remove();
             mapCards(domainsK);
         })
-        $("#clickL").on('click', function() {
+        $(".clickL").on('click', function() {
             $(".card-style").remove();
             mapCards(domainsL);
         })
-        $("#clickM").on('click', function() {
+        $(".clickM").on('click', function() {
             $(".card-style").remove();
             mapCards(domainsM);
         })
-        $("#clickN").on('click', function() {
+        $(".clickN").on('click', function() {
             $(".card-style").remove();
             mapCards(domainsN);
         })
-        $("#clickO").on('click', function() {
+        $(".clickO").on('click', function() {
             $(".card-style").remove();
             mapCards(domainsO);
         })
-        $("#clickP").on('click', function() {
+        $(".clickP").on('click', function() {
             $(".card-style").remove();
             mapCards(domainsP);
         })
-        $("#clickQ").on('click', function() {
+        $(".clickQ").on('click', function() {
             $(".card-style").remove();
             mapCards(domainsQ);
         })
-        $("#clickR").on('click', function() {
+        $(".clickR").on('click', function() {
             $(".card-style").remove();
             mapCards(domainsR);
         })
-        $("#clickS").on('click', function() {
+        $(".clickS").on('click', function() {
             $(".card-style").remove();
             mapCards(domainsS);
         })
-        $("#clickT").on('click', function() {
+        $(".clickT").on('click', function() {
             $(".card-style").remove();
             mapCards(domainsT);
         })
-        $("#clickU").on('click', function() {
+        $(".clickU").on('click', function() {
             $(".card-style").remove();
             mapCards(domainsU);
         })
-        $("#clickV").on('click', function() {
+        $(".clickV").on('click', function() {
             $(".card-style").remove();
             mapCards(domainsV);
         })
-        $("#clickW").on('click', function() {
+        $(".clickW").on('click', function() {
             $(".card-style").remove();
             mapCards(domainsW);
         })
-        $("#clickX").on('click', function() {
+        $(".clickX").on('click', function() {
             $(".card-style").remove();
             mapCards(domainsX);
         })
-        $("#clickY").on('click', function() {
+        $(".clickY").on('click', function() {
             $(".card-style").remove();
             mapCards(domainsY);
         })
-        $("#clickZ").on('click', function() {
+        $(".clickZ").on('click', function() {
             $(".card-style").remove();
             mapCards(domainsZ);
         })
 
 
         function mapCards(domains) {
-
             for (var i = 0; i < domains.length; i++) {
-                // $('.row').append("<div class='col-lg-3 col-md-4 col-sm-4 card-style'>" + "<div class='card-icon'>hello</div>" + "<div class='card-middle'>middle</div>" + "<div class='card-text'>" + domainsA[i] + "</div>" + "</div>");
-
                 $('.row').append(placeCardsHtml(takeDotComOut(domains), i));
             }
         }

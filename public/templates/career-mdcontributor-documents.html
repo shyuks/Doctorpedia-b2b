@@ -109,7 +109,7 @@
             width: 50%;
             margin: auto;
             padding: 20px;
-            margin-top: 80px;
+            margin-top: 20px;
         }
 
         .document a {
@@ -137,7 +137,35 @@
             background-position: center;
         } */
 
+        .mobile-logo img {
+            width: 48px !important;
+        }
+        .mobile-menu-btn-open {
+            display: none !important;
+        }
 
+        @media (max-width: 900px) {
+            #career-container p {
+                font-size: 18px;
+                margin: 10px;
+            }
+            .form-desc p {
+                font-size: 16px;
+                margin: 10px;
+            }
+            .outter-input {
+                margin-bottom: 10px;
+            }
+            .document {
+                margin-bottom: 20px;
+            }
+            .continue-btn {
+                width: 80%;
+            }
+            .footer-img {
+                display: none;
+            }
+        }
 
     </style>
 </head>
@@ -150,9 +178,9 @@
                     <a href="/"><img class="nav-logo-img" src="../images/logo_doctorpedia.png"></a>
                 </div>
                 <ul role="menu" aria-label="Page menu" class="nav-menu">
-                    <li role="none" class="our-mission-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="/mdcontributor">Overview</a></li>
-                    <li role="none" class="features-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="/mdcontributor/register">Access</a></li>
-                    <li role="none" class="reserve-spot-item nav-menu-item"><a role="menuitem" class="doc-link nav-menu-link" href="/mdcontributor/register">Documents</a></li>
+                    <li role="none" class="our-mission-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="/mdinvest">Overview</a></li>
+                    <li role="none" class="features-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="/mdinvest/register">Access</a></li>
+                    <li role="none" class="reserve-spot-item nav-menu-item"><a role="menuitem" class="doc-link nav-menu-link" href="/mdinvest/register">Documents</a></li>
                 </ul>
                 <div class="nav-cta" mobile-hide-block><a class="nav-cta-link benefits contactus" href="#">Contact Us<span class="nav-cta-link-text"></span></a></div>
 
@@ -160,12 +188,12 @@
         </div>
         <div aria-label="Mobile Page menu" class="mobile-menu-wrap">
             <div class="nav-logo">
-                <a class="mobile-logo" href="/"><img class="mobile-logo-logo-img" src="../images/doctorpedialogo_white.png"></a>
+                <a class="mobile-logo" href="/"><img class="mobile-logo-logo-img" src="../images/favicon.png"></a>
             </div>
             <a href="javascript:void(0);" class="mobile-menu-btn-open"></a>
             <div class="mobile-menu hide">
                 <div class="mobile-menu-logo">
-                    <a class="mobile-menu-logo-link" href="/"><img class="mobile-logo-logo-img" src="../images/doctorpedia_logo_white_lrg.png"></a>
+                    <a class="mobile-menu-logo-link" href="/"><img class="mobile-logo-logo-img" src="../images/favicon.png"></a>
                 </div>
                 <a href="javascript:void(0);" class="mobile-menu-btn-close"></a>
                 <div class="menu-holder">
@@ -195,18 +223,20 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-2 col-sm-2"></div>
                     <div class="col-lg-4 col-md-4 col-sm-4">
-                        <div class="document">
-                            <a href="../images/doctorpedia_logo_white_lrg.png" download>Download                    <i class="icon ion-ios-arrow-thin-down"></i>
-                            </a>
-                        </div>
+                        <span class="download-titles">1. Investment Summary</span>
+                        <a href="../images/doctorpedia_logo_white_lrg.png" download>
+                            <div class="document">
+                                Download <i class="icon ion-ios-arrow-thin-down"></i>
+                            </div>
+                        </a>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4">
-                        <div class="document">
-                            <a href="../images/doctorpedia_logo_white_lrg.png" download>
-                                <a href="../images/doctorpedia_logo_white_lrg.png" download>Download                    <i class="icon ion-ios-arrow-thin-down"></i>
-                                </a>
-                            </a>
-                        </div>                        
+                        <span class="download-titles">2. Key Financials</span>
+                        <a href="../images/doctorpedia_logo_white_lrg.png" download>
+                            <div class="document">
+                                Download<i class="icon ion-ios-arrow-thin-down"></i>
+                            </div>                        
+                        </a>
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-2"></div>
                 </div>
@@ -218,20 +248,20 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-2 col-sm-2"></div>
                     <div class="col-lg-4 col-md-4 col-sm-4">
-                        <div class="document">
-                            <a href="../images/doctorpedia_logo_white_lrg.png" download>
-                                <a href="../images/doctorpedia_logo_white_lrg.png" download>Download                    <i class="icon ion-ios-arrow-thin-down"></i>
-                                </a>
-                            </a>
-                        </div>
+                        <span class="download-titles">3. Investor Deck</span>
+                        <a href="../images/doctorpedia_logo_white_lrg.png" download>                        
+                            <div class="document">
+                                Download <i class="icon ion-ios-arrow-thin-down"></i>
+                            </div>
+                        </a>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4">
-                        <div class="document">
-                            <a href="../images/doctorpedia_logo_white_lrg.png" download>
-                                <a href="../images/doctorpedia_logo_white_lrg.png" download>Download                    <i class="icon ion-ios-arrow-thin-down"></i>
-                                </a>
-                            </a>
-                        </div>
+                        <span class="download-titles">4. Investment Paperwork</span>
+                        <a href="../images/doctorpedia_logo_white_lrg.png" download>
+                            <div class="document">
+                                Download<i class="icon ion-ios-arrow-thin-down"></i>
+                            </div>
+                        </a>
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-2"></div>
                 </div>
