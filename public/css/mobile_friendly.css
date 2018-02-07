@@ -1,9 +1,0 @@
-@media (min-width: 1024px) {
-    .mobile-logo {
-        padding: 20px !important; 
-    }
-    .mobile-logo img {
-        height: 64px !important;
-        width: 64px !important;
-    }
-}

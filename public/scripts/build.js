@@ -704,12 +704,15 @@ $(document).ready(function(){
 
   // video-modal
   var $videoModal = $('#video-modal');
+
   function closeVideoModal() {
     if (!$videoModal.hasClass('hide')) {
       $videoModal.addClass('hide');
       $body.removeClass('stop-scrolling');
     }
   }
+
+
   function openVideoModal() {
     $videoModal.removeClass('hide');
     $body.addClass('stop-scrolling');
@@ -721,10 +724,15 @@ $(document).ready(function(){
 
   $videoModal.on('click', '.modal-close', function(){
     closeVideoModal();
+    vimeoWrap = $('#video-modal');
+    vimeoWrap.html( vimeoWrap.html() );
   });
+
 
   $body.on('click', '.video-modal', function(){
     closeVideoModal();
+    vimeoWrap = $('#video-modal');
+    vimeoWrap.html( vimeoWrap.html() );
   });
 
   $(".section9-tiers").owlCarousel({

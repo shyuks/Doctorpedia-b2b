@@ -26,7 +26,7 @@
         <section id="cards-background">
             <div id="cards-top"></div>
             <div class="container-fluid no-padding">
-                <div class="row no-padding">
+                <div class="cards-table row no-padding">
                     <span id="domain-cards"></span>                        
                 </div>
             </div>
@@ -35,6 +35,7 @@
         <div class="side-bar-nav">
             <div class="tools">
                 <a href="/"><div class="header-nav-img"></div></a> 
+                <div class="nav-title">The World's Largest Condition-Specific Domains</div>
                 <div class="alphabeta">
                     <span class="clickA">A</span>
                     <span class="clickB">B</span>
@@ -64,7 +65,7 @@
                     <span class="clickZ">Z</span>
                 </div>
             </div>
-            <div class="nav-footer">Over 2,000 domains for your investments!</div>
+            <!-- <div class="nav-footer">Over 2,000 domains for your investments!</div> -->
         </div>
 
         <div class="side-bar-nav-mobile">
@@ -100,8 +101,81 @@
                 </div>
             </div>
             <!-- <div class="nav-footer">Over 2,000 domains for your investments!</div> -->
+            
         </div>
 
+        <div id="invest-form" class="modal-wrap contact-modal hide">
+            <div class="modal-outter">
+                <div class="close-contactus modal-close">CLOSE MODAL</div>
+                <div class="modal-content">
+
+                    <h3>Next Steps</h3>
+                    
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div id="investor-form">
+
+                                    <form method="POST">
+                                        <div class="outter-input">
+                                            <input id="first-name" type="text" name="firstName" value="" placeholder="First Name" />
+                                        </div>
+
+                                        <div class="outter-input">
+                                            <input id="last-name" type="text" name="lastName" value="" placeholder="Last Name" />
+                                        </div>
+
+                                        <div class="outter-input">
+                                            <input id="email" type="text" name="email" value="" placeholder="Email Address" />
+                                        </div>
+
+                                        <div class="outter-input">
+                                            <input id="phone" type="text" name="phoneNumber" value="" placeholder="Phone Number" />
+                                        </div>
+                                        
+                                        <div class="continue-btn" style="cursor:pointer;">
+                                            <input id="submit-investor" type="submit" style="border: none; background-color: white;    cursor: pointer;
+                                            " />      
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div id="errorModal" class="modal-wrap contact-modal hide">
+            <div class="modal-outter">
+                <div class="close-contactus modal-close">CLOSE MODAL</div>
+                <div class="modal-content">
+                    <h1 style="color: white;">Oops!</h1>
+                    <div class="modal-body">
+                        <div style="color: white; font-size: 20px; text-align: center;"> 
+                            Redirecting... <br>
+                            Please enter information into all fields!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="successModal" class="modal-wrap contact-modal hide">
+            <div class="modal-outter">
+                <div class="close-contactus modal-close">CLOSE MODAL</div>
+                <div class="modal-content">
+                    <h1 style="color: white;">Thank you for your interest in Doctorpedia!</h1>
+                    <div class="modal-body">
+                        <div style="color: white; font-size: 20px; text-align: center;">
+                           Please wait while we redirect you!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </main>
 
@@ -2342,25 +2416,50 @@
         ]
 
         function takeDotComOut(domainArray) {
-            
             this.domains = domainArray;
-
             var noDotCom = [];
-
             for (var i = 0; i < this.domains.length; i++) {
                 var index = this.domains[i].replace('.com', '');
                 noDotCom.push(index);
             }
-
             return noDotCom;
         }
 
 
+        var $document = $(document);
+        var $body = $(document.body);
+        var $error = $('#errorModal');
+        var $success = $('#successModal');        
+        var $contactusModal = $('#invest-form');
 
+        function closeContactusModal() {
+            if (!$contactusModal.hasClass('hide')) {
+                $contactusModal.addClass('hide');
+                $body.removeClass('stop-scrolling');
+            }
+        }
+
+        function openContactusModal() {
+            $contactusModal.removeClass('hide');
+            $body.addClass('stop-scrolling');
+        }
+
+        $body.on('click', '.invest-button', function() {
+            openContactusModal();
+        });
+
+        $body.on('click', '.contribute-button', function() {
+            openContactusModal();
+        });
+
+        $contactusModal.on('click', '.modal-close', function(){
+            closeContactusModal();
+        });
+        
         function placeCardsHtml(domains, i) {
             var card = '';
             
-            card += "<div class='col-lg-3 col-md-4 col-sm-4 card-style'>";
+            card += "<div id='dele' class='col-lg-3 col-md-4 col-sm-4 card-style' style='padding: 0;'>";
             card +=     "<div class='card-icon'></div>";
             card +=         "<div class='card-middle'></div>";
             card +=             "<div class='card-text'><a href=" + "http://www." + domains[i]+ ".com" + ">";
@@ -2368,12 +2467,51 @@
             card +=             "</a></div>";
             card +=             "<div class='card-description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
             card +=             "</div>";
-            card +=         "</div>";
+            card +=             "<div id='btn-container'>"
+            card +=                 "<div class='invest-button'>Invest</div>"
+            card +=                 "<div class='contribute-button'>Contribute</div>"   
+            card +=             "</div>"
+            card +=         "</div>"         
             card +=     "</div>";
             card += "</div>";
             
             return card;
         }
+
+
+
+        function closeSuccessModal() {
+            if (!$success.hasClass('hide')) {
+                $success.addClass('hide');
+                $body.removeClass('stop-scrolling');
+            }
+        }
+        function openSuccessModal() {
+            $success.removeClass('hide');
+            $body.addClass('stop-scrolling');
+        }
+
+        function closeErrorModal() {
+            if (!$error.hasClass('hide')) {
+                $error.addClass('hide');
+                $body.removeClass('stop-scrolling');
+            }
+        }
+        function openErrorModal() {
+            $error.removeClass('hide');
+            $body.addClass('stop-scrolling');
+        }
+
+        $("#submit-investor").on('click', function() {
+            if ( $('#first-name').val() < 1 || $('#last-name').val() < 1 || $('#email').val() < 3 || $('#phone').val() < 5 ) {
+                openErrorModal();
+            } else {
+                openSuccessModal();
+            }         
+        })
+
+        $(document).on('click', '.invest-button', function() {
+        })
 
         $(".clickA").on('click', function() {
             $(".card-style").remove();
@@ -2483,7 +2621,7 @@
 
         function mapCards(domains) {
             for (var i = 0; i < domains.length; i++) {
-                $('.row').append(placeCardsHtml(takeDotComOut(domains), i));
+                $('.cards-table').append(placeCardsHtml(takeDotComOut(domains), i));
             }
         }
 
