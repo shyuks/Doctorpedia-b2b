@@ -1,7 +1,7 @@
 #cards-background {
     width: 100%;
     height: 100%;
-    background: url('../images/domain-background.png');
+    background: #cce3fc;
     background-position: cover;
     background-size: auto;
     opacity: 0.6;
@@ -22,8 +22,8 @@
 
 .card-style {
     position: relative;
-    background-color: white;
-    border: 1px solid white;
+    background-color: #7ca9d9;
+    border: 1px solid #7ca9d9;
     padding: 40px;
     padding-top: 80px;
     padding-bottom: 80px;
@@ -32,14 +32,14 @@
 }
 
 .card-icon {
-    position: absolute;
+    /* position: absolute;
     background-color: #7ca9d9;
     height: 64px;
     width: 64px;
     border: 1px solid #7ca9d9;
     top: -1px;
     left: -1px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
     
 }
 
@@ -52,16 +52,19 @@
     position: absolute;
     top: 5px;
     right: 10px;
-    font-size: 14px;
+    font-size: 18px;
 }
 .card-text a {
     text-decoration: none;
+    color: white;
 }
 
 .card-description {
     position: relative;
-    
     font-size: 12px;
+    margin-top: 30px;
+    padding: 20px;
+    color: white;
 }
 
 .header-nav-img {
@@ -87,7 +90,7 @@
 .side-bar-nav-mobile {
     display: none;
     position: fixed;
-    background-color: #7ca9d9;
+    background-color: rgb(52, 133, 209);
     text-align: center;
     height: 120px;
     width: 100%;
@@ -101,7 +104,7 @@
     display: block;
     position: fixed;    
     text-align: center;
-    background-color: #7ca9d9;
+    background-color: rgb(50, 107, 160);
     width: 20%;
     top: 0;
     right: 0;
@@ -131,11 +134,20 @@
 .alphabeta span {
     cursor: pointer;
     padding: 3px;
+    text-shadow: 0.8px 0.8px grey;    
 }
 .alphabeta-mobile span {
     cursor: pointer;
     padding: 5px;
     color: white;
+    text-shadow: 0.8px 0.8px grey;    
+}
+
+.nav-title {
+    color: white;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-shadow: 0.8px 0.8px grey;
 }
 
 .nav-footer {
@@ -145,6 +157,108 @@
     width: 100%;
     color: white;
 }
+
+#btn-container {
+    background-color: grey;
+    margin-top: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+.invest-button {
+    display: inline-block;
+    width: 50%;
+    background-color: rgb(12, 62, 109);
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    box-shadow: inset 0px 0px 7px 0px rgba(0, 0, 0, 1);
+}
+
+.contribute-button {
+    display: inline-block;
+    width: 50%;
+    background-color: rgb(3, 101, 192);
+    color: white;
+    padding-top: 30px;   
+    padding-bottom: 30px;
+    box-shadow: inset 0px 0px 5x 0px rgba(0, 0, 0, 1);    
+}
+
+.contribute-button:hover, .invest-button:hover {
+    cursor: pointer;
+}
+
+
+
+/* Modal Form Invest/Contribute */
+
+.modal-outter {
+    background-color:#7ca9d9 !important;   
+    border: none !important; 
+}
+.modal-content {
+    background-color:#7ca9d9 !important;  
+    border: none !important;  
+}
+
+.modal-content h3 {
+    text-align: center;
+    color: white;
+}
+
+
+.outter-input {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    max-width: 300px;
+    background-color: white !important;
+    display: flex;
+    border-radius: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.outter-input input {
+    width: 100%;
+    border-style: none;
+    background: transparent;
+    outline: none;
+    vertical-align: middle;
+    flex-grow: 1;
+    font-size: 20px;
+    padding-left: 10px;
+    color: black;
+}
+
+.continue-btn {
+    position: relative;
+    text-align: center;
+    border: 1px solid #7ca9d9 !important;
+    background: white !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: white;
+    width: 50%;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+
+#investor-form {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    background-color:#7ca9d9;
+}
+
 
 @media (max-width: 998px) {
     .side-bar-nav {

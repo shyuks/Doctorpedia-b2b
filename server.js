@@ -1,3 +1,5 @@
+// import { setTimeout } from 'timers';
+
 var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
@@ -59,7 +61,9 @@ app.get('/mdinvest/documents', function(req, res) {
 
 
 // MDInvestor forms
-app.post('/mdcontributor/register/', function(req, res) {
+app.post('/mdcontributor/register', function(req, res) {
+
+    console.log('req:body; ', req.body);
     var email = {
         emailAddress: '',
         emailLength: 0 
@@ -70,15 +74,23 @@ app.post('/mdcontributor/register/', function(req, res) {
         tokenLength: 0
     };
 
-    var name = {
+    var info = {
         firstName: '',
         lastName: '',
         speciality: '',
     };
 
+    // console.log('first name: ', req.body.firstName);
+    // console.log('last name: ', req.body.lastName);    
+    // console.log('profession: ', req.body.profession);        
+    // console.log('email: ', req.body.email);
+    // console.log('token: ', req.body.token);
 
-    console.log('email: ', req.body.email);
-    console.log('token: ', req.body.token);
+    if (req.body.firstName !== undefined && req.body.lastName !== undefined) {
+        info.firstName = req.body.firstName;
+        info.lastName = req.body.lastName;
+        info.speciality = req.body.profession;
+    }
 
     if (req.body.email !== undefined) {
         email.emailAddress = req.body.email;
@@ -90,76 +102,28 @@ app.post('/mdcontributor/register/', function(req, res) {
         token.tokenLength = req.body.token.length;
     };
 
-    console.log('email2: ', email.emailAddress);
-    console.log('token2: ', token.token);
+    // console.log('email2: ', email.emailAddress);
+    // console.log('token2: ', token.token);
 
     if ( /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email.emailAddress) && token.token === undefined) {        
+
         sendmail({
             from: 'team@doctorpedia.com',
             to: email.emailAddress,
-            subject: 'Welcome to Doctorpedia Investor Programme',
-            html: 'One time access unique token: 872923'
+            subject: 'Welcome to Doctorpedia Investor Programme' + info.firstName + " " + info.lastName,
+            html: 'One time access unique token: ' + Math.floor(Math.random()*90000) + 100
         }, function(err, reply) {
             console.log(err && err.stack);
             console.dir(reply);
         });
 
-        res.sendFile(path.join(__dirname, './public/templates/career-subscription.html'));
+        setTimeout(function() {
+            return res.redirect('/mdcontributor/register');    
+        }, 3000)
 
-    } else if (token.tokenLength > 5 && email.emailLength === 0) {
-        return res.redirect('/mdcontributor/documents');
-        // res.sendFile(path.join(__dirname, './public/templates/career-documents.html'));
-    }   
-})
-
-
-// MDInvestor forms
-app.post('/mdinvest/register/', function(req, res) {
-    var email = {
-        emailAddress: '',
-        emailLength: 0 
-    };
-
-    var token = { 
-        token: undefined,
-        tokenLength: 0
-    };
-
-    var name = {
-        firstName: '',
-        lastName: '',
-        speciality: '',
-    };
-
-
-    console.log('email: ', req.body.email);
-    console.log('token: ', req.body.token);
-
-    if (req.body.email !== undefined) {
-        email.emailAddress = req.body.email;
-        email.emailLength = req.body.email.length;
-    };
-
-    if (req.body.token !== undefined) {
-        token.token = req.body.token;
-        token.tokenLength = req.body.token.length;
-    };
-
-    console.log('email2: ', email.emailAddress);
-    console.log('token2: ', token.token);
-
-    if ( /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email.emailAddress) && token.token === undefined) {        
-        sendmail({
-            from: 'team@doctorpedia.com',
-            to: email.emailAddress,
-            subject: 'Welcome to Doctorpedia Investor Programme',
-            html: 'One time access unique token: 872923'
-        }, function(err, reply) {
-            console.log(err && err.stack);
-            console.dir(reply);
-        });
-
-        res.sendFile(path.join(__dirname, './public/templates/career-subscription.html'));
+        // res.render('./public/templates/career-subscription.html');
+        // res.sendFile(path.join(__dirname, './public/templates/career-subscription.html'));
+        // res.sendFile(path.join(__dirname, './public/templates/career-subscription.html'));
 
     } else if (token.tokenLength > 5 && email.emailLength === 0) {
         return res.redirect('/mdinvest/documents');
@@ -167,6 +131,111 @@ app.post('/mdinvest/register/', function(req, res) {
     }   
 })
 
+// MDInvestor forms
+app.post('/mdinvest/register', function(req, res) {
+
+    console.log('req:body; ', req.body);
+    var email = {
+        emailAddress: '',
+        emailLength: 0 
+    };
+
+    var token = { 
+        token: undefined,
+        tokenLength: 0
+    };
+
+    var info = {
+        firstName: '',
+        lastName: '',
+        speciality: '',
+    };
+
+    // console.log('first name: ', req.body.firstName);
+    // console.log('last name: ', req.body.lastName);    
+    // console.log('profession: ', req.body.profession);        
+    // console.log('email: ', req.body.email);
+    // console.log('token: ', req.body.token);
+
+    if (req.body.firstName !== undefined && req.body.lastName !== undefined) {
+        info.firstName = req.body.firstName;
+        info.lastName = req.body.lastName;
+        info.speciality = req.body.profession;
+    }
+
+    if (req.body.email !== undefined) {
+        email.emailAddress = req.body.email;
+        email.emailLength = req.body.email.length;
+    };
+
+    if (req.body.token !== undefined) {
+        token.token = req.body.token;
+        token.tokenLength = req.body.token.length;
+    };
+
+    // console.log('email2: ', email.emailAddress);
+    // console.log('token2: ', token.token);
+
+    if ( /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email.emailAddress) && token.token === undefined) {        
+
+        sendmail({
+            from: 'team@doctorpedia.com',
+            to: email.emailAddress,
+            subject: 'Welcome to Doctorpedia Investor Programme' + info.firstName + " " + info.lastName,
+            html: 'One time access unique token: ' + Math.floor(Math.random()*90000) + 100
+        }, function(err, reply) {
+            console.log(err && err.stack);
+            console.dir(reply);
+        });
+
+        setTimeout(function() {
+            return res.redirect('/mdinvest/register');    
+        }, 3000)
+
+        // res.render('./public/templates/career-subscription.html');
+        // res.sendFile(path.join(__dirname, './public/templates/career-subscription.html'));
+        // res.sendFile(path.join(__dirname, './public/templates/career-subscription.html'));
+
+    } else if (token.tokenLength > 5 && email.emailLength === 0) {
+        return res.redirect('/mdinvest/documents');
+        // res.sendFile(path.join(__dirname, './public/templates/career-documents.html'));
+    }   
+})
+
+
+app.post('/domains2', function(req, res, next) {
+
+    console.log(req.body);
+    
+    var firstName = req.body.firstName;
+    var lastName = req.body.lastName;
+    var email = req.body.email;
+    var phone = req.body.phoneNumber;
+
+    console.log('info: ', firstName)
+    console.log('info: ', lastName)
+    console.log('info: ', email)
+    console.log('info: ', phone)
+    
+
+    if (firstName.length > 1 && lastName.length > 1 && email.length > 1 && phone.length > 1) {
+        sendmail({
+            from: email,
+            to: 'sangenyx@gmail.com',
+            subject: 'New Investor Lead: ' + firstName + " " + lastName,
+            html: 'Here is a new lead: ' + phone + " and the email: " + email
+        }, function(err, reply) {
+            console.log(err && err.stack);
+            console.dir(reply);
+        });
+    }
+
+    setTimeout(function() {
+        return res.redirect('/domains2');    
+    }, 3000)
+
+
+})
 
 
 

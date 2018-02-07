@@ -91,6 +91,8 @@
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             padding-bottom: 260px;
             background-color: white;
+            cursor: pointer;
+
         }
 
         .learning-video-1 {
@@ -477,15 +479,19 @@
 
         $videoModal_1.on('click', '.modal-close', function(){
             closeVideoModal();
+            vimeoWrap = $('#video-modal-1');
+            vimeoWrap.html( vimeoWrap.html() );
         });
 
         $videoModal_2.on('click', '.modal-close', function(){
             closeVideoModal();
+            vimeoWrap = $('#video-modal-2');
+            vimeoWrap.html( vimeoWrap.html() );
         });
 
-        $body.on('click', '.video-modal', function(){
-            closeVideoModal();
-        });
+        // $body.on('click', '.video-modal', function(){
+        //     closeVideoModal();
+        // });
 
         $(".section9-tiers").owlCarousel({
             dotsEach: true,

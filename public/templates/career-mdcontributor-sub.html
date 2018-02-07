@@ -246,7 +246,6 @@
         }
 
 
-
     </style>
 </head>
 
@@ -258,9 +257,9 @@
                     <a href="/"><img class="nav-logo-img" src="../images/logo_doctorpedia.png"></a>
                 </div>
                 <ul role="menu" aria-label="Page menu" class="nav-menu">
-                    <li role="none" class="our-mission-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="/mdcontributor">Overview</a></li>
-                    <li role="none" class="features-item nav-menu-item"><a role="menuitem" class="sub-link nav-menu-link" href="/mdcontributor/register">Access</a></li>
-                    <li role="none" class="reserve-spot-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="/mdcontributor/register">Documents</a></li>
+                    <li role="none" class="our-mission-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="/mdinvest">Overview</a></li>
+                    <li role="none" class="features-item nav-menu-item"><a role="menuitem" class="sub-link nav-menu-link" href="/mdinvest/register">Access</a></li>
+                    <li role="none" class="reserve-spot-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="/mdinvest/register">Documents</a></li>
                 </ul>
                 <div class="nav-cta" mobile-hide-block><a class="nav-cta-link benefits contactus" href="#">Contact Us<span class="nav-cta-link-text"></span></a></div>
 
@@ -351,8 +350,8 @@
                     <div class="col-lg-2 col-md-2 col-sm-2"></div>
                     <div class="col-lg-8 col-md-8 col-sm-8">
                         <section id="career-continue">
-                            <a href="#"><div class="continue-btn">
-                                <spane id="valid-register">Submit</spane></div> </a>
+                            <div class="continue-btn" style="cursor:pointer;">
+                                <input id="valid-register" type="submit" style="border: none; background-color: #7ca9d9"></input></div>
                             <!-- <div class="learn-btn"><spane>Contact Us</spane></div>   -->
                             <div class="why-doctorpedia"></div>          
                         </section>
@@ -404,18 +403,32 @@
 
 
         <div id="errorModal" class="modal-wrap contact-modal hide">
-                <div class="modal-outter">
-                    <div class="close-contactus modal-close">CLOSE MODAL</div>
-                    <div class="modal-content">
-                        <h1 style="color: white;">ERROR!</h1>
-                        <div class="modal-body">
-                            <div>
-                                Oops, please enter information into all fields!
-                            </div>
+            <div class="modal-outter">
+                <div class="close-contactus modal-close">CLOSE MODAL</div>
+                <div class="modal-content">
+                    <h1 style="color: white;">Oops!</h1>
+                    <div class="modal-body">
+                        <div style="text-align: center;"> 
+                            Please enter information into all fields!
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div id="successModal" class="modal-wrap contact-modal hide">
+            <div class="modal-outter">
+                <div class="close-contactus modal-close">CLOSE MODAL</div>
+                <div class="modal-content">
+                    <h1 style="color: white;">Thank you for your interest in Doctorpedia!</h1>
+                    <div class="modal-body">
+                        <div style="text-align: center;">
+                            Please check your email for a token, this will allow you to look at our documents. (Tokens can take up to 2 hours, check your spam box if you do not see it instantly.)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </main>
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
@@ -429,6 +442,20 @@
             var $document = $(document);
             var $body = $(document.body);
             var $error = $('#errorModal');
+            var $success = $('#successModal');
+
+
+            function closeSuccessModal() {
+                if (!$success.hasClass('hide')) {
+                    $success.addClass('hide');
+                    $body.removeClass('stop-scrolling');
+                }
+            }
+            function openSuccessModal() {
+                $success.removeClass('hide');
+                $body.addClass('stop-scrolling');
+            }
+
 
             function closeErrorModal() {
                 if (!$error.hasClass('hide')) {
@@ -436,7 +463,6 @@
                 $body.removeClass('stop-scrolling');
                 }
             }
-
             function openErrorModal() {
                 $error.removeClass('hide');
                 $body.addClass('stop-scrolling');
@@ -446,11 +472,23 @@
                 closeErrorModal();
             });
 
+            $success.on('click', '.modal-close', function() {
+                closeSuccessModal();
+            })
+
             $('#valid-register').on('click', function() {
                 if ( $('#first-name').val().length <= 1 || $('#last-name').val().length <= 1 || $('#email-field').val() <= 3 ) {
-
                     openErrorModal();
-                }
+                    $('#first-name').val("")
+                    $('#last-name').val("")
+                    $('#email-field').val("")
+                } 
+                else if ( $('#first-name').val().length >= 2 || $('#last-name').val().length >= 2 || $('#email-field').val() >= 3 ) {
+                    openSuccessModal();
+                    // $('#first-name').val("")
+                    // $('#last-name').val("")
+                    // $('#email-field').val("")
+                } 
             })
 
             $('#token-submit').on('click', function() {
