@@ -181,7 +181,7 @@ app.post('/mdinvest/register', function(req, res) {
         sendmail({
             from: 'team@doctorpedia.com',
             to: email.emailAddress,
-            subject: 'Welcome to Doctorpedia Investor Programme' + info.firstName + " " + info.lastName,
+            subject: 'Welcome to Doctorpedia Investor Programme ' + info.firstName + " " + info.lastName,
             html: 'One time access unique token: ' + Math.floor(Math.random()*90000) + 100
         }, function(err, reply) {
             console.log(err && err.stack);
