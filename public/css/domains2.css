@@ -196,11 +196,19 @@
 .modal-outter {
     background-color:#7ca9d9 !important;   
     border: none !important; 
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
 }
 .modal-content {
     background-color:#7ca9d9 !important;  
     border: none !important;  
 }
+
+.modal-body {
+    padding-top: 0px !important;    
+}
+
+
 
 .modal-content h3 {
     text-align: center;
