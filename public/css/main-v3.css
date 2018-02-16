@@ -1116,7 +1116,7 @@ a:hover {
 
 @media (min-width: 769px) {
     .mission h1 {
-        font-size: 60px
+        font-size: 50px
     }
 }
 
@@ -1141,7 +1141,7 @@ a:hover {
 
 @media (min-width: 769px) {
     .mission-intro {
-        font-size: 30px
+        font-size: 25px
     }
 }
 
@@ -1264,6 +1264,12 @@ a:hover {
     background: linear-gradient(to bottom, #dcdfe5 0%, #e7eaf1 50%, #dcdfe5 100%);
 }
 
+@media (min-width: 1024px) {
+    .section3 {
+        display: flex
+    }
+}
+
 .section3-left {
     background: url(../images/desktop_more_time.png) center top no-repeat;
     background-size: cover;
@@ -1279,7 +1285,7 @@ a:hover {
 @media (min-width: 1024px) {
     .section3-left {
         width: 50%;
-        min-height: 900px;
+        min-height: 750px;
         float: left
     }
 }
@@ -1290,15 +1296,6 @@ a:hover {
 
 .section3-right p {
     margin-bottom: 0
-}
-
-@media (min-width: 700px) {
-    .section3-right h1 {
-        font-size: 60px
-    }
-    .section3-right p {
-        font-size: 20px
-    }
 }
 
 @media (min-width: 1024px) {
@@ -1326,6 +1323,12 @@ a:hover {
 
 @media (min-width: 700px) {
     .section3-right ul {
+        font-size: 16px
+    }
+}
+
+@media (min-width: 1024px) {
+    .section3-right ul {
         font-size: 20px
     }
 }
@@ -1346,7 +1349,7 @@ a:hover {
 }
 
 .section3-right-content {
-    padding: 40px 20px 20px;
+    padding: 40px;
 }
 
 .section3-right ul {
@@ -1355,14 +1358,14 @@ a:hover {
 
 @media (min-width: 700px) {
     .section3-right-content {
-        padding: 40px 20px 50px
+        padding: 40px 13%
     }
 }
 
 @media (min-width: 1024px) {
     .section3-right-content {
         min-height: 750px;
-        padding: 30% 10%;
+        padding: 12%;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -1376,6 +1379,30 @@ a:hover {
         -ms-flex-line-pack: center;
         align-content: center
     }
+
+    .section3-right p {
+        font-size: 20px
+    }
+}
+
+.section3 .footer-cta {
+    text-align: justify
+}
+
+.section3 .btn-link {
+    transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    -o-transform: scale(1, 1)
+}
+
+.section3 .btn-link:hover {
+    transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1)
 }
 
 .section4 {
@@ -1451,7 +1478,7 @@ a:hover {
 @media (min-width: 700px) {
     .section4-left-content {
         padding: 20px 10% 170px;
-        font-size: 20px
+        font-size: 16px
     }
 }
 
@@ -2070,7 +2097,7 @@ a:hover {
     .section8-right {
         width: 50%;
         padding: 80px 10%;
-        min-height: 400px
+        min-height: 700px
     }
 }
 
