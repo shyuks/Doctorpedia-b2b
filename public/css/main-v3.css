@@ -910,7 +910,7 @@ a:hover {
     }
 }
 
-@media (min-width: 1441px) {
+@media (min-width: 1440px) {
     .hero-content-slant {
         height: 1100px;
         background: linear-gradient(130deg, #fff 0%, #fff 53%, rgba(255, 255, 255, 0) 53%, rgba(255, 255, 255, 0) 100%)
@@ -2390,7 +2390,7 @@ a:hover {
 
 .section10-top p {
     color: #fff;
-    font-size: 10px;
+    font-size: 14px;
     line-height: 1.3em;
     margin: 40px
 }
@@ -2663,7 +2663,7 @@ a:hover {
 }
 
 .modal-outter {
-    padding: 50px;
+    padding: 40px;
     position: relative
 }
 
@@ -2692,8 +2692,10 @@ a:hover {
 
 .modal-content {
     background-color: #fff;
-    max-width: 680px;
-    padding: 50px 60px
+    max-width: 45vh;
+    padding: 35px 50px;
+    max-height: 80vh;
+    overflow: scroll
 }
 
 .modal-content h1 {
@@ -2732,13 +2734,27 @@ a:hover {
 }
 
 @media (min-width: 400px) {
+    .modal-outter {
+        padding: 50px
+    }
+
     .modal-content p {
         font-size: 15px
     }
 }
 
-.benefits-modal .modal-content {
-    height: 680px
+.modal-body {
+    max-height: 50vh
+}
+
+@media (min-width: 768px) {
+    .modal-content {
+        max-width: 130vh
+    }
+
+    .modal-body {
+        max-width: 100vh
+    }
 }
 
 .benefits-modal .modal-body {
@@ -2787,7 +2803,6 @@ a:hover {
 
 .privacy-modal .modal-content,
 .terms-modal .modal-content {
-    max-height: 470px;
     padding: 20px 10px 20px 20px
 }
 
@@ -2823,8 +2838,6 @@ a:hover {
 .privacy-modal .modal-content .modal-body,
 .terms-modal .modal-content .modal-body {
     padding-right: 10px;
-    max-height: 290px;
-    overflow: scroll
 }
 
 @media (min-width: 700px) {
@@ -2832,7 +2845,6 @@ a:hover {
     .terms-modal .modal-content {
         padding: 50px 30px 50px 60px;
         max-width: 680px;
-        max-height: 680px
     }
     .privacy-modal .modal-content h1,
     .terms-modal .modal-content h1 {
@@ -2884,8 +2896,8 @@ a:hover {
     height: 100%
 }
 
-.contact-modal .modal-content {
-    width: 100%
+#contactus .modal-content {
+    width: 100%;
 }
 
 @media (min-width: 700px) {
@@ -2930,7 +2942,6 @@ a:hover {
 }
 
 #aboutus .modal-content {
-    max-height: 560px;
     padding: 20px 10px 20px 20px
 }
 
@@ -2940,33 +2951,19 @@ a:hover {
 }
 
 #aboutus .modal-content .modal-body {
-    max-height: 360px;
-    overflow: scroll;
     padding-right: 10px
-}
-
-@media (min-width: 400px) {
-    #aboutus .modal-content .modal-body {
-        max-height: 480px
-    }
-}
-
-@media (min-width: 400px) {
-    #aboutus .modal-content {
-        max-height: 680px
-    }
 }
 
 @media (min-width: 768px) {
     #aboutus .modal-content {
-        padding: 50px 30px 50px 60px
+        padding: 50px 30px 50px 60px;
     }
     #aboutus .modal-content h1 {
         font-size: 45px;
         padding-right: 30px
     }
     #aboutus .modal-content .modal-body {
-        padding-right: 30px
+        padding-right: 30px;
     }
 }
 
