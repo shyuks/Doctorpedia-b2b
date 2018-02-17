@@ -1313,7 +1313,7 @@ a:hover {
 
 .section3-right ul {
     width: 100%;
-    padding: 10px 20px;
+    padding: 10px 20px 30px;
     font-size: 14px
 }
 
@@ -1329,7 +1329,7 @@ a:hover {
 
 @media (min-width: 1024px) {
     .section3-right ul {
-        font-size: 20px
+        font-size: 20px;
     }
 }
 
@@ -2128,6 +2128,10 @@ a:hover {
     margin-bottom: 20px
 }
 
+.section9-top br {
+    display: none
+}
+
 @media (min-width: 768px) {
     .section9 {
         padding: 117px 20px 60px 20px;
@@ -2136,6 +2140,10 @@ a:hover {
     .section9-top h1 {
         font-size: 62px;
         margin-bottom: 50px
+    }
+
+    .section9-top br {
+        display: inline
     }
 }
 

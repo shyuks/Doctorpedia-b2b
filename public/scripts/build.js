@@ -450,9 +450,9 @@ function throttle(func, wait, options) {
   driveSectionAnimation('.section7 .a-wrap', '.section7 h1', 'fadeInUp');
   // driveSectionAnimation('.section8-left', '.hero-content .scroll-cta', 'fadeInUp');
   driveSectionAnimation('.section9 .a-wrap', '.section9 h1', 'fadeInUp');
-  driveSectionAnimation('.section10 h1', '.section10 .a-wrap', 'fadeInUp');
-  driveSectionAnimation('.section10 .section10-top p', '.section10 .a-wrap', 'fadeInUp', 'delay');
-  driveSectionAnimation('.section10 .section10-cta', '.section10 .a-wrap', 'fadeInUp', 'delay');
+  // driveSectionAnimation('.section10 h1', '.section10 .a-wrap', 'fadeInUp');
+  // driveSectionAnimation('.section10 .section10-top p', '.section10 .a-wrap', 'fadeInUp', 'delay');
+  // driveSectionAnimation('.section10 .section10-cta', '.section10 .a-wrap', 'fadeInUp', 'delay');
 
   // animating icons currated list
   $('.resource-item').each(function(i, el) {
