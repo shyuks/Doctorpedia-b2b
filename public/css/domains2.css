@@ -22,8 +22,9 @@
 
 .card-style {
     position: relative;
-    background-color: #7ca9d9;
-    border: 1px solid #7ca9d9;
+    background-color: white;
+    /* border: 1px solid #7ca9d9; */
+    /* background: url('../images/domain-background.png'); */
     padding: 40px;
     padding-top: 80px;
     padding-bottom: 80px;
@@ -45,26 +46,36 @@
 
 .card-middle {
     width: 33%;
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 .card-text {
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    font-size: 18px;
+    background-color: rgb(10, 100, 160);
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
+    font-size: 15px;
 }
 .card-text a {
     text-decoration: none;
     color: white;
 }
 
+.card-text a:hover {
+    color: white;
+}
+
 .card-description {
     position: relative;
-    font-size: 12px;
+    text-align: center;
+    font-size: 16px;
+    /* text-shadow: 1px 1px black; */
     margin-top: 30px;
     padding: 20px;
-    color: white;
+    color: black;
+    min-height: 178px;
+    max-height: 178px;
 }
 
 .header-nav-img {
@@ -128,14 +139,17 @@
 .alphabeta {
     padding-top: 60px;
     color: white;
-    font-size: 24x;
+    font-size: 18px;
 }
 
 .alphabeta span {
     cursor: pointer;
+    color: white;
     padding: 3px;
+    margin: 2px;
     text-shadow: 0.8px 0.8px grey;    
 }
+
 .alphabeta-mobile span {
     cursor: pointer;
     padding: 5px;
@@ -147,7 +161,12 @@
     color: white;
     padding-top: 40px;
     padding-bottom: 40px;
+    font-size: 20px;
     text-shadow: 0.8px 0.8px grey;
+}
+
+.nav-all-rights {
+    padding-top: 40px;
 }
 
 .nav-footer {
@@ -156,6 +175,16 @@
     top: 80%;
     width: 100%;
     color: white;
+    cursor: pointer;
+}
+
+.nav-contact-us {
+    color: white;
+    border: 1px solid white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 #btn-container {
@@ -170,8 +199,9 @@
     width: 50%;
     background-color: rgb(12, 62, 109);
     color: white;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    letter-spacing: 0.7px;
     box-shadow: inset 0px 0px 7px 0px rgba(0, 0, 0, 1);
 }
 
@@ -180,8 +210,9 @@
     width: 50%;
     background-color: rgb(3, 101, 192);
     color: white;
-    padding-top: 30px;   
-    padding-bottom: 30px;
+    padding-top: 20px;   
+    padding-bottom: 20px;
+    letter-spacing: 0.7px;    
     box-shadow: inset 0px 0px 5x 0px rgba(0, 0, 0, 1);    
 }
 
@@ -202,13 +233,15 @@
 .modal-content {
     background-color:#7ca9d9 !important;  
     border: none !important;  
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
 }
 
 .modal-body {
     padding-top: 0px !important;    
 }
-
-
 
 .modal-content h3 {
     text-align: center;
@@ -258,12 +291,10 @@
     cursor: pointer;
 }
 
-
-
 #investor-form {
     text-align: center;
     width: 100%;
-    padding: 20px;
+    padding-top: 20px;
     background-color:#7ca9d9;
 }
 
