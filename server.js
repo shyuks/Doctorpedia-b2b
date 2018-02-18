@@ -111,7 +111,7 @@ app.post('/mdcontributor/register', function(req, res) {
             from: 'team@doctorpedia.com',
             to: email.emailAddress,
             subject: 'Welcome to Doctorpedia Investor Programme' + info.firstName + " " + info.lastName,
-            html: 'One time access unique token: ' + Math.floor(Math.random()*90000) + 100
+            html: "Hello, " + info.firstName + " " + info.lastName + "<br><br>" + "Thank you so much for your interest in Doctorpedia, the worlds next medical technology platform. Looking at next steps, we'll need you to use our one time token to access our documents. If you have any additional questions, please feel free to reach out to our marketing managers (investor.relations@doctorpedia.com). <br><br> One time access unique token: " + Math.floor(Math.random()*90000) + 100 + "<br><br><br>" + "Best, <br> Jeremy Wosner"
         }, function(err, reply) {
             console.log(err && err.stack);
             console.dir(reply);
@@ -182,7 +182,7 @@ app.post('/mdinvest/register', function(req, res) {
             from: 'team@doctorpedia.com',
             to: email.emailAddress,
             subject: 'Welcome to Doctorpedia Investor Programme ' + info.firstName + " " + info.lastName,
-            html: 'One time access unique token: ' + Math.floor(Math.random()*90000) + 100
+            html: "Hello, " + info.firstName + " " + info.lastName + "<br><br>" + "Thank you so much for your interest in Doctorpedia, the worlds next medical technology playform. Looking at next steps, we'll need you to use our one time token to access our documents. If you have any additional questions, please feel free to reach out to our marketing managers (investor.relations@doctorpedia.com). <br><br> One time access unique token: " + Math.floor(Math.random()*90000) + 100 + "<br><br><br>" + "Best, <br> Jeremy Wosner"
         }, function(err, reply) {
             console.log(err && err.stack);
             console.dir(reply);
