@@ -2083,7 +2083,7 @@ a:hover {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
-    background: url(../images/domains.png) top center no-repeat;
+    background: url(../images/domains.png) top left no-repeat;
     background-size: cover;
 }
 
