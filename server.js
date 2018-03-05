@@ -69,15 +69,16 @@ app.post('/mdcontributor/register', function(req, res) {
         emailLength: 0 
     };
 
-    var token = { 
-        token: undefined,
-        tokenLength: 0
-    };
+    // var token = { 
+    //     token: undefined,
+    //     tokenLength: 0
+    // };
 
     var info = {
         firstName: '',
         lastName: '',
-        speciality: '',
+        specialty: '',
+        about: ''
     };
 
     // console.log('first name: ', req.body.firstName);
@@ -89,7 +90,8 @@ app.post('/mdcontributor/register', function(req, res) {
     if (req.body.firstName !== undefined && req.body.lastName !== undefined) {
         info.firstName = req.body.firstName;
         info.lastName = req.body.lastName;
-        info.speciality = req.body.profession;
+        info.specialty = req.body.profession;
+        info.about = req.body.about
     }
 
     if (req.body.email !== undefined) {
@@ -97,26 +99,31 @@ app.post('/mdcontributor/register', function(req, res) {
         email.emailLength = req.body.email.length;
     };
 
-    if (req.body.token !== undefined) {
-        token.token = req.body.token;
-        token.tokenLength = req.body.token.length;
-    };
+    // if (req.body.token !== undefined) {
+    //     token.token = req.body.token;
+    //     token.tokenLength = req.body.token.length;
+    // };
 
     // console.log('email2: ', email.emailAddress);
     // console.log('token2: ', token.token);
 
-    if ( /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email.emailAddress) && token.token === undefined) {        
+    if ( /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email.emailAddress)) {        
 
         sendmail({
             from: 'team@doctorpedia.com',
             to: 's.hong35@gmail.com',
-            subject: 'A new contributor has registered via JoinDoctorpedia',
-            html: "A new investor has registered on the website:" + "<br><br>" + "First Name: " + info.firstName + "<br>" + 
-            "Last Name: " + info.lastName + "<br>" + "Email: " + email.emailAddress + "<br><br><br>" + "Best, <br> Jeremy Wosner"
-        }, function(err, reply) {
-            console.log(err && err.stack);
-            console.dir(reply);
-        });
+            subject: 'New Potential CONTRIBUTOR',
+            html: "Hello, " + "<br><br>" + 'A new CONTRIBUTOR is interested and requires contact.' + "<br><br>" +
+                  "First Name: " + info.firstName + "<br>" +
+                  "Last Name: " + info.lastName + "<br>" +
+                  "Email: " + email.emailAddress + "<br>" +
+                  "Specialty: " + info.specialty + "<br>" +
+                  "About: " + info.about + "<br><br>" +
+                  "Automated message from joindoctorpedia.com."
+        }), function(err, reply) {
+                console.log(err && err.stack);
+                console.dir(reply);
+        }
 
         setTimeout(function() {
             return res.redirect('/mdcontributor');    
@@ -126,30 +133,31 @@ app.post('/mdcontributor/register', function(req, res) {
         // res.sendFile(path.join(__dirname, './public/templates/career-subscription.html'));
         // res.sendFile(path.join(__dirname, './public/templates/career-subscription.html'));
 
-    } else if (token.tokenLength > 5 && email.emailLength === 0) {
-        return res.redirect('/mdinvest/documents');
+    } 
+    // else if (token.tokenLength > 5 && email.emailLength === 0) {
+    //     return res.redirect('/mdinvest/documents');
         // res.sendFile(path.join(__dirname, './public/templates/career-documents.html'));
-    }   
+    // }   
 })
 
 // MDInvestor forms
 app.post('/mdinvest/register', function(req, res) {
 
-    console.log('req:body; ', req.body);
+    console.log('investor req:body; ', req.body);
     var email = {
         emailAddress: '',
         emailLength: 0 
     };
 
-    var token = { 
-        token: undefined,
-        tokenLength: 0
-    };
+    // var token = { 
+    //     token: undefined,
+    //     tokenLength: 0
+    // };
 
     var info = {
         firstName: '',
         lastName: '',
-        speciality: '',
+        inviteCode: '',
     };
 
     // console.log('first name: ', req.body.firstName);
@@ -161,7 +169,7 @@ app.post('/mdinvest/register', function(req, res) {
     if (req.body.firstName !== undefined && req.body.lastName !== undefined) {
         info.firstName = req.body.firstName;
         info.lastName = req.body.lastName;
-        info.speciality = req.body.profession;
+        info.inviteCode = req.body.inviteCode;
     }
 
     if (req.body.email !== undefined) {
@@ -169,25 +177,41 @@ app.post('/mdinvest/register', function(req, res) {
         email.emailLength = req.body.email.length;
     };
 
-    if (req.body.token !== undefined) {
-        token.token = req.body.token;
-        token.tokenLength = req.body.token.length;
-    };
+    // if (req.body.token !== undefined) {
+    //     token.token = req.body.token;
+    //     token.tokenLength = req.body.token.length;
+    // };
 
     // console.log('email2: ', email.emailAddress);
     // console.log('token2: ', token.token);
 
-    if ( /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email.emailAddress) && token.token === undefined) {        
+    if ( /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email.emailAddress)) {        
+
+        // sendmail({
+        //     from: 'team@doctorpedia.com',
+        //     to: email.emailAddress,
+        //     subject: 'Welcome to Doctorpedia Investor Programme ' + info.firstName + " " + info.lastName,
+        //     html: "Hello, " + info.firstName + " " + info.lastName + "<br><br>" + "Thank you so much for your interest in Doctorpedia, the worlds next medical technology playform. Looking at next steps, we'll need you to use our one time token to access our documents. If you have any additional questions, please feel free to reach out to our marketing managers (investor.relations@doctorpedia.com). <br><br> One time access unique token: " + Math.floor(Math.random()*90000) + 100 + "<br><br><br>" + "Best, <br> Jeremy Wosner"
+        // }, function(err, reply) {
+        //     console.log("error has occured")
+        //     console.log(err && err.stack);
+        //     console.dir(reply);
+        // });
 
         sendmail({
             from: 'team@doctorpedia.com',
-            to: email.emailAddress,
-            subject: 'Welcome to Doctorpedia Investor Programme ' + info.firstName + " " + info.lastName,
-            html: "Hello, " + info.firstName + " " + info.lastName + "<br><br>" + "Thank you so much for your interest in Doctorpedia, the worlds next medical technology playform. Looking at next steps, we'll need you to use our one time token to access our documents. If you have any additional questions, please feel free to reach out to our marketing managers (investor.relations@doctorpedia.com). <br><br> One time access unique token: " + Math.floor(Math.random()*90000) + 100 + "<br><br><br>" + "Best, <br> Jeremy Wosner"
-        }, function(err, reply) {
-            console.log(err && err.stack);
-            console.dir(reply);
-        });
+            to: 's.hong35@gmail.com',
+            subject: 'New Potential INVESTOR',
+            html: "Hello, " + "<br><br>" + 'A new INVESTOR is interested and requires documentation.' + "<br><br>" +
+                  "First Name: " + info.firstName + "<br>" +
+                  "Last Name: " + info.lastName + "<br>" +
+                  "Email: " + email.emailAddress + "<br>" +
+                  "Invite Code: " + info.inviteCode + "<br><br>" +
+                  "Automated message from joindoctorpedia.com."
+        }), function(err, reply) {
+                console.log(err && err.stack);
+                console.dir(reply);
+        }
 
         setTimeout(function() {
             return res.redirect('/mdinvest');    
@@ -197,10 +221,11 @@ app.post('/mdinvest/register', function(req, res) {
         // res.sendFile(path.join(__dirname, './public/templates/career-subscription.html'));
         // res.sendFile(path.join(__dirname, './public/templates/career-subscription.html'));
 
-    } else if (token.tokenLength > 5 && email.emailLength === 0) {
-        return res.redirect('/mdinvest/documents');
+    } 
+        // else if (token.tokenLength > 5 && email.emailLength === 0) {
+        // return res.redirect('/mdinvest/documents');
         // res.sendFile(path.join(__dirname, './public/templates/career-documents.html'));
-    }   
+    // }   
 })
 
 

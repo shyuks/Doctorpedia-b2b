@@ -107,9 +107,9 @@
             margin: 0 auto;
             max-width: 400px;
             padding: 1.4rem 2rem 1.6rem;
-            background-color: #7ca9d9 !important;
             display: flex;
-            border-radius: 12px;
+            border-radius: 10px;
+            border: 1px solid black
         }
 
         .outter-input input {
@@ -119,17 +119,28 @@
             outline: none;
             vertical-align: middle;
             flex-grow: 1;
-            font-size: 2.4rem;
-            color: white;
+            font-size: 2rem;
+            color: black;
         }
 
         .outter-input button {
             vertical-align: middle;
-            font-size: 2.4rem;
+            font-size: 2rem;
             padding: 0;
             background: none;
             border: none;
             outline: none;
+        }
+
+        .form-group {
+            padding: 0 17px;
+        }
+
+        #about-field {
+            font-size: 2rem;
+            color: black;
+            border: 1px solid black;
+            border-radius: 10px
         }
 
         @keyframes gradient { 
@@ -156,7 +167,7 @@
         } */
 
         ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-            color: white;
+            color: #7ca9d9;
 
         }
 
@@ -197,7 +208,7 @@
             padding: 20px;
             margin-top: 40px;
             border-radius: 32px;
-            font-size: 2.4rem;
+            font-size: 2rem;
         }
 
         .icon {
@@ -344,10 +355,22 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4">
                         <div class="outter-input">
-                            <input type="text" placeholder="Speciality" name="profession" id="specialization" value="" />
+                            <input type="text" placeholder="Specialty" name="profession" id="specialization" value="" />
                             <!-- <button id="email-submit">
                                 <i class="icon ion-android-arrow-forward"></i>
                             </button> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2"></div>
+                </div>
+                <div class="row input-rows">
+                    <div class="col-lg-2 col-md-2 col-sm-2"></div>
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                        <!-- <div class="outter-input">
+                            <input type="text" placeholder="Tell us about yourself..." name="about" id="about-field" value="" />
+                        </div> -->
+                        <div class="form-group">
+                            <textarea class="form-control" name="about" id="about-field" rows="5" placeholder="Tell us about yourself..." value=""></textarea>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-2"></div>
@@ -429,7 +452,7 @@
                     <h1 style="color: white;">Thank you for your interest in Doctorpedia!</h1>
                     <div class="modal-body">
                         <div style="text-align: center;">
-                            Please check your email for a token, this will allow you to look at our documents. (Tokens can take up to 2 hours, check your spam box if you do not see it instantly.)
+                            We will be in touch with you within 48 hours.
                         </div>
                     </div>
                 </div>
@@ -498,12 +521,12 @@
                 } 
             })
 
-            $('#token-submit').on('click', function() {
-                console.log('shit')
-                if ($('#token-field').val().length <= 5) {
-                    alert('invalid token');
-                }
-            })
+            // $('#token-submit').on('click', function() {
+            //     console.log('shit')
+            //     if ($('#token-field').val().length <= 5) {
+            //         alert('invalid token');
+            //     }
+            // })
 
 
              // contact us modal

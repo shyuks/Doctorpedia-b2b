@@ -107,9 +107,9 @@
             margin: 0 auto;
             max-width: 400px;
             padding: 1.4rem 2rem 1.6rem;
-            background-color: #7ca9d9 !important;
             display: flex;
-            border-radius: 12px;
+            border-radius: 10px;
+            border: 1px solid black
         }
 
         .outter-input input {
@@ -119,13 +119,13 @@
             outline: none;
             vertical-align: middle;
             flex-grow: 1;
-            font-size: 2.4rem;
-            color: white;
+            font-size: 2rem;
+            color: black;
         }
 
         .outter-input button {
             vertical-align: middle;
-            font-size: 2.4rem;
+            font-size: 2rem;
             padding: 0;
             background: none;
             border: none;
@@ -156,7 +156,7 @@
         } */
 
         ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-            color: white;
+            color: black;
 
         }
 
@@ -197,7 +197,7 @@
             padding: 20px;
             margin-top: 40px;
             border-radius: 32px;
-            font-size: 2.4rem;
+            font-size: 2rem;
         }
 
         .icon {
@@ -344,7 +344,7 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4">
                         <div class="outter-input">
-                            <input type="text" placeholder="Invitation Code" name="profession" id="specialization" value="" />
+                            <input type="text" placeholder="Invitation Code" name="inviteCode" id="inviteCode" value="" />
                             <!-- <button id="email-submit">
                                 <i class="icon ion-android-arrow-forward"></i>
                             </button> -->
@@ -483,6 +483,7 @@
             })
 
             $('#valid-register').on('click', function(e) {
+                console.log("click")
                 if ( $('#first-name').val().length <= 1 || $('#last-name').val().length <= 1 || $('#email-field').val() <= 3 ) {
                     openErrorModal();
                     $('#first-name').val("")
@@ -490,7 +491,6 @@
                     $('#email-field').val("")
                 } 
                 else if ( $('#first-name').val().length >= 2 || $('#last-name').val().length >= 2 || $('#email-field').val() >= 3 ) {
-                    e.preventDefault();
                     openSuccessModal();
                     // $('#first-name').val("")
                     // $('#last-name').val("")
@@ -498,12 +498,12 @@
                 } 
             })
 
-            $('#token-submit').on('click', function() {
-                console.log('fail')
-                if ($('#token-field').val().length <= 5) {
-                    alert('invalid token');
-                }
-            })
+            // $('#token-submit').on('click', function() {
+            //     console.log('fail')
+            //     if ($('#token-field').val().length <= 5) {
+            //         alert('invalid token');
+            //     }
+            // })
 
 
              // contact us modal
