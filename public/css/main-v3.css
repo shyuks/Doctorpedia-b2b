@@ -2036,6 +2036,10 @@ a:hover {
     .section8-left p {
         font-size: 28px;
     }
+
+    .section8-left-content h1 {
+        font-size: 60px;
+    }
 }
 
 @media (min-width: 768px) {

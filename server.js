@@ -37,7 +37,7 @@ app.get('/domains2', function(req, res) {
     res.sendFile(path.join(__dirname, './public/domains2.html'));
 })
 
-// MDInvestor Routes
+// MDContributor Routes
 app.get('/mdcontributor', function(req, res) {
     res.sendFile(path.join(__dirname, './public/templates/career-mdcontributor.html'))
 });
@@ -60,7 +60,7 @@ app.get('/mdinvest/documents', function(req, res) {
 });
 
 
-// MDInvestor forms
+// MDContributor forms
 app.post('/mdcontributor/register', function(req, res) {
 
     console.log('req:body; ', req.body);
@@ -109,17 +109,18 @@ app.post('/mdcontributor/register', function(req, res) {
 
         sendmail({
             from: 'team@doctorpedia.com',
-            to: email.emailAddress,
-            subject: 'Welcome to Doctorpedia Investor Programme' + info.firstName + " " + info.lastName,
-            html: "Hello, " + info.firstName + " " + info.lastName + "<br><br>" + "Thank you so much for your interest in Doctorpedia, the worlds next medical technology platform. Looking at next steps, we'll need you to use our one time token to access our documents. If you have any additional questions, please feel free to reach out to our marketing managers (investor.relations@doctorpedia.com). <br><br> One time access unique token: " + Math.floor(Math.random()*90000) + 100 + "<br><br><br>" + "Best, <br> Jeremy Wosner"
+            to: 's.hong35@gmail.com',
+            subject: 'A new contributor has registered via JoinDoctorpedia',
+            html: "A new investor has registered on the website:" + "<br><br>" + "First Name: " + info.firstName + "<br>" + 
+            "Last Name: " + info.lastName + "<br>" + "Email: " + email.emailAddress + "<br><br><br>" + "Best, <br> Jeremy Wosner"
         }, function(err, reply) {
             console.log(err && err.stack);
             console.dir(reply);
         });
 
         setTimeout(function() {
-            return res.redirect('/mdcontributor/register');    
-        }, 3000)
+            return res.redirect('/mdcontributor');    
+        }, 8000)
 
         // res.render('./public/templates/career-subscription.html');
         // res.sendFile(path.join(__dirname, './public/templates/career-subscription.html'));
@@ -189,8 +190,8 @@ app.post('/mdinvest/register', function(req, res) {
         });
 
         setTimeout(function() {
-            return res.redirect('/mdinvest/register');    
-        }, 3000)
+            return res.redirect('/mdinvest');    
+        }, 8000)
 
         // res.render('./public/templates/career-subscription.html');
         // res.sendFile(path.join(__dirname, './public/templates/career-subscription.html'));
@@ -221,7 +222,7 @@ app.post('/domains2', function(req, res, next) {
     if (firstName.length > 1 && lastName.length > 1 && email.length > 1 && phone.length > 1) {
         sendmail({
             from: email,
-            to: 'sangenyx@gmail.com',
+            to: 's.hong35@gmail.com',
             subject: 'New Investor Lead: ' + firstName + " " + lastName,
             html: 'Here is a new lead: ' + phone + " and the email: " + email
         }, function(err, reply) {

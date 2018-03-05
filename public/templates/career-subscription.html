@@ -103,7 +103,7 @@
 
         .outter-input {
             position: relative;
-            width: 100%;
+            width: 90%;
             margin: 0 auto;
             max-width: 400px;
             padding: 1.4rem 2rem 1.6rem;
@@ -209,6 +209,11 @@
             background-color: #2f4266;
             color: white;
         }
+
+        .modal-body {
+            font-size: 30px;
+        }
+
         /* .why-doctorpedia {
             background: url('../images/why_doctorpedia.png');
             background-size: cover;
@@ -258,8 +263,8 @@
                 </div>
                 <ul role="menu" aria-label="Page menu" class="nav-menu">
                     <li role="none" class="our-mission-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="/mdinvest">Overview</a></li>
-                    <li role="none" class="features-item nav-menu-item"><a role="menuitem" class="sub-link nav-menu-link" href="/mdinvest/register">Access</a></li>
-                    <li role="none" class="reserve-spot-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="/mdinvest/register">Documents</a></li>
+                    <li role="none" class="features-item nav-menu-item"><a role="menuitem" class="sub-link nav-menu-link" href="/mdinvest/register">Form</a></li>
+                    <!-- <li role="none" class="reserve-spot-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="/mdinvest/register">Documents</a></li> -->
                 </ul>
                 <div class="nav-cta" mobile-hide-block><a class="nav-cta-link benefits contactus" href="#">Contact Us<span class="nav-cta-link-text"></span></a></div>
 
@@ -295,15 +300,16 @@
 
 
         <section id="career-container">
-            <p>Thank you for your interest in our investor program. Here is a 2-step authentication process so you can view the investment documentation.
+            <p>
+                Thank you for your interest in our investor program. Please fill out your details and the submit the invitation code and we will send you the investor documentation.
             </p>
         </section>
 
         <section class="career-form">
-            <div class="form-desc">
+            <!-- <div class="form-desc">
                 <h4>Step 1</h4>
                 <p>You will need to enter a valid email address that you currently have access to. After entering your information via the form below, you will recieve a unique token (can take up to 2 hours).</p>
-            </div>
+            </div> -->
             <form method="POST">
                 <div class="row input-rows">
                     <div class="col-lg-2 col-md-2 col-sm-2"></div>
@@ -338,7 +344,7 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4">
                         <div class="outter-input">
-                            <input type="text" placeholder="Speciality" name="profession" id="specialization" value="" />
+                            <input type="text" placeholder="Invitation Code" name="profession" id="specialization" value="" />
                             <!-- <button id="email-submit">
                                 <i class="icon ion-android-arrow-forward"></i>
                             </button> -->
@@ -361,7 +367,7 @@
             </form>
         </section>
 
-        <section id="half-rules">
+        <!-- <section id="half-rules">
             <hr style="color: white; background-color:white; width: 60%; height: 1px;" />
         </section>
 
@@ -378,7 +384,7 @@
                         </button>
                     </div>
                 </form>
-            </section>
+            </section> -->
 
         <section id="footer">
             <div class="footer-img">
@@ -423,7 +429,7 @@
                     <h1 style="color: white;">Thank you for your interest in Doctorpedia!</h1>
                     <div class="modal-body">
                         <div style="text-align: center;">
-                            Please check your email for a token, this will allow you to look at our documents. (Tokens can take up to 2 hours, check your spam box if you do not see it instantly.)
+                            We will be in touch with you within 48 hours.
                         </div>
                     </div>
                 </div>
@@ -476,7 +482,7 @@
                 closeSuccessModal();
             })
 
-            $('#valid-register').on('click', function() {
+            $('#valid-register').on('click', function(e) {
                 if ( $('#first-name').val().length <= 1 || $('#last-name').val().length <= 1 || $('#email-field').val() <= 3 ) {
                     openErrorModal();
                     $('#first-name').val("")
@@ -484,6 +490,7 @@
                     $('#email-field').val("")
                 } 
                 else if ( $('#first-name').val().length >= 2 || $('#last-name').val().length >= 2 || $('#email-field').val() >= 3 ) {
+                    e.preventDefault();
                     openSuccessModal();
                     // $('#first-name').val("")
                     // $('#last-name').val("")
@@ -492,7 +499,7 @@
             })
 
             $('#token-submit').on('click', function() {
-                console.log('shit')
+                console.log('fail')
                 if ($('#token-field').val().length <= 5) {
                     alert('invalid token');
                 }

@@ -103,7 +103,7 @@
 
         .outter-input {
             position: relative;
-            width: 100%;
+            width: 90%;
             margin: 0 auto;
             max-width: 400px;
             padding: 1.4rem 2rem 1.6rem;
@@ -209,6 +209,11 @@
             background-color: #2f4266;
             color: white;
         }
+
+        .modal-body {
+            font-size: 30px;
+        }
+
         /* .why-doctorpedia {
             background: url('../images/why_doctorpedia.png');
             background-size: cover;
@@ -257,9 +262,9 @@
                     <a href="/"><img class="nav-logo-img" src="../images/logo_doctorpedia.png"></a>
                 </div>
                 <ul role="menu" aria-label="Page menu" class="nav-menu">
-                    <li role="none" class="our-mission-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="/mdinvest">Overview</a></li>
-                    <li role="none" class="features-item nav-menu-item"><a role="menuitem" class="sub-link nav-menu-link" href="/mdinvest/register">Access</a></li>
-                    <li role="none" class="reserve-spot-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="/mdinvest/register">Documents</a></li>
+                    <li role="none" class="our-mission-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="/mdcontributor">Overview</a></li>
+                    <li role="none" class="features-item nav-menu-item"><a role="menuitem" class="sub-link nav-menu-link" href="/mdinvest/register">Form</a></li>
+                    <!-- <li role="none" class="reserve-spot-item nav-menu-item"><a role="menuitem" class="nav-menu-link" href="/mdinvest/register">Documents</a></li> -->
                 </ul>
                 <div class="nav-cta" mobile-hide-block><a class="nav-cta-link benefits contactus" href="#">Contact Us<span class="nav-cta-link-text"></span></a></div>
 
@@ -295,15 +300,16 @@
 
 
         <section id="career-container">
-            <p>Thank you for your interest in our investor program. Here is a 2-step authentication process to release documents to your local machine. We will need you to follow the steps below in order to continue with our investor programme.
+            <p>
+                Thank you for your interest in contributing to our website. Please fill in this form and we will be in touch with you.
             </p>
         </section>
 
         <section class="career-form">
-            <div class="form-desc">
+            <!-- <div class="form-desc">
                 <h4>Step 1</h4>
                 <p>You will need to enter a valid email address you currently have access to. After submitting via the form below (can take up to 2 hours), you will recieve a unique token.</p>
-            </div>
+            </div> -->
             <form method="POST">
                 <div class="row input-rows">
                     <div class="col-lg-2 col-md-2 col-sm-2"></div>
@@ -361,24 +367,24 @@
             </form>
         </section>
 
-        <section id="half-rules">
+        <!-- <section id="half-rules">
             <hr style="color: white; background-color:white; width: 60%; height: 1px;" />
         </section>
 
         <section class="career-form">
-                <div class="form-desc">
-                    <h8>Step 2</h4>
-                    <p>Upon receiving your access token, please enter the unique code below for access to our documents page. If you do not see your token email, please check your spam folder.</p>
+            <div class="form-desc">
+                <h8>Step 2</h4>
+                <p>Upon receiving your access token, please enter the unique code below for access to our documents page. If you do not see your token email, please check your spam folder.</p>
+            </div>
+            <form method="POST">
+                <div class="outter-input">
+                    <input type="text" placeholder="Validate Token" name="token" id="token-field" value="" />
+                    <button type="submit" id="token-submit">
+                        <i class="icon ion-ios-arrow-thin-right"></i>
+                    </button>
                 </div>
-                <form method="POST">
-                    <div class="outter-input">
-                        <input type="text" placeholder="Validate Token" name="token" id="token-field" value="" />
-                        <button type="submit" id="token-submit">
-                            <i class="icon ion-ios-arrow-thin-right"></i>
-                        </button>
-                    </div>
-                </form>
-            </section>
+            </form>
+        </section> -->
 
         <section id="footer">
             <div class="footer-img">
@@ -476,7 +482,8 @@
                 closeSuccessModal();
             })
 
-            $('#valid-register').on('click', function() {
+            $('#valid-register').on('click', function(e) {
+                
                 if ( $('#first-name').val().length <= 1 || $('#last-name').val().length <= 1 || $('#email-field').val() <= 3 ) {
                     openErrorModal();
                     $('#first-name').val("")
