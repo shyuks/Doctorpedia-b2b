@@ -483,7 +483,6 @@
             })
 
             $('#valid-register').on('click', function(e) {
-                console.log("click")
                 if ( $('#first-name').val().length <= 1 || $('#last-name').val().length <= 1 || $('#email-field').val() <= 3 ) {
                     openErrorModal();
                     $('#first-name').val("")

@@ -112,7 +112,7 @@ app.post('/mdcontributor/register', function(req, res) {
         sendmail({
             from: 'team@doctorpedia.com',
             to: 's.hong35@gmail.com',
-            subject: 'New Potential CONTRIBUTOR',
+            subject: 'New Potential CONTRIBUTOR, ' + info.firstName + ' ' + info.lastName,
             html: "Hello, " + "<br><br>" + 'A new CONTRIBUTOR is interested and requires contact.' + "<br><br>" +
                   "First Name: " + info.firstName + "<br>" +
                   "Last Name: " + info.lastName + "<br>" +
@@ -201,7 +201,7 @@ app.post('/mdinvest/register', function(req, res) {
         sendmail({
             from: 'team@doctorpedia.com',
             to: 's.hong35@gmail.com',
-            subject: 'New Potential INVESTOR',
+            subject: 'New Potential INVESTOR ' + info.firstName + ' ' + info.lastName,
             html: "Hello, " + "<br><br>" + 'A new INVESTOR is interested and requires documentation.' + "<br><br>" +
                   "First Name: " + info.firstName + "<br>" +
                   "Last Name: " + info.lastName + "<br>" +
