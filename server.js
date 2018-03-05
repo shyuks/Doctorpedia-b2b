@@ -246,7 +246,7 @@ app.post('/domains2', function(req, res, next) {
 
     if (firstName.length > 1 && lastName.length > 1 && email.length > 1 && phone.length > 1) {
         sendmail({
-            from: email,
+            from: 'team@doctorpedia.com',
             to: 's.hong35@gmail.com',
             subject: 'New Investor Lead: ' + firstName + " " + lastName,
             html: 'Here is a new lead: ' + phone + " and the email: " + email
