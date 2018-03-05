@@ -111,7 +111,7 @@ app.post('/mdcontributor/register', function(req, res) {
 
         sendmail({
             from: 'team@doctorpedia.com',
-            to: 's.hong35@gmail.com',
+            to: 'jeremy@doctorpedia.com',
             subject: 'New Potential CONTRIBUTOR, ' + info.firstName + ' ' + info.lastName,
             html: "Hello, " + "<br><br>" + 'A new CONTRIBUTOR is interested and requires contact.' + "<br><br>" +
                   "First Name: " + info.firstName + "<br>" +
@@ -200,7 +200,7 @@ app.post('/mdinvest/register', function(req, res) {
 
         sendmail({
             from: 'team@doctorpedia.com',
-            to: 's.hong35@gmail.com',
+            to: 'jeremy@doctorpedia.com',
             subject: 'New Potential INVESTOR ' + info.firstName + ' ' + info.lastName,
             html: "Hello, " + "<br><br>" + 'A new INVESTOR is interested and requires documentation.' + "<br><br>" +
                   "First Name: " + info.firstName + "<br>" +
@@ -247,7 +247,7 @@ app.post('/domains2', function(req, res, next) {
     if (firstName.length > 1 && lastName.length > 1 && email.length > 1 && phone.length > 1) {
         sendmail({
             from: 'team@doctorpedia.com',
-            to: 's.hong35@gmail.com',
+            to: 'jeremy@doctorpedia.com',
             subject: 'New Investor Lead: ' + firstName + " " + lastName,
             html: 'Here is a new lead: ' + phone + " and the email: " + email
         }, function(err, reply) {
