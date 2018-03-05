@@ -185,7 +185,7 @@ app.post('/mdinvest/register', function(req, res) {
     // console.log('email2: ', email.emailAddress);
     // console.log('token2: ', token.token);
 
-    if ( /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email.emailAddress)) {        
+    // if ( /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email.emailAddress)) {        
 
         // sendmail({
         //     from: 'team@doctorpedia.com',
@@ -221,7 +221,7 @@ app.post('/mdinvest/register', function(req, res) {
         // res.sendFile(path.join(__dirname, './public/templates/career-subscription.html'));
         // res.sendFile(path.join(__dirname, './public/templates/career-subscription.html'));
 
-    } 
+    // } 
         // else if (token.tokenLength > 5 && email.emailLength === 0) {
         // return res.redirect('/mdinvest/documents');
         // res.sendFile(path.join(__dirname, './public/templates/career-documents.html'));
