@@ -5313,7 +5313,8 @@
             $body.addClass('stop-scrolling');
         }
 
-        $body.on('click', '.invest-button', function() {
+        $body.on('touchstart click', '.invest-button', function() {
+            console.log('touchstart click');
             openInvestForm();
         });
 
@@ -5488,8 +5489,8 @@
             card +=             "<div class='card-description'>The specific condition keyword <u>" + domains.keyword + "</u> has a <u><b>"+ domains.hits + "</b></u> searches per month. <br><br><b>Visit Website:</b><br>" + "<a href=" + "http://www." + domains.domain + "><div style='color: rgb(10, 100, 160); cursor: pointer; font-size: 12px;'>" + domains.domain + "</div></a>";
             card +=             "</div>";
             card +=             "<div id='btn-container'>"
-            card +=                 "<div class='invest-button style='cursor:pointer''>INVEST</div>"
-            card +=                 "<div class='contribute-button' style='cursor:pointer'>PARTICIPATE</div>"   
+            card +=                 "<div class='invest-button'>INVEST</div>"
+            card +=                 "<div class='contribute-button'>PARTICIPATE</div>"   
             card +=             "</div>"
             card +=         "</div>"         
             card +=     "</div>";
