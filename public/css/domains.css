@@ -410,8 +410,8 @@ a:hover {
     left: 0;
     right: 0;
     height: 75px;
-    background: white;
-    border-bottom: 1px solid black
+    background: #F5F5F5;
+    border-bottom: 1px solid lightgray
 }
 
 .mobile-logo {
@@ -424,6 +424,10 @@ a:hover {
     width: 137px
 }
 
+/* .dropdown {
+    display: none
+} */
+
 .dropdown-toggle {
     float: right;
     margin: 1.2rem .5rem 0rem 0rem;
@@ -432,11 +436,13 @@ a:hover {
 .dropdown-menu {
     text-align: center !important;
     margin: 0 auto !important;
-    padding: .5rem !important
+    padding: .5rem !important;
+    min-width: 0 !important
 }
 
 .dropdown-menu.show {
-    background-color: #828787;
+    background-color: #2e5363;
+    padding: 10px !important
 }
 
 #dropdownMenuButton {
@@ -444,22 +450,28 @@ a:hover {
     background-color: white;
     border-color: #47484a;
     box-shadow: none;
+    border-radius: 10px
 }
 
 #filter .btn {
-    min-width: 2.5rem;
+    width: 2.65rem;
     border-color: gray;
     background-color: #fff;
-    color: #47484a
+    color: #47484a;
+    font-size: 1rem
 }
 
 @media all and (min-width: 768px) {
-    #main #dropdownMenuButton {
-        display: none;
+    .dropdown-menu.show {
+        padding: 10px 0px !important
     }
 
     .mobile-logo img {
         width: 200px
+    }
+
+    #filter .btn {
+        font-size: 16px
     }
 }
 
@@ -481,7 +493,7 @@ a:hover {
 
 .filterDomain .letterHeading {
     font-size: 1.5rem;
-    background-color: #7ca9d9;
+    background-color: #2e5363;
     color: #fff;
     margin: 0 auto !important;
     padding-left: .75rem
@@ -541,28 +553,77 @@ a:hover {
     color: #47484a
 }
 
-.domainColumnOne {
-    position: inherit !important
-}
-
-.domainColumnTwo {
-    position: inherit !important
-}
 
 @media (min-width: 768px) {
 
-    .domainColumnOne {
-        padding-right: 0px !important;
-    }
 
-    .domainColumnTwo {
-        padding-left: 0px !important;
-    }
 }
 
 @media all and (max-width: 767px) {
     .main-filter {
         display: none !important;
+    }
+}
+
+/* Domain List */
+
+.row.domains {
+    width: 100%;
+    margin: 0
+}
+
+table {
+    width: 100%;
+    margin: 0
+}
+
+.table {
+    margin-bottom: 0 !important
+}
+
+.domain-column {
+    display: none;
+}
+
+.condition-column {
+    width: 75%
+}
+
+.monthly-column {
+    width: 25%
+}
+
+.related-column {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .condition-column {
+        width: 50%
+    }
+    
+    .related-column {
+        display: table-cell;
+        width: 25%
+    }
+}
+
+@media (min-width: 1024px) {
+    .domain-column {
+        display: table-cell;
+        width: 35%
+    }
+
+    .condition-column {
+        width: 35%
+    }
+
+    .monthly-column {
+        width: 15%
+    }
+
+    .related-column {
+        width: 15%
     }
 }
 
@@ -974,7 +1035,7 @@ a:hover {
     }
 }
 
-.zev {
+/* .zev {
     background: url(/images/AVATAR_ZEV.png) center top no-repeat
 }
 
@@ -982,7 +1043,7 @@ a:hover {
     .zev {
         background-position: 0 0
     }
-}
+} */
 
 .richard {
     background: url(/images/AVATAR_RICHARD.png) center top no-repeat
@@ -1004,7 +1065,7 @@ a:hover {
     }
 }
 
-.joao {
+/* .joao {
     background: url(/images/AVATAR_JOAO.png) center top no-repeat
 }
 
@@ -1012,9 +1073,9 @@ a:hover {
     .joao {
         background-position: 0 0
     }
-}
+} */
 
-.rick {
+/* .rick {
     background: url(/images/AVATAR_RICK.png) center top no-repeat
 }
 
@@ -1022,14 +1083,25 @@ a:hover {
     .rick {
         background-position: 0 0
     }
-}
+} */
 
-.suzanne {
+/* .suzanne {
     background: url(/images/AVATAR_SUZANNE.png) center top no-repeat
 }
 
 @media (min-width: 500px) {
     .suzanne {
+        background-position: 0 0
+    }
+} */
+
+.molly {
+    background: url(/images/AVATAR_MOLLY.png) center top no-repeat;
+    min-height: 66px;
+}
+
+@media (min-width: 500px) {
+    .molly {
         background-position: 0 0
     }
 }

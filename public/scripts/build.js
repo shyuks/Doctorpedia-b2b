@@ -386,32 +386,32 @@ function throttle(func, wait, options) {
     requestAnimationFrame(step);
   }
 
-  var $missionStats = $('.mission-stats');
-  $missionStats.addClass('invisible');
-  var inview = new Waypoint.Inview({
-    element: $missionStats[0],
-    entered: function(direction) {
-      if ('down' === direction) {
-        $missionStats.addClass('animated fadeInUp');
+  // var $missionStats = $('.mission-stats');
+  // $missionStats.addClass('invisible');
+  // var inview = new Waypoint.Inview({
+  //   element: $missionStats[0],
+  //   entered: function(direction) {
+  //     if ('down' === direction) {
+  //       $missionStats.addClass('animated fadeInUp');
 
-        // kick off counters
-        $statNos = $('.mission-stats-item span', $missionStats);
-        counter(50, $($statNos[0]), 2200, 2113);
-        counter(50, $($statNos[1]), 38000, 37871);
-        counter(50, $($statNos[2]), 57000, 56834);
-      }
-    },
-    exited: function(direction) {
-      if ('up' === direction) {
-        $missionStats.removeClass('animated fadeInUp');
-        // reset stats
-        var $els = $('.mission-stats-item span', $missionStats);
-        $($els[0]).html(2113);
-        $($els[1]).html(37871);
-        $($els[2]).html(56834);
-      }
-    }
-  });
+  //       // kick off counters
+  //       $statNos = $('.mission-stats-item span', $missionStats);
+  //       counter(50, $($statNos[0]), 2200, 2113);
+  //       counter(50, $($statNos[1]), 38000, 37871);
+  //       counter(50, $($statNos[2]), 57000, 56834);
+  //     }
+  //   },
+  //   exited: function(direction) {
+  //     if ('up' === direction) {
+  //       $missionStats.removeClass('animated fadeInUp');
+  //       // reset stats
+  //       var $els = $('.mission-stats-item span', $missionStats);
+  //       $($els[0]).html(2113);
+  //       $($els[1]).html(37871);
+  //       $($els[2]).html(56834);
+  //     }
+  //   }
+  // });
 
   function driveSectionAnimation(elToAnimate, elThatTriggersAnimation, animation, animAdaptClass) {
     var $el = $(elToAnimate);
@@ -442,22 +442,23 @@ function throttle(func, wait, options) {
 
   driveSectionAnimation('.mission-content', '.mission-content h1', 'fadeInUp');
   driveSectionAnimation('.section3-right-content', '.section3-right-content p', 'fadeInUp');
-  driveSectionAnimation('.section4-left', '.section4-left h1', 'fadeInUp');
-  driveSectionAnimation('.section4-right', '.section4-left h1', 'fadeInUp', 'delayed');
-  driveSectionAnimation('.section5-left', '.section5 h1', 'fadeInUp');
-  driveSectionAnimation('.section5-right', '.section5 h1', 'fadeInUp', 'delayed');
-  driveSectionAnimation('.section6 .a-wrap', '.section6 h1', 'fadeInUp');
-  driveSectionAnimation('.section7 .a-wrap', '.section7 h1', 'fadeInUp');
-  // driveSectionAnimation('.section8-left', '.hero-content .scroll-cta', 'fadeInUp');
-  driveSectionAnimation('.section9 .a-wrap', '.section9 h1', 'fadeInUp');
+  driveSectionAnimation('.section4-top', '.section4-top h1', 'fadeInUp');
+  // driveSectionAnimation('.section4-body', '.section4-header h1', 'fadeInUp');
+  // driveSectionAnimation('.section4-right', '.section4-header h1', 'fadeInUp', 'delayed');
+  // driveSectionAnimation('.section5-left', '.section5 h1', 'fadeInUp');
+  // driveSectionAnimation('.section5-right', '.section5 h1', 'fadeInUp', 'delayed');
+  // driveSectionAnimation('.section6 .a-wrap', '.section6 h1', 'fadeInUp');
+  // driveSectionAnimation('.section7 .a-wrap', '.section7 h1', 'fadeInUp');
+  driveSectionAnimation('.section8-left', '.section8-left h1', 'fadeInUp');
+  // driveSectionAnimation('.section9 .a-wrap', '.section9 h1', 'fadeInUp');
   // driveSectionAnimation('.section10 h1', '.section10 .a-wrap', 'fadeInUp');
   // driveSectionAnimation('.section10 .section10-top p', '.section10 .a-wrap', 'fadeInUp', 'delay');
   // driveSectionAnimation('.section10 .section10-cta', '.section10 .a-wrap', 'fadeInUp', 'delay');
 
   // animating icons currated list
-  $('.resource-item').each(function(i, el) {
-    driveSectionAnimation(el, '.section7-content', 'fadeInUp', 'delayed-' + (1+i) );
-  })
+  // $('.resource-item').each(function(i, el) {
+  //   driveSectionAnimation(el, '.section7-content', 'fadeInUp', 'delayed-' + (1+i) );
+  // })
 
   var waypoint = new Waypoint({
     element: document.body,
@@ -474,7 +475,7 @@ function throttle(func, wait, options) {
 
 $(document).ready(function(){
   var $nav = $('#main-nav');
-  var navIds = ['our-mission', 'features', 'reserve-spot'];
+  var navIds = ['our-mission', 'opportunity', 'videos', 'join-us'];
   var focusClasses = navIds
     .map(function(navId) {
       return 'focus-' + navId;
@@ -505,284 +506,407 @@ $(document).ready(function(){
     .not('[href="#0"]')
     .click(function(event) {
       // On-page links
-      if (
-        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-        && 
-        location.hostname == this.hostname
-      ) {
-        // Figure out element to scroll to
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        // Does a scroll target exist?
-        if (target.length) {
-          // Only prevent default if animation is actually gonna happen
-          event.preventDefault();
-          var hash = this.hash;
-          $('html, body').animate({
-            scrollTop: target.offset().top
-          }, 1000, function() {
-            // Callback after animation
-            // Must change focus!
-            var $target = $(target);
-            $target.focus();
-            setNavFocus($target.attr('id'));
-            window.location.hash = hash;
-            if ($target.is(":focus")) { // Checking if the target was focused
-              return false;
-            } else {
-              $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-              $target.focus(); // Set focus again
-            };
-          });
+        if (
+            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+            && 
+            location.hostname == this.hostname
+        ) {
+            // Figure out element to scroll to
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            // Does a scroll target exist?
+            if (target.length) {
+                // Only prevent default if animation is actually gonna happen
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 1000, function() {
+                    // Callback after animation
+                    // Must change focus!
+                    var $target = $(target);
+                    $target.focus();
+                    setNavFocus($target.attr('id'));
+                    window.location.hash = hash;
+                    if ($target.is(":focus")) { // Checking if the target was focused
+                    return false;
+                    } else {
+                    $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                    $target.focus(); // Set focus again
+                    };
+                });
+            }
         }
-      }
     });
 
-  var $mobMenuWrap = $('.mobile-menu-wrap');
-  var $mobMenu = $('.mobile-menu');
+    var $mobMenuWrap = $('.mobile-menu-wrap');
+    var $mobMenu = $('.mobile-menu');
 
-  // mobile menu
-  $mobMenuWrap.on('click', '.mobile-menu-btn-close', function() {
-    $mobMenu.addClass('hide');
-  });
+    // mobile menu
+    $mobMenuWrap.on('click', '.mobile-menu-btn-close', function() {
+        $mobMenu.addClass('hide');
+    });
 
-  $mobMenuWrap.on('click', '.mobile-menu-btn-open', function() {
-    $mobMenu.removeClass('hide');
-  });
+    $mobMenuWrap.on('click', '.mobile-menu-btn-open', function() {
+        $mobMenu.removeClass('hide');
+    });
 
-  $mobMenuWrap.on('click', '.mobile-menu-nav-link, .sub-menu-link', function() {
-    $mobMenu.addClass('hide');
-  });
+    $mobMenuWrap.on('click', '.mobile-menu-nav-link, .sub-menu-link', function() {
+        $mobMenu.addClass('hide');
+    });
 
-  // MODALS
-  var $document = $(document);
-  var $body = $(document.body);
+    // MODALS
+    var $document = $(document);
+    var $body = $(document.body);
 
-  // prevent modal body click to close modal
-  $('.modal-outter').on('click', '.modal-content', function(e){
-    e.stopPropagation();
-  });
+    // prevent modal body click to close modal
+    $('.modal-outter').on('click', '.modal-content', function(e){
+        e.stopPropagation();
+    });
 
-  // modal about us
-  var $aboutModal = $('#aboutus');
-  function closeAboutusModal() {
-    if (!$aboutModal.hasClass('hide')) {
-      $aboutModal.addClass('hide');
-      $body.removeClass('stop-scrolling');
+    // modal about us
+    var $aboutModal = $('#aboutus');
+    function closeAboutusModal() {
+        if (!$aboutModal.hasClass('hide')) {
+        $aboutModal.addClass('hide');
+        $body.removeClass('stop-scrolling');
+        }
     }
-  }
-  function openAboutusModal() {
-    $aboutModal.removeClass('hide');
-    $body.addClass('stop-scrolling');
-  }
-
-  $document.on('click', '.about-us', function(){
-    openAboutusModal();
-  });
-
-  $aboutModal.on('click', '.close-aboutus', function(){
-    closeAboutusModal();
-  });
-
-  $document.on('click', '#aboutus', function(){
-    closeAboutusModal();
-  });
-
-  // why doctorpedia modal
-  var $benefitsModal = $('#benefits-modal');
-  function closeBenefitsModal() {
-    if (!$benefitsModal.hasClass('hide')) {
-      $benefitsModal.addClass('hide');
-      $body.removeClass('stop-scrolling');
+    function openAboutusModal() {
+        $aboutModal.removeClass('hide');
+        $body.addClass('stop-scrolling');
     }
-  }
-  function openBenefitsModal() {
-    $benefitsModal.removeClass('hide');
-    $body.addClass('stop-scrolling');
-  }
 
-  // nav-cta-link benefits
+    $document.on('click', '.about-us', function(){
+        openAboutusModal();
+    });
 
-  // $()
+    $aboutModal.on('click', '.close-aboutus', function(){
+        closeAboutusModal();
+    });
 
-  $('.ambig').on('click', '.lems', function(){
-    openBenefitsModal();
-  });
+    $document.on('click', '#aboutus', function(){
+        closeAboutusModal();
+    });
 
-  $('.nav-cta').on('click', '.benefits', function(){
-    openBenefitsModal();
-  });
+    // why doctorpedia modal
+    // var $benefitsModal = $('#benefits-modal');
+    // function closeBenefitsModal() {
+    //     if (!$benefitsModal.hasClass('hide')) {
+    //     $benefitsModal.addClass('hide');
+    //     $body.removeClass('stop-scrolling');
+    //     }
+    // }
+    // function openBenefitsModal() {
+    //     $benefitsModal.removeClass('hide');
+    //     $body.addClass('stop-scrolling');
+    // }
 
-  $benefitsModal.on('click', '.modal-close', function(){
-    closeBenefitsModal();
-  });
+    // nav-cta-link benefits
 
-  $document.on('click', '#benefits-modal', function(){
-    closeBenefitsModal();
-  });
+    // $()
 
-  enquire.register("screen and (max-width: 768px)", {
-    match : function() {
-      closeBenefitsModal();
+    // $('.ambig').on('click', '.lems', function(){
+    //   openBenefitsModal();
+    // });
+
+    // $('.nav-cta').on('click', '.benefits', function(){
+    //   openBenefitsModal();
+    // });
+
+    // $benefitsModal.on('click', '.modal-close', function(){
+    //   closeBenefitsModal();
+    // });
+
+    // $document.on('click', '#benefits-modal', function(){
+    //   closeBenefitsModal();
+    // });
+
+    // enquire.register("screen and (max-width: 768px)", {
+    //   match : function() {
+    //     closeBenefitsModal();
+    //   }
+    // });
+
+    // contact us modal
+    var $contactusModal = $('#contactus');
+    function closeContactusModal() {
+        if (!$contactusModal.hasClass('hide')) {
+        $contactusModal.addClass('hide');
+        $body.removeClass('stop-scrolling');
+        }
     }
-  });
-
-  // contact us modal
-  var $contactusModal = $('#contactus');
-  function closeContactusModal() {
-    if (!$contactusModal.hasClass('hide')) {
-      $contactusModal.addClass('hide');
-      $body.removeClass('stop-scrolling');
+    function openContactusModal() {
+        $contactusModal.removeClass('hide');
+        $body.addClass('stop-scrolling');
     }
-  }
-  function openContactusModal() {
-    $contactusModal.removeClass('hide');
-    $body.addClass('stop-scrolling');
-  }
 
-  $body.on('click', '.contactus', function(){
-    openContactusModal();
-  });
+    $body.on('click', '.contactus', function(){
+        openContactusModal();
+    });
 
-  $contactusModal.on('click', '.modal-close', function(){
-    closeContactusModal();
-  });
+    $contactusModal.on('click', '.modal-close', function(){
+        closeContactusModal();
+    });
 
-  $body.on('click', '.contact-modal', function(){
-    closeContactusModal();
-  });
+    $body.on('click', '.contact-modal', function(){
+        closeContactusModal();
+    });
 
-  // privacy
-  var $privacyModal = $('#privacy');
-  function closePrivacyModal() {
-    if (!$privacyModal.hasClass('hide')) {
-      $privacyModal.addClass('hide');
-      $body.removeClass('stop-scrolling');
+    // privacy
+    var $privacyModal = $('#privacy');
+    function closePrivacyModal() {
+        if (!$privacyModal.hasClass('hide')) {
+        $privacyModal.addClass('hide');
+        $body.removeClass('stop-scrolling');
+        }
     }
-  }
-  function openPrivacyModal() {
-    $privacyModal.removeClass('hide');
-    $body.addClass('stop-scrolling');
-  }
-
-  $body.on('click', '.privacy', function(){
-    openPrivacyModal();
-  });
-
-  $privacyModal.on('click', '.modal-close', function(){
-    closePrivacyModal();
-  });
-
-  $body.on('click', '.privacy-modal', function(){
-    closePrivacyModal();
-  });
-
-  // terms-modal
-  var $termsModal = $('#terms');
-  function closeTermsModal() {
-    if (!$termsModal.hasClass('hide')) {
-      $termsModal.addClass('hide');
-      $body.removeClass('stop-scrolling');
+    function openPrivacyModal() {
+        $privacyModal.removeClass('hide');
+        $body.addClass('stop-scrolling');
     }
-  }
-  function openTermsModal() {
-    $termsModal.removeClass('hide');
-    $body.addClass('stop-scrolling');
-  }
 
-  $body.on('click', '.terms', function(){
-    openTermsModal();
-  });
+    $body.on('click', '.privacy', function(){
+        openPrivacyModal();
+    });
 
-  $termsModal.on('click', '.modal-close', function(){
-    closeTermsModal();
-  });
+    $privacyModal.on('click', '.modal-close', function(){
+        closePrivacyModal();
+    });
 
-  $body.on('click', '.terms-modal', function(){
-    closeTermsModal();
-  });
+    $body.on('click', '.privacy-modal', function(){
+        closePrivacyModal();
+    });
 
-  // video-modal
-  var $videoModal = $('#video-modal');
-
-  function closeVideoModal() {
-    if (!$videoModal.hasClass('hide')) {
-      $videoModal.addClass('hide');
-      $body.removeClass('stop-scrolling');
+    // terms-modal
+    var $termsModal = $('#terms');
+    function closeTermsModal() {
+        if (!$termsModal.hasClass('hide')) {
+        $termsModal.addClass('hide');
+        $body.removeClass('stop-scrolling');
+        }
     }
-  }
+    function openTermsModal() {
+        $termsModal.removeClass('hide');
+        $body.addClass('stop-scrolling');
+    }
 
+    $body.on('click', '.terms', function(){
+        openTermsModal();
+    });
 
-  function openVideoModal() {
-    $videoModal.removeClass('hide');
-    $body.addClass('stop-scrolling');
-  }
+    $termsModal.on('click', '.modal-close', function(){
+        closeTermsModal();
+    });
 
-  $('.watch-video').click(function(){
-    openVideoModal();
-  });
+    $body.on('click', '.terms-modal', function(){
+        closeTermsModal();
+    });
 
-  $videoModal.on('click', '.modal-close', function(){
-    closeVideoModal();
-    vimeoWrap = $('#video-modal');
-    vimeoWrap.html( vimeoWrap.html() );
-  });
+    //FAQ Modal
+    var $faqModal = $('#faq');
+    function closeFAQModal() {
+        if (!$faqModal.hasClass('hide')) {
+        $faqModal.addClass('hide');
+        $body.removeClass('stop-scrolling');
+        }
+    }
+    function openFAQModal() {
+        $faqModal.removeClass('hide');
+        $body.addClass('stop-scrolling');
+    }
 
+    $body.on('click', '.faq', function(){
+        openFAQModal();
+    });
 
-  $body.on('click', '.video-modal', function(){
-    closeVideoModal();
-    vimeoWrap = $('#video-modal');
-    vimeoWrap.html( vimeoWrap.html() );
-  });
+    $faqModal.on('click', '.modal-close', function(){
+        closeFAQModal();
+    });
 
-  $(".section9-tiers").owlCarousel({
-    dotsEach: true,
-    center: true,
-    responsive:{
-        0:{
-          items:1
+    $body.on('click', '.faq-modal', function(){
+        closeFAQModal();
+    });
+
+    // video-modal
+    var $videoCompany = $('#video-company');
+    var $videoProduct = $('#video-product');
+    var $videoProcess = $('#video-process');
+    var $videoSample = $('#video-sample');
+
+    function closeVideoModal(video) {
+        if (!$videoCompany.hasClass('hide')) {
+            $videoCompany.addClass('hide');
+            $body.removeClass('stop-scrolling');
+        }
+
+        if (!$videoProduct.hasClass('hide')) {
+            $videoProduct.addClass('hide');
+            $body.removeClass('stop-scrolling');
+        }
+
+        if (!$videoProcess.hasClass('hide')) {
+            $videoProcess.addClass('hide');
+            $body.removeClass('stop-scrolling');
+        }
+
+        if (!$videoSample.hasClass('hide')) {
+            $videoSample.addClass('hide');
+            $body.removeClass('stop-scrolling');
+        }
+    }
+
+    function openVideo(video) {
+        video.removeClass('hide');
+        $body.addClass('stop-scrolling');
+    }
+
+    $('.watch-company').click(function(){
+        openVideo($videoCompany);
+    });
+
+    $('.watch-product').click(function(){
+        openVideo($videoProduct);
+    });
+
+    $('.watch-process').click(function(){
+        openVideo($videoProcess);
+    });
+
+    $('.watch-sample').click(function(){
+        openVideo($videoSample);
+    });
+
+    $('.video-modal').on('click', '.modal-close', function(){
+        closeVideoModal();
+        vimeoWrap = $('#video-modal');
+        vimeoWrap.html( vimeoWrap.html() );
+    });
+
+    $body.on('click', '.video-modal', function(){
+        closeVideoModal();
+        vimeoWrap = $('#video-modal');
+        vimeoWrap.html( vimeoWrap.html() );
+    });
+
+    //Form Modal
+    var $error = $('#errorModal');
+    var $success = $('#successModal');
+
+    function closeSuccessModal () {
+        if (!$success.hasClass('hide')) {
+        $success.addClass('hide');
+        $body.removeClass('stop-scrolling');
+        }
+    }
+
+    function openSuccessModal() {
+        $success.removeClass('hide');
+        $body.addClass('stop-scrolling');
+    }
+
+    $success.on('click', '.modal-close', function() {
+        closeSuccessModal();
+    })
+
+    $body.on('click', '.form-modal', function(){
+        closeSuccessModal();
+    });
+    
+    function closeErrorModal () {
+        if (!$error.hasClass('hide')) {
+        $error.addClass('hide');
+        $body.removeClass('stop-scrolling');
+        }
+    }
+
+    function openErrorModal() {
+        $error.removeClass('hide');
+        $body.addClass('stop-scrolling');
+    }
+
+    $error.on('click', '.modal-close', function() {
+        closeErrorModal();
+    })
+
+    $body.on('click', '.form-modal', function(){
+        closeErrorModal();
+    });
+
+    $('#valid-register').on('click', function(e) {
+                    
+        if ( $('#first-name').val().length < 1 || $('#last-name').val().length < 1 || $('#email-address').val().length < 3 ) {
+            e.preventDefault();
+            openErrorModal();
+        } 
+        else if ( $('#first-name').val().length >= 1 || $('#last-name').val().length >= 1 || $('#email-address').val().length >= 3 ) {
+            openSuccessModal();
+        } 
+    })
+
+    $(".section4-videos").owlCarousel({
+        dotsEach: true,
+        center: true,
+        responsive:{
+            0:{
+            items:1
+            },
+            768:{
+            center: false,
+            dots: true,
+            items:3
+            }
+        }
+    });
+
+    // $(".section9-tiers").owlCarousel({
+    //     dotsEach: true,
+    //     center: true,
+    //     responsive:{
+    //         0:{
+    //         items:1
+    //         },
+    //         1024:{
+    //         center: false,
+    //         dots: false,
+    //         items:3
+    //         }
+    //     }
+    // });
+    
+    function createArticleOwl() {
+        $('.section6-content').owlCarousel({
+        dotsEach: true,
+        center: true,
+        responsive:{
+            0:{
+            items:1
+            }
+        }
+        });
+    }
+
+    function destroyArticleOwl() {
+        var owl = $('.section6-content');
+        owl.owlCarousel();
+        owl.trigger('destroy.owl.carousel');
+        $('.section6-content').removeClass('owl-carousel owl-theme');
+    }
+
+    enquire.register("screen and (max-width: 700px)", {
+        // OPTIONAL
+        // If supplied, triggered when a media query matches.
+        match : function() {
+        createArticleOwl();
         },
-        1024:{
-          center: false,
-          dots: false,
-          items:3
+
+        // OPTIONAL
+        // If supplied, triggered when the media query transitions
+        // *from a matched state to an unmatched state*.
+        unmatch : function() {
+        destroyArticleOwl();
         }
-    }
-  });
-  
-  function createArticleOwl() {
-    $('.section6-content').owlCarousel({
-      dotsEach: true,
-      center: true,
-      responsive:{
-        0:{
-          items:1
-        }
-      }
     });
-  }
-
-  function destroyArticleOwl() {
-    var owl = $('.section6-content');
-    owl.owlCarousel();
-    owl.trigger('destroy.owl.carousel');
-    $('.section6-content').removeClass('owl-carousel owl-theme');
-  }
-
-  enquire.register("screen and (max-width: 700px)", {
-    // OPTIONAL
-    // If supplied, triggered when a media query matches.
-    match : function() {
-      createArticleOwl();
-    },
-
-    // OPTIONAL
-    // If supplied, triggered when the media query transitions
-    // *from a matched state to an unmatched state*.
-    unmatch : function() {
-      destroyArticleOwl();
-    }
-  });
 });
 
 
