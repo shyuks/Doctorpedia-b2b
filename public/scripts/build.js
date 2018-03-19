@@ -779,13 +779,13 @@ $(document).ready(function(){
 
     $('.video-modal').on('click', '.modal-close', function(){
         closeVideoModal();
-        vimeoWrap = $('#video-modal');
+        vimeoWrap = $('.video-modal');
         vimeoWrap.html( vimeoWrap.html() );
     });
 
     $body.on('click', '.video-modal', function(){
         closeVideoModal();
-        vimeoWrap = $('#video-modal');
+        vimeoWrap = $('.video-modal');
         vimeoWrap.html( vimeoWrap.html() );
     });
 

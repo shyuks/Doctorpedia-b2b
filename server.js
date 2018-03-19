@@ -61,7 +61,7 @@ app.post('/', function(req, res) {
 
     sendmail({
         from: 'team@doctorpedia.com',
-        to: 's.hong35@gmail.com',
+        to: 'jeremy@doctorpedia.com',
         subject: 'New Potential INVESTOR ' + info.firstName + ' ' + info.lastName,
         html: "Hello, " + "<br><br>" + 'A new INVESTOR has submitted his information via joindoctorpedia.com.' + "<br><br>" +
               "First Name: " + info.firstName + "<br>" +
@@ -94,9 +94,9 @@ app.post('/', function(req, res) {
 // app.get('/mdinvest', function(req, res) {
 //     res.sendFile(path.join(__dirname, './public/templates/career-mdinvest.html'))
 // });
-app.get('/register/', function(req, res) {
-    res.sendFile(path.join(__dirname, './public/templates/career-subscription.html'));
-})
+// app.get('/register/', function(req, res) {
+//     res.sendFile(path.join(__dirname, './public/templates/career-subscription.html'));
+// })
 // app.get('/mdinvest/documents', function(req, res) {
 //     res.sendFile(path.join(__dirname, './public/templates/career-documents.html'))
 // });
