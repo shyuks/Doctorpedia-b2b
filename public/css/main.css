@@ -1203,7 +1203,11 @@ a:hover {
 }
 
 .hero-content h1 {
-    line-height: 1.5em
+    line-height: 1.25em
+}
+
+.hero-content h4 {
+    margin-bottom: 5px
 }
 
 @media (min-width: 768px) {
@@ -1212,8 +1216,11 @@ a:hover {
     }
 
     .hero-content h1 {
-        line-height: 1em;
         font-size: 60px
+    }
+
+    .hero-content h4 {
+        font-size: 30px
     }
 
     .hero-content p {
@@ -1258,7 +1265,7 @@ a:hover {
 @media (min-width: 769px) {
     .mission-content {
         max-width: 1248px;
-        padding: 145px 40px 155px
+        padding: 145px 40px
     }
 }
 
@@ -2197,13 +2204,13 @@ a:hover {
 
 @media (min-width: 768px) {
     .section8-left {
-        padding: 60px 10% 55px
+        padding: 60px 10%
     }
 }
 
 @media (min-width: 1024px) {
     .section8-left {
-        padding: 80px 10%;
+        padding: 80px 5%;
         width: 50%;
         -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
