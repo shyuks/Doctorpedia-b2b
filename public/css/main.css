@@ -1220,7 +1220,8 @@ a:hover {
     }
 
     .hero-content h4 {
-        font-size: 30px
+        font-size: 30px;
+        margin-bottom: 1em
     }
 
     .hero-content p {
@@ -1230,7 +1231,7 @@ a:hover {
 
 @media (min-width: 1024px) {
     .hero-content {
-        margin-top: 10em
+        margin-top: 8em
     }
 }
 
