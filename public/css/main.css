@@ -298,7 +298,7 @@ h1 {
     margin-top: 0
 }
 
-@media (min-width: 700px) {
+@media (min-width: 768px) {
     h1 {
         font-size: 70px
     }
@@ -726,7 +726,7 @@ a:hover {
 }
 
 .mobile-menu-btn-open {
-    height: 70px;
+    height: 80px;
     width: 70px;
     background: transparent url(../images/menu.png) center center no-repeat;
     float: right;
@@ -1088,9 +1088,15 @@ a:hover {
 .scroll-cta {
     -webkit-transition: all 500ms ease-out 0ms;
     transition: all 500ms ease-out 0ms;
-    display: none;
+    display: inline-block;
     padding: 0;
-    margin: 0
+    margin: 0;
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+    width: 70px;
+    height: 170px;
+    background: url(../images/scroll_down_arrow_lrg.png) left top no-repeat
 }
 
 @media (min-width: 768px) {
@@ -1098,98 +1104,81 @@ a:hover {
         -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
         order: 3;
-        display: inline-block;
         width: 70px;
         height: 170px;
         background: url(../images/scroll_down_arrow_lrg.png) left top no-repeat
     }
 }
 
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    color: black;
-    max-width: 960px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin: auto;
-    text-align: center;
-}
-
-@media (min-width: 768px) {
-    
-}
-
 @media (min-width: 1024px) {
-    
+    .hero {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        color: black;
+        max-width: 960px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin: auto;
+        text-align: center
+    }
 }
 
 .fullscreen-video-wrap {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden
+    width: 100%
 }
 
 .fullscreen-video-wrap video {
     min-width: 100%;
-    min-height: 100%
+    min-height: 100%;
+    width: 100%;
+    padding-top: 80px
 }
 
 @media (min-width: 768px) {
+    
+}
+
+@media (min-width: 1024px) {
     .fullscreen-video-wrap {
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
         height: 100vh;
-        overflow: hidden
+        overflow:hidden
     }
-    
-    .fullscreen-video-wrap video {
-        min-width: 100%;
-        min-height: 100%
-    }
-}
 
-@media (min-width: 1024px) {
-    
+    .fullscreen-video-wrap video {
+        width: initial;
+        padding-top: 0
+    }
 }
 
 .hero-overlay {
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #ffffff;
-    z-index: 1;
-    opacity: 0.75
+    display: none
 }
 
 @media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
     .hero-overlay {
+        display: inherit;
         height: 100vh;
         width: 100vw;
         position: absolute;
         top: 0;
         left: 0;
-        background: #ffffff;
+        background: #7ca9d9;
         z-index: 1;
-        opacity: 0.75
+        opacity: .4
     }
 }
 
-@media (min-width: 1024px) {
-    
-}
-
 .hero-content {
+    text-align: center;
     z-index: 2;
-    margin: 5px
+    margin: 30px 10px 50px
 }
 
 .hero-content h1 {
@@ -1197,21 +1186,16 @@ a:hover {
 }
 
 .hero-content h4 {
-    margin-bottom: 5px
+    margin-bottom: 1.25em
 }
 
 @media (min-width: 768px) {
-    .hero-content {
-        margin-top: 5em
-    }
-
     .hero-content h1 {
         font-size: 60px
     }
 
     .hero-content h4 {
         font-size: 30px;
-        margin-bottom: 1em
     }
 
     .hero-content p {
@@ -1398,7 +1382,7 @@ a:hover {
     }
 }
 
-.section3-left {
+/* .section3-left {
     background: url(../images/desktop_more_time.png) center top no-repeat;
     background-size: cover;
     min-height: 350px
@@ -1416,20 +1400,36 @@ a:hover {
         min-height: 750px;
         float: left
     }
-}
+} */
 
 .section3-right {
-    max-height: 900px
+    width: 100%
+}
+
+.section3-right h1 {
+    text-align: center;
+    margin: .4em
 }
 
 .section3-right p {
-    margin-bottom: 0
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 20px
+}
+
+@media (min-width: 768px) {
+    .section3-right p {
+        font-size: 22px
+    }
 }
 
 @media (min-width: 1024px) {
     .section3-right {
-        max-width: 50%;
-        float: right
+        max-width: 100%;
+    }
+
+    .section3-right p {
+        font-size: 24px
     }
 }
 
@@ -1439,25 +1439,80 @@ a:hover {
     }
 }
 
+.section3-right-content {
+    padding: 40px;
+}
+
+@media (min-width: 768px) {
+    .section3-right-content {
+        padding: 40px 10%
+    }
+}
+
+@media (min-width: 1024px) {
+    .section3-right-content {
+        min-height: 750px;
+        padding: 80px 15%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-line-pack: center;
+        align-content: center
+    }
+}
+
 .section3-right ul {
     width: 100%;
-    padding: 10px 20px 30px;
-    font-size: 14px
+    padding: 10px 20px 50px;
+    margin: 0
 }
 
 .section3-right ul li {
     padding: 4px
 }
 
-@media (min-width: 700px) {
+.section3-right ul li h4 {
+    font-size: 20px;
+    color: #7ca9d9
+}
+
+.section3-right ul li p {
+    text-align: initial;
+    font-size: 14px
+}
+
+/* .section3-right ul li span {
+    visibility: hidden;
+    width: 10em;
+    background-color: gray;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+} */
+
+@media (min-width: 768px) {
     .section3-right ul {
+        font-size: 20px
+    }
+
+    .section3-right ul li p {
         font-size: 16px
     }
 }
 
 @media (min-width: 1024px) {
     .section3-right ul {
-        font-size: 20px;
+        font-size: 24px;
     }
 }
 
@@ -1476,45 +1531,8 @@ a:hover {
     }
 }
 
-.section3-right-content {
-    padding: 40px;
-}
-
-.section3-right ul {
-    margin: 0
-}
-
-@media (min-width: 700px) {
-    .section3-right-content {
-        padding: 40px 13%
-    }
-}
-
-@media (min-width: 1024px) {
-    .section3-right-content {
-        min-height: 750px;
-        padding: 12%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -ms-flex-line-pack: center;
-        align-content: center
-    }
-
-    .section3-right p {
-        font-size: 20px
-    }
-}
-
 .section3 .footer-cta {
-    text-align: justify
+    text-align: center
 }
 
 .section3 .btn-link {
@@ -1522,7 +1540,8 @@ a:hover {
     -moz-transform: scale(1, 1);
     -ms-transform: scale(1, 1);
     -webkit-transform: scale(1, 1);
-    -o-transform: scale(1, 1)
+    -o-transform: scale(1, 1);
+    margin-bottom: 20px
 }
 
 .section3 .btn-link:hover {
@@ -1531,6 +1550,12 @@ a:hover {
     -ms-transform: scale(1.1, 1.1);
     -webkit-transform: scale(1.1, 1.1);
     -o-transform: scale(1.1, 1.1)
+}
+
+@media (min-width: 768px) {
+    .section3 .btn-link {
+        margin-right: 20px
+    }
 }
 
 .section4 {
@@ -1652,17 +1677,23 @@ a:hover {
 
 @media (min-width: 768px) {
     .section4-videos .video-description p {
+        min-height: 240px
+    }
+}
+
+@media (min-width: 1024px) {
+    .section4-videos .video-description p {
         min-height: 210px
     }
 }
 
-/* @media (min-width: 1024px) {
-    .section4-videos .video-description p {
-        min-height: 210px
-    }
-} */
-
 @media (min-width: 1200px) {
+    .section4-videos .video-description p {
+        min-height: 180px
+    }
+}
+
+@media (min-width: 1327px) {
     .section4-videos .video-description p {
         min-height: 150px
     }
@@ -2209,29 +2240,19 @@ a:hover {
     }
 }
 
-@media (min-width: 1200px) {
-    .section8-left {
-        /* padding: 200px 12% */
-    }
-
-    .section8-left p {
-        font-size: 30px;
-    }
-
-}
-
 .section8-left-content {
-    width: 100%
+    width: 100%;
+    text-align: center
 }
 
 @media (min-width: 1024px) {
-    .section8-left-content p {
-        font-size: 20px
+    .section8-left-content {
+        text-align: initial
     }
 }
 
 .section8-right {
-    height: 350px;
+    height: 300px;
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
@@ -2252,7 +2273,7 @@ a:hover {
     .section8-right {
         width: 50%;
         padding: 80px 10%;
-        min-height: 700px
+        min-height: 650px
     }
 }
 
@@ -2672,7 +2693,8 @@ a:hover {
 }
 
 .section11 .investor-form {
-    padding: 40px 20px;
+    background: linear-gradient(to bottom, #dcdfe5 0%, #e7eaf1 50%, #dcdfe5 100%);
+    padding: 40px 20px
 }
 
 @media (min-width: 1024px) {
@@ -3221,8 +3243,13 @@ input {
 
 /* Contact Modal */
 
+.contact-modal p {
+    margin-bottom: 28px
+}
+
 #contactus .modal-content {
     width: 100%;
+    padding: 35px 25px
 }
 
 @media (min-width: 700px) {
@@ -3239,7 +3266,8 @@ input {
 }
 
 .contact-modal .modal-body {
-    padding-top: 20px
+    padding-top: 20px 0px 0px;
+    text-align: center
 }
 
 .contact-modal .address {
@@ -3253,17 +3281,19 @@ input {
     background-size: 30px auto
 }
 
-.contact-modal .email a {
-    color: #7d8ca9
+.contact-modal span {
+    margin-bottom: 0
+}
+
+.contact-modal a {
+    color: #7d8ca9;
+    font-size: 15px;
+    margin-bottom: 10px
 }
 
 .contact-modal .telephon {
     background: url(/images/contact_icon_phone.png) center top no-repeat;
     background-size: 26px auto
-}
-
-.contact-modal p {
-    margin-bottom: 28px
 }
 
 #aboutus .modal-content {

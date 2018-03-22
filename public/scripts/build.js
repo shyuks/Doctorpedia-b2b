@@ -779,14 +779,30 @@ $(document).ready(function(){
 
     $('.video-modal').on('click', '.modal-close', function(){
         closeVideoModal();
-        vimeoWrap = $('.video-modal');
-        vimeoWrap.html( vimeoWrap.html() );
+
+        var companyWrap = $('#video-company');
+        var productWrap = $('#video-product');
+        var processWrap = $('#video-process');
+        var sampleWrap = $('#video-sample');
+
+        companyWrap.html( companyWrap.html() );
+        productWrap.html( productWrap.html() );
+        processWrap.html( processWrap.html() );
+        sampleWrap.html( sampleWrap.html() );
     });
 
     $body.on('click', '.video-modal', function(){
         closeVideoModal();
-        vimeoWrap = $('.video-modal');
-        vimeoWrap.html( vimeoWrap.html() );
+        
+        var companyWrap = $('#video-company');
+        var productWrap = $('#video-product');
+        var processWrap = $('#video-process');
+        var sampleWrap = $('#video-sample');
+
+        companyWrap.html( companyWrap.html() );
+        productWrap.html( productWrap.html() );
+        processWrap.html( processWrap.html() );
+        sampleWrap.html( sampleWrap.html() );
     });
 
     //Form Modal
