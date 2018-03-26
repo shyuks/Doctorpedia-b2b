@@ -442,7 +442,8 @@ function throttle(func, wait, options) {
 
   driveSectionAnimation('.mission-content', '.mission-content h1', 'fadeInUp');
   driveSectionAnimation('.section3-right-content', '.section3-right-content p', 'fadeInUp');
-  driveSectionAnimation('.section4-top', '.section4-top h1', 'fadeInUp');
+  driveSectionAnimation('.section4-top', '.section4-top p', 'fadeInUp');
+  driveSectionAnimation('.video-box', '.section4-top p', 'fadeInUp')
   // driveSectionAnimation('.section4-body', '.section4-header h1', 'fadeInUp');
   // driveSectionAnimation('.section4-right', '.section4-header h1', 'fadeInUp', 'delayed');
   // driveSectionAnimation('.section5-left', '.section5 h1', 'fadeInUp');

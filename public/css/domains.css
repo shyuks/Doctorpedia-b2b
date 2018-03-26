@@ -441,7 +441,7 @@ a:hover {
 }
 
 .dropdown-menu.show {
-    background-color: #2e5363;
+    background-color: #7ca9d9;
     padding: 10px !important
 }
 
@@ -493,7 +493,7 @@ a:hover {
 
 .filterDomain .letterHeading {
     font-size: 1.5rem;
-    background-color: #2e5363;
+    background-color: #7ca9d9;
     color: #fff;
     margin: 0 auto !important;
     padding-left: .75rem
@@ -581,20 +581,29 @@ table {
     margin-bottom: 0 !important
 }
 
+.table .thead-dark th {
+    background-color: #47484a !important;
+    border-color: #47484a !important
+}
+
 .domain-column {
     display: none;
+    color: #7ca9d9
 }
 
 .condition-column {
-    width: 75%
+    width: 75%;
+    color: #7ca9d9
 }
 
 .monthly-column {
-    width: 25%
+    width: 25%;
+    color: #7ca9d9
 }
 
 .related-column {
     display: none;
+    color: #7ca9d9
 }
 
 @media (min-width: 768px) {
