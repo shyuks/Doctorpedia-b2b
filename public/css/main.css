@@ -1175,7 +1175,7 @@ a:hover {
         left: 0;
         background: white;
         z-index: 1;
-        opacity: .65
+        opacity: .55
     }
 }
 
@@ -1186,12 +1186,18 @@ a:hover {
 }
 
 .hero-content h1 {
-    font-size: 40px;
+    font-size: 36px;
     line-height: 1.25em
 }
 
 .hero-content h4 {
     margin-bottom: 1.25em
+}
+
+@media (min-width: 375px) {
+    .hero-content h1 {
+        font-size: 40px
+    }
 }
 
 @media (min-width: 768px) {
@@ -1216,7 +1222,7 @@ a:hover {
     }
 
     .hero-content h1 {
-        font-size: 95px;
+        font-size: 100px;
         /* background-color: rgba(255, 255, 255, 0.6);
         border: 1px solid black; */
         margin: 50px 50px 30px;
