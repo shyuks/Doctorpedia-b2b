@@ -386,32 +386,38 @@ function throttle(func, wait, options) {
     requestAnimationFrame(step);
   }
 
-  // var $missionStats = $('.mission-stats');
-  // $missionStats.addClass('invisible');
-  // var inview = new Waypoint.Inview({
-  //   element: $missionStats[0],
-  //   entered: function(direction) {
-  //     if ('down' === direction) {
-  //       $missionStats.addClass('animated fadeInUp');
+  var $missionStats = $('.mission-stats');
+  $missionStats.addClass('invisible');
+  var inview = new Waypoint.Inview({
+    element: $missionStats[0],
+    entered: function(direction) {
+      if ('down' === direction) {
+        $missionStats.addClass('animated fadeInUp');
 
-  //       // kick off counters
-  //       $statNos = $('.mission-stats-item span', $missionStats);
-  //       counter(50, $($statNos[0]), 2200, 2113);
-  //       counter(50, $($statNos[1]), 38000, 37871);
-  //       counter(50, $($statNos[2]), 57000, 56834);
-  //     }
-  //   },
-  //   exited: function(direction) {
-  //     if ('up' === direction) {
-  //       $missionStats.removeClass('animated fadeInUp');
-  //       // reset stats
-  //       var $els = $('.mission-stats-item span', $missionStats);
-  //       $($els[0]).html(2113);
-  //       $($els[1]).html(37871);
-  //       $($els[2]).html(56834);
-  //     }
-  //   }
-  // });
+        // kick off counters
+        $statNos = $('.mission-stats-item span', $missionStats);
+        // counter(50, $($statNos[0]), 2200, 2113);
+        // counter(50, $($statNos[1]), 38000, 37871);
+        // counter(50, $($statNos[2]), 57000, 56834);
+        counter(50, $($statNos[0]), 212, 125); //212  87
+        counter(50, $($statNos[1]), 2718, 2589); //27000  129
+        counter(50, $($statNos[2]), 16303, 16134); //16300  166
+      }
+    },
+    exited: function(direction) {
+      if ('up' === direction) {
+        $missionStats.removeClass('animated fadeInUp');
+        // reset stats
+        var $els = $('.mission-stats-item span', $missionStats);
+        // $($els[0]).html(2113);
+        // $($els[1]).html(37871);
+        // $($els[2]).html(56834);
+        $($els[0]).html(125);
+        $($els[1]).html(2589);
+        $($els[2]).html(16134);
+      }
+    }
+  });
 
   function driveSectionAnimation(elToAnimate, elThatTriggersAnimation, animation, animAdaptClass) {
     var $el = $(elToAnimate);
@@ -442,6 +448,7 @@ function throttle(func, wait, options) {
 
   driveSectionAnimation('.mission-content', '.mission-content h1', 'fadeInUp');
   driveSectionAnimation('.section3-right-content', '.section3-right-content p', 'fadeInUp');
+  driveSectionAnimation('.section12-main-content', '.section12-main h1', 'fadeInUp')
   driveSectionAnimation('.section4-top', '.section4-top p', 'fadeInUp');
   driveSectionAnimation('.video-box', '.section4-top p', 'fadeInUp')
   // driveSectionAnimation('.section4-body', '.section4-header h1', 'fadeInUp');
@@ -566,29 +573,29 @@ $(document).ready(function(){
     });
 
     // modal about us
-    var $aboutModal = $('#aboutus');
-    function closeAboutusModal() {
-        if (!$aboutModal.hasClass('hide')) {
-        $aboutModal.addClass('hide');
-        $body.removeClass('stop-scrolling');
-        }
-    }
-    function openAboutusModal() {
-        $aboutModal.removeClass('hide');
-        $body.addClass('stop-scrolling');
-    }
+    // var $aboutModal = $('#aboutus');
+    // function closeAboutusModal() {
+    //     if (!$aboutModal.hasClass('hide')) {
+    //     $aboutModal.addClass('hide');
+    //     $body.removeClass('stop-scrolling');
+    //     }
+    // }
+    // function openAboutusModal() {
+    //     $aboutModal.removeClass('hide');
+    //     $body.addClass('stop-scrolling');
+    // }
 
-    $document.on('click', '.about-us', function(){
-        openAboutusModal();
-    });
+    // $document.on('click', '.about-us', function(){
+    //     openAboutusModal();
+    // });
 
-    $aboutModal.on('click', '.close-aboutus', function(){
-        closeAboutusModal();
-    });
+    // $aboutModal.on('click', '.close-aboutus', function(){
+    //     closeAboutusModal();
+    // });
 
-    $document.on('click', '#aboutus', function(){
-        closeAboutusModal();
-    });
+    // $document.on('click', '#aboutus', function(){
+    //     closeAboutusModal();
+    // });
 
     // why doctorpedia modal
     // var $benefitsModal = $('#benefits-modal');
@@ -876,6 +883,27 @@ $(document).ready(function(){
         }
     });
 
+  //   $(".section12-members").owlCarousel({
+  //     dotsEach: true,
+  //     loop: true,
+  //     center: true,
+  //     // autoplay: true,
+  //     // autoplayTimeout: 3000,
+  //     // autoplayHoverPause: true,
+  //     responsive:{
+  //         0:{
+  //         items:1
+  //         },
+  //         768:{
+  //         dots: true,
+  //         items:2
+  //         },
+  //         1024:{
+  //         items:4
+  //         }
+  //     }
+  // });
+
     // $(".section9-tiers").owlCarousel({
     //     dotsEach: true,
     //     center: true,
@@ -891,39 +919,39 @@ $(document).ready(function(){
     //     }
     // });
     
-    function createArticleOwl() {
-        $('.section6-content').owlCarousel({
-        dotsEach: true,
-        center: true,
-        responsive:{
-            0:{
-            items:1
-            }
-        }
-        });
-    }
+    // function createArticleOwl() {
+    //     $('.section6-content').owlCarousel({
+    //     dotsEach: true,
+    //     center: true,
+    //     responsive:{
+    //         0:{
+    //         items:1
+    //         }
+    //     }
+    //     });
+    // }
 
-    function destroyArticleOwl() {
-        var owl = $('.section6-content');
-        owl.owlCarousel();
-        owl.trigger('destroy.owl.carousel');
-        $('.section6-content').removeClass('owl-carousel owl-theme');
-    }
+    // function destroyArticleOwl() {
+    //     var owl = $('.section6-content');
+    //     owl.owlCarousel();
+    //     owl.trigger('destroy.owl.carousel');
+    //     $('.section6-content').removeClass('owl-carousel owl-theme');
+    // }
 
-    enquire.register("screen and (max-width: 700px)", {
+    // enquire.register("screen and (max-width: 700px)", {
         // OPTIONAL
         // If supplied, triggered when a media query matches.
-        match : function() {
-        createArticleOwl();
-        },
+        // match : function() {
+        // createArticleOwl();
+        // },
 
         // OPTIONAL
         // If supplied, triggered when the media query transitions
         // *from a matched state to an unmatched state*.
-        unmatch : function() {
-        destroyArticleOwl();
-        }
-    });
+        // unmatch : function() {
+        // destroyArticleOwl();
+        // }
+    // });
 });
 
 

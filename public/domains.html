@@ -586,7 +586,7 @@
             <div class="footer-top">
             <h1><img class="footer-logo-img" src="images/doctorpedialogo_white.png"></h1></div>
             <ul class="footer-menu">
-                <li><a class="nav-link about-us" href="#about-us">Team</a></li>
+                <!-- <li><a class="nav-link about-us" href="#about-us">Team</a></li> -->
                 <li><a class="nav-link contactus" href="#contact">Contact</a></li>
             </ul>
             <ul class="footer-social">
@@ -604,7 +604,7 @@
         </footer>
 
         <!-- About Us/Team Modal -->
-        <div id="aboutus" class="modal-wrap hide">
+        <!-- <div id="aboutus" class="modal-wrap hide">
             <div class="modal-outter">
                 <div class="close-aboutus modal-close">CLOSE MODAL</div>
                 <div class="modal-content">
@@ -615,26 +615,26 @@
                         <h2>Our Team</h2>
                         <p class="card jeremy"><strong>Jeremy Wosner – Founder/CEO</strong>
                             <br>Works to set product strategy and direction while building the company’s culture as well as allocating capital to the company’s priorities</p>
-                        <!-- <p class="card zev"><strong>Zev Weinstein – COO President & CEO of Medicom Inc.</strong>
-                            <br>Focuses on setting strategic vision and decision making to reach goals and deliverables</p> -->
-                        <!-- <p class="card owen"><strong>Owen O'Shea - Title</strong>
-                            <br>Brief Description</p> -->
+                        <p class="card zev"><strong>Zev Weinstein – COO President & CEO of Medicom Inc.</strong>
+                            <br>Focuses on setting strategic vision and decision making to reach goals and deliverables</p>
+                        <p class="card owen"><strong>Owen O'Shea - Title</strong>
+                            <br>Brief Description</p>
                         <p class="card richard"><strong>Richard Averbach – Chief Marketing Consultant</strong>
                             <br>Executive Director, Massachusetts Coalition for Serious Illness Care, Former CEO of Mass General</p>
                         <p class="card molly"><strong>Dr. Molly Maloof - VP of Clinical Strategy</strong>
                             <br>Physician, Technologist & Scientific Wellness Pioneer</p>
                         <p class="card joseph"><strong>Joseph Alpert – Chief Clinical Advisor</strong>
                             <br>Editor in Chief of The American Journal of Medicine. Assisting in production and appearances in medical information videos</p>
-                        <!-- <p class="card joao"><strong>João Cowperthwaite – Doctor Engagement Consultant</strong>
-                            <br>Business Development at Exer. Creation of strategic marketing documents, survey design, market research, website content creation, recruitment of physicians for videos</p> -->
-                        <!-- <p class="card rick"><strong>Rick Kahn – Sales Consultant</strong>
-                            <br>Hospital outreach - recruit hospitals; recruitment of physicians for videos, Business development and sales (Sponsorships, partnerships etc.)</p> -->
-                        <!-- <p class="card suzanne"><strong>Suzanne Polizzi – Sales Consultant</strong>
-                            <br>Analyze range of opportunities and assist us in focusing on the best opportunities, comparing market requirements with the company’s capabilities and set out a range of options</p> -->
+                        <p class="card joao"><strong>João Cowperthwaite – Doctor Engagement Consultant</strong>
+                            <br>Business Development at Exer. Creation of strategic marketing documents, survey design, market research, website content creation, recruitment of physicians for videos</p>
+                        <p class="card rick"><strong>Rick Kahn – Sales Consultant</strong>
+                            <br>Hospital outreach - recruit hospitals; recruitment of physicians for videos, Business development and sales (Sponsorships, partnerships etc.)</p>
+                        <p class="card suzanne"><strong>Suzanne Polizzi – Sales Consultant</strong>
+                            <br>Analyze range of opportunities and assist us in focusing on the best opportunities, comparing market requirements with the company’s capabilities and set out a range of options</p>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div id="contactus" class="modal-wrap contact-modal hide">
             <div class="modal-outter">
                 <div class="close-contactus modal-close">CLOSE MODAL</div>
@@ -7063,29 +7063,29 @@
             });
 
             // modal about us
-            var $aboutModal = $('#aboutus');
-            function closeAboutusModal() {
-                if (!$aboutModal.hasClass('hide')) {
-                $aboutModal.addClass('hide');
-                $body.removeClass('stop-scrolling');
-                }
-            }
-            function openAboutusModal() {
-                $aboutModal.removeClass('hide');
-                $body.addClass('stop-scrolling');
-            }
+            // var $aboutModal = $('#aboutus');
+            // function closeAboutusModal() {
+            //     if (!$aboutModal.hasClass('hide')) {
+            //     $aboutModal.addClass('hide');
+            //     $body.removeClass('stop-scrolling');
+            //     }
+            // }
+            // function openAboutusModal() {
+            //     $aboutModal.removeClass('hide');
+            //     $body.addClass('stop-scrolling');
+            // }
 
-            $document.on('click', '.about-us', function(){
-                openAboutusModal();
-            });
+            // $document.on('click', '.about-us', function(){
+            //     openAboutusModal();
+            // });
 
-            $aboutModal.on('click', '.close-aboutus', function(){
-                closeAboutusModal();
-            });
+            // $aboutModal.on('click', '.close-aboutus', function(){
+            //     closeAboutusModal();
+            // });
 
-            $document.on('click', '#aboutus', function(){
-                closeAboutusModal();
-            });
+            // $document.on('click', '#aboutus', function(){
+            //     closeAboutusModal();
+            // });
 
             // contact us modal
             var $contactusModal = $('#contactus');

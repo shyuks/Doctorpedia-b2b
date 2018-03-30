@@ -626,7 +626,7 @@ a:hover {
     font-family: "PlainLight", sans-serif;
     font-weight: 600;
     font-size: 17px;
-    color: #47484a;
+    color: #fff;
     text-decoration: none;
     line-height: 80px
 }
@@ -635,13 +635,9 @@ a:hover {
     color: #b3cceb
 }
 
-/* .scrolled .nav-menu-link {
+.scrolled .nav-menu-link {
     color: #47484a
-} */
-
-/* .scrolled .nav-menu-link {
-    color: #828787
-} */
+}
 
 .nav-cta {
     -webkit-box-flex: 1;
@@ -1115,16 +1111,26 @@ a:hover {
 }
 
 @media (min-width: 1024px) {
+    .scroll-cta {
+        display: none;
+    }
+}
+
+.hero {
+    align-items: center;
+    text-align: center
+}
+
+@media (min-width: 1024px) {
     .hero {
         height: 100vh;
+        width: 100vw;
         display: flex;
         align-items: center;
-        color: black;
-        max-width: 960px;
+        /* max-width: 960px; */
         padding-left: 1rem;
         padding-right: 1rem;
-        margin: auto;
-        text-align: center
+        margin: auto
     }
 }
 
@@ -1173,9 +1179,9 @@ a:hover {
         position: absolute;
         top: 0;
         left: 0;
-        background: white;
+        background: black;
         z-index: 1;
-        opacity: .55
+        opacity: .2
     }
 }
 
@@ -1192,6 +1198,14 @@ a:hover {
 
 .hero-content h4 {
     margin-bottom: 1.25em
+}
+
+.hero-content .hero-header {
+    display: none
+}
+
+.hero-content .hero-scroll {
+    display: none
 }
 
 @media (min-width: 375px) {
@@ -1216,17 +1230,36 @@ a:hover {
 
 @media (min-width: 1024px) {
     .hero-content {
-        margin-top: 8em;
+        margin-top: 3em;
         /* background-color: rgba(255, 255, 255, 0.6);
         border: 1px solid black; */
+        width: 100vw;
+        margin: 0
     }
 
     .hero-content h1 {
-        font-size: 100px;
-        /* background-color: rgba(255, 255, 255, 0.6);
-        border: 1px solid black; */
-        margin: 50px 50px 30px;
+        /* font-size: 100px;
+        background-color: rgba(255, 255, 255, 0.6);
+        border: 1px solid black;
+        margin: 50px 50px 30px; */
+        display: none
     }
+
+    .hero-content .hero-header {
+        display: inherit;
+        width: 100%;
+        /* margin-bottom: 2em; */
+    }
+
+    .hero-content .hero-scroll {
+        display: inherit;
+        text-align: center;
+        position:absolute;
+        top:95vh;
+        transform:translateY(-100%);
+        width:100vw;
+    }
+
 }
 
 
@@ -1286,7 +1319,9 @@ a:hover {
 }
 
 .mission-stats {
-    text-align: center
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 0
 }
 
 @media (min-width: 1024px) {
@@ -1297,9 +1332,9 @@ a:hover {
 
 .mission-stats-item {
     display: inline-block;
-    color: #43c7d8;
+    color: #b3cceb;
     font-size: 9px;
-    padding-right: 4px
+    padding-right: 30px
 }
 
 .mission-stats-item:last-child {
@@ -1308,7 +1343,7 @@ a:hover {
 
 @media (min-width: 768px) {
     .mission-stats-item {
-        padding-right: 20px;
+        padding-right: 50px;
         font-size: 20px
     }
 }
@@ -1579,6 +1614,8 @@ a:hover {
         margin-right: 20px
     }
 }
+
+/* Video Section */
 
 .section4 {
     overflow: hidden;
@@ -2827,6 +2864,277 @@ input {
     background-color: white
 }
 
+/* Team Module */
+
+/* .section12 {
+    overflow: hidden;
+    background: -webkit-gradient(linear, left top, left bottom, from(#dcdfe5), color-stop(50%, #e7eaf1), to(#dcdfe5));
+    background: linear-gradient(to bottom, #dcdfe5 0%, #e7eaf1 50%, #dcdfe5 100%);
+}
+
+.section12 {
+    padding: 40px 20px 40px;
+    text-align: center
+}
+
+@media (min-width: 1024px) {
+    .section12 {
+        padding: 80px 20px 80px
+    }
+
+}
+
+.section12-members {
+    text-align: center;
+}
+
+
+.section12-top p {
+    margin-bottom: 20px
+}
+
+.section12-members .member-box {
+    margin: 10px;
+    border: 1px solid black;
+    background-color: #ffffff;
+
+}
+
+@media (min-width: 1024px) {
+    .section12-members .member-box {
+        margin: auto;
+        width: 90%;
+        max-width: 350px
+    }
+}
+
+.section12-members .member-border {
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-bottom: 250px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.section12-members .jeremy {
+    background: url('../images/AVATAR_JEREMY.png');
+    background-position: center;
+    background-size: cover
+}
+
+.section12-members .richard {
+    background: url('../images/AVATAR_RICHARD.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.section12-members .joseph {
+    background: url('../images/AVATAR_JOSEPH.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.section12-members .molly {
+    background: url('../images/AVATAR_MOLLY.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.section12-members .member-description h4 {
+    margin: 20px 0px 5px;
+    font-weight: bold
+}
+
+.section12-members .member-description h5 {
+    font-size: 16px;
+    font-style: italic;
+    margin: 0
+}
+
+.section12-members .member-description p {
+    margin: 15px;
+    min-height: 120px
+}
+
+@media (min-width: 412px) {
+    .section12-members .member-description p {
+        min-height: 100px
+    }
+}
+
+@media (min-width: 768px) {
+    .section12-members .member-description p {
+        min-height: 240px
+    }
+}
+
+@media (min-width: 1024px) {
+    .section12-members .member-description p {
+        min-height: 210px
+    }
+}
+
+@media (min-width: 1200px) {
+    .section12-videos .member-description p {
+        min-height: 180px
+    }
+}
+
+@media (min-width: 1327px) {
+    .section12-members .member-description p {
+        min-height: 150px
+    }
+} */
+
+.section12 {
+    overflow: hidden;
+    background: -webkit-gradient(linear, left top, left bottom, from(#dcdfe5), color-stop(50%, #e7eaf1), to(#dcdfe5));
+    background: linear-gradient(to bottom, #dcdfe5 0%, #e7eaf1 50%, #dcdfe5 100%);
+}
+
+@media (min-width: 1024px) {
+    .section12 {
+        display: flex
+    }
+}
+
+.section12-main {
+    width: 100%;
+    /* background-color: #7ca9d9 */
+}
+
+.section12-main h1 {
+    text-align: center;
+    margin: .4em
+}
+
+.section12-main p {
+    text-align: center;
+    font-size: 14px
+}
+
+@media (min-width: 768px) {
+    .section12-main p {
+        font-size: 16px
+    }
+}
+
+@media (min-width: 1024px) {
+    .section12-main {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1150px) {
+    .section12-main h1 {
+        font-size: 75px
+    }
+}
+
+.section12-main-content {
+    padding: 40px;
+}
+
+@media (min-width: 768px) {
+    .section12-main-content {
+        padding: 40px 10%
+    }
+}
+
+@media (min-width: 1024px) {
+    .section12-main-content {
+        min-height: 750px;
+        padding: 80px 15%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-line-pack: center;
+        align-content: center
+    }
+}
+
+.section12-main ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.section12-main ul li {
+    padding: 4px;
+    list-style-type: none;
+}
+
+.section12-main ul li h4 {
+    font-size: 20px;
+    color: #7ca9d9;
+    margin-bottom: 0
+}
+
+.section12-main ul li h5 {
+    margin: 5px 0 10px;
+    font-style: italic
+}
+
+@media (min-width: 768px) {
+
+    .section12-main ul {
+        text-align: left;
+    }
+
+    .section12-main .member-left {
+        text-align: left
+    }
+
+    .section12-main .member-right {
+        text-align: right
+    }
+    
+    .section12-main ul li .jeremy {
+        float: left;
+        padding-right: 10px
+    }
+
+    .section12-main ul li .richard {
+        float: right;
+        padding-left: 10px
+    }
+
+    .section12-main ul li .joseph {
+        float: left;
+        padding-right: 10px
+    }
+
+    .section12-main ul li .molly {
+        float: right;
+        padding-left: 10px
+    }
+
+    .section12-main ul li h4 {
+        display: inline-block
+    }
+
+    .section12-main ul li h5 {
+        display: inline-block;
+        font-size: 18px;
+        margin: 0
+    }
+
+    .section12-main ul li p {
+        font-size: 14px;
+        text-align: inherit
+    }
+}
+
+/* Footer */
+
 .footer {
     padding: 60px 20px;
     background-color: #293344
@@ -3206,7 +3514,8 @@ input {
 .video-modal .modal-content {
     background-color: #fff;
     min-width: 280px;
-    padding: 0
+    padding: 0;
+    overflow: hidden
 }
 
 @media (min-width: 500px) {
@@ -3326,7 +3635,7 @@ input {
     background-size: 26px auto
 }
 
-#aboutus .modal-content {
+/* #aboutus .modal-content {
     padding: 20px 10px 20px 20px
 }
 
@@ -3451,4 +3760,4 @@ input {
     .molly {
         background-position: 0 0
     }
-}
+} */
