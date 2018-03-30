@@ -3089,33 +3089,14 @@ input {
         text-align: left;
     }
 
-    .section12-main .member-left {
+    .section12-main ul li {
         text-align: left
     }
 
-    .section12-main .member-right {
-        text-align: right
-    }
-    
-    .section12-main ul li .jeremy {
+    .section12-main ul li img {
         float: left;
         padding-right: 10px
-    }
-
-    .section12-main ul li .richard {
-        float: right;
-        padding-left: 10px
-    }
-
-    .section12-main ul li .joseph {
-        float: left;
-        padding-right: 10px
-    }
-
-    .section12-main ul li .molly {
-        float: right;
-        padding-left: 10px
-    }
+    } 
 
     .section12-main ul li h4 {
         display: inline-block
