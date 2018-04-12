@@ -3372,12 +3372,22 @@ input {
     line-height: 1.5em
 }
 
+.modal-content ol li {
+    font-size: 12px;
+    margin-bottom: 30px;
+    line-height: 1.5em
+}
+
 @media (min-width: 400px) {
     .modal-outter {
         padding: 50px
     }
 
     .modal-content p {
+        font-size: 15px
+    }
+
+    .modal-content ol li {
         font-size: 15px
     }
 }
@@ -3461,6 +3471,12 @@ input {
 .privacy-modal .modal-content p,
 .terms-modal .modal-content p {
     margin-bottom: 0
+}
+
+.privacy-modal .modal-content ol li,
+.terms-modal .modal-content ol li {
+    margin-bottom: 0;
+    list-style-type: lower-roman
 }
 
 .privacy-modal .modal-content a,
