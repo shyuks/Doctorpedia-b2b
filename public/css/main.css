@@ -509,7 +509,7 @@ a:hover {
     position: fixed;
     z-index: 3;
     background-color: transparent;
-    height: 146px;
+    height: 120px;
     top: 0;
     left: 0;
     right: 0;
@@ -531,7 +531,8 @@ a:hover {
         padding-right: 40px;
         display: -webkit-box;
         display: -ms-flexbox;
-        display: flex
+        display: flex;
+        height: 100px
     }
 }
 
@@ -1085,6 +1086,18 @@ a:hover {
     }
 } */
 
+@keyframes float {
+    0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
 .scroll-cta {
     -webkit-transition: all 500ms ease-out 0ms;
     transition: all 500ms ease-out 0ms;
@@ -1095,19 +1108,8 @@ a:hover {
     -ms-flex-order: 3;
     order: 3;
     width: 70px;
-    height: 170px;
-    background: url(../images/scroll_down_arrow_lrg.png) left top no-repeat
-}
-
-@media (min-width: 768px) {
-    .scroll-cta {
-        -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-        order: 3;
-        width: 70px;
-        height: 170px;
-        background: url(../images/scroll_down_arrow_lrg.png) left top no-repeat
-    }
+    height: 100px;
+    background: url(../images/scroll_down_arrow_sm.png) left top no-repeat
 }
 
 @media (min-width: 1024px) {
@@ -1258,6 +1260,8 @@ a:hover {
         top:95vh;
         transform:translateY(-100%);
         width:100vw;
+        transform: translatey(0px);
+	    animation: float 4s ease-in-out infinite;
     }
 
 }
