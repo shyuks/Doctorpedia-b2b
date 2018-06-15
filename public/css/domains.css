@@ -628,7 +628,8 @@ table {
     }
 
     .monthly-column {
-        width: 15%
+        /* width: 15% */
+        width: 30%
     }
 
     .related-column {
