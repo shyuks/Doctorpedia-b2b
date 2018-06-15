@@ -6,9 +6,14 @@ var bodyParser = require('body-parser');
 var db = require('./db/connection.js');
 var favicon = require('serve-favicon');
 var sendmail = require('sendmail')();
+var basicAuth = require('express-basic-auth')
 
 var app = express();
 
+app.use(basicAuth({
+    users: { 'admin': 'success123' },
+    challenge: true
+}))
 app.use(favicon(path.join(__dirname, './public/images/favicon.png')))
 
 // app.use(express.favicon(__dirname + './public/img/favicon.ico'));

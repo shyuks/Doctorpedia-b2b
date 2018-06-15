@@ -2794,6 +2794,14 @@ a:hover {
     }
 }
 
+.section11 .investor-form .form-wrap .form-header h2 {
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    color: white
+    /* background-color: #ffffff */
+}
+
 .section11 .investor-form .form-wrap .form-header h4 {
     text-align: center;
     padding: 16px;
@@ -2809,12 +2817,22 @@ a:hover {
 }
 
 @media (min-width: 768px) {
+    .section11 .investor-form .form-wrap .form-header h2 {
+        font-size: 28px;
+    }
+
     .section11 .investor-form .form-wrap .form-header h4 {
         font-size: 22px;
     }
 
     .section11 .investor-form .form-wrap .form-body {
         padding: 25px
+    }
+}
+
+@media (min-width: 1024px) {
+    .section11 .investor-form .form-wrap .form-header h2 {
+        font-size: 32px;
     }
 }
 
