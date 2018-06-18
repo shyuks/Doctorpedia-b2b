@@ -3412,7 +3412,9 @@ input {
 }
 
 .modal-body {
-    max-height: 50vh
+    max-height: 50vh;
+    overflow-wrap: break-word;
+    word-wrap: break-word;  
 }
 
 @media (min-width: 768px) {
@@ -3470,19 +3472,22 @@ input {
 }
 
 .privacy-modal .modal-content,
-.terms-modal .modal-content {
+.terms-modal .modal-content,
+.faq-modal .modal-content {
     padding: 20px 10px 20px 20px
 }
 
 .privacy-modal .modal-content h1,
-.terms-modal .modal-content h1 {
+.terms-modal .modal-content h1,
+.faq-modal .modal-content h1 {
     line-height: 1em;
     font-size: 30px;
     padding-right: 10px
 }
 
 .privacy-modal .modal-content h2,
-.terms-modal .modal-content h2 {
+.terms-modal .modal-content h2,
+.faq-modal .modal-content h2 {
     padding-top: 15px;
     line-height: 1.2em
 }
@@ -3490,6 +3495,11 @@ input {
 .privacy-modal .modal-content p,
 .terms-modal .modal-content p {
     margin-bottom: 0
+}
+
+.faq-modal .modal-content p {
+    margin-bottom: 0;
+    margin-top: 10px
 }
 
 .privacy-modal .modal-content ol li,
