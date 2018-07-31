@@ -745,8 +745,8 @@ $(document).ready(function(){
     });
 
     $faqQuestion.click(function(){
-      closeAnswers();
       if ($(this).next('.faqAnswer').hasClass('collapse')) {
+        closeAnswers();
         $(this).next('.faqAnswer').removeClass('collapse');
       } else {
         $(this).next('.faqAnswer').addClass('collapse');
