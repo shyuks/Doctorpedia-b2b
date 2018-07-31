@@ -713,15 +713,23 @@ $(document).ready(function(){
 
     //FAQ Modal
     var $faqModal = $('#faq');
+    var $faqQuestion = $('.faqQuestion');
+
     function closeFAQModal() {
+        closeAnswers();
         if (!$faqModal.hasClass('hide')) {
         $faqModal.addClass('hide');
         $body.removeClass('stop-scrolling');
         }
     }
+
     function openFAQModal() {
         $faqModal.removeClass('hide');
         $body.addClass('stop-scrolling');
+    }
+
+    function closeAnswers() {
+        $('.faqAnswer[class!="collapse"]').addClass('collapse');
     }
 
     $body.on('click', '.faq', function(){
@@ -735,6 +743,15 @@ $(document).ready(function(){
     $body.on('click', '.faq-modal', function(){
         closeFAQModal();
     });
+
+    $faqQuestion.click(function(){
+      closeAnswers();
+      if ($(this).next('.faqAnswer').hasClass('collapse')) {
+        $(this).next('.faqAnswer').removeClass('collapse');
+      } else {
+        $(this).next('.faqAnswer').addClass('collapse');
+      }
+  });
 
     // video-modal
     var $videoCompany = $('#video-company');

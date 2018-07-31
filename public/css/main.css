@@ -1640,6 +1640,23 @@ a:hover {
 
 }
 
+@media (min-width: 768px) {
+    .section4-top h1 {
+        margin-bottom: 20px;
+    }
+}
+
+.section4-top p {
+    margin-bottom: 20px
+}
+
+@media (min-width: 768px) {
+    .section4-top p {
+        padding: 0 10%;
+        margin-bottom: 40px
+    }
+}
+
 .section4-videos {
     text-align: center;
     padding-bottom: 40px
@@ -1649,10 +1666,6 @@ a:hover {
     .section4-videos {
         padding-bottom: 80px
     }
-}
-
-.section4-top p {
-    margin-bottom: 20px
 }
 
 .section4-videos .video-box {
@@ -1740,12 +1753,6 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-    .section4-videos .video-description p {
-        min-height: 240px
-    }
-}
-
-@media (min-width: 1024px) {
     .section4-videos .video-description p {
         min-height: 210px
     }
@@ -2337,7 +2344,19 @@ a:hover {
     .section8-right {
         width: 50%;
         padding: 80px 10%;
-        min-height: 650px
+        min-height: 1000px
+    }
+}
+
+@media (min-width: 1200px) {
+    .section8-right {
+        min-height: 870px
+    }
+}
+
+@media (min-width: 1366px) {
+    .section8-right {
+        min-height: 800px
     }
 }
 
@@ -3118,7 +3137,8 @@ input {
 
     .section12-main ul li img {
         float: left;
-        padding-right: 10px
+        padding-right: 10px;
+        padding-top: 13px;
     } 
 
     .section12-main ul li h4 {
@@ -3133,7 +3153,8 @@ input {
 
     .section12-main ul li p {
         font-size: 14px;
-        text-align: inherit
+        text-align: inherit;
+        padding-left: 110px
     }
 }
 
