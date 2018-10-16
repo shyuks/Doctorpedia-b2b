@@ -51,6 +51,10 @@ a {
     -webkit-text-decoration-skip: objects
 }
 
+a:hover {
+    color: #fff
+}
+
 abbr[title] {
     border-bottom: none;
     text-decoration: underline;
@@ -294,7 +298,7 @@ h1 {
     font-size: 28px;
     line-height: 1em;
     font-weight: bold;
-    color: #7ca9d9;
+    color: #df054e;
     margin-top: 0
 }
 
@@ -350,8 +354,8 @@ a:hover {
 
 .btn-link {
     background: #b3cceb;
-    background: -webkit-gradient(linear, left top, right top, from(#b3cceb), color-stop(99%, #7ca9d9));
-    background: linear-gradient(to right, #b3cceb 0%, #7ca9d9 99%);
+    background: -webkit-gradient(linear, left top, right top, from(#626790), color-stop(99%, #303248));
+    background: linear-gradient(to right, #626790 0%, #303248 99%);
     padding: 14px 70px 18px 28px;
     font-size: 18px;
     line-height: 1em;
@@ -363,6 +367,10 @@ a:hover {
     text-decoration: none;
     color: #fff;
     white-space: nowrap
+}
+
+.btn-link:hover {
+    color: #fff
 }
 
 .universal-holder {
@@ -1272,8 +1280,8 @@ a:hover {
 /* Mission Statement */
 
 .mission {
-    background: #2f4266;
-    background: linear-gradient(135deg, #2e5363 0%, #47484a 99%);
+    background: #4432a7;
+    background: linear-gradient(135deg, #4432a7 0%, #303248 99%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#2f4266', endColorstr='#202e49', GradientType=1)
 }
 
@@ -1305,7 +1313,7 @@ a:hover {
 .mission-intro {
     font-size: 17px;
     line-height: 1.3em;
-    color: #b3cceb;
+    color: #f2f2f2;
     text-align: center
 }
 
@@ -1337,7 +1345,7 @@ a:hover {
 
 .mission-stats-item {
     display: inline-block;
-    color: #b3cceb;
+    color: #f2f2f2;
     font-size: 9px;
     padding-right: 30px
 }
