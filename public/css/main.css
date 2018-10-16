@@ -1549,7 +1549,7 @@ a:hover {
 
 .section3-right ul li h4 {
     font-size: 20px;
-    color: #7ca9d9
+    color: #df054e
 }
 
 .section3-right ul li p {
@@ -1689,7 +1689,7 @@ a:hover {
         max-width: 350px
     }
 
-    .section4-videos .company-box {
+    .section4-videos .product-box {
         margin-right: 0
     }
 
@@ -1741,7 +1741,7 @@ a:hover {
     font-size: 100px;
     position: relative;
     padding-top: 70px;
-    color: #7ca9d9; 
+    color: #df054e; 
 }
 
 .section4-videos .video-description h4 {
