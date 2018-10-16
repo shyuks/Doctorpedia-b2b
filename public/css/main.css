@@ -1628,6 +1628,11 @@ a:hover {
     }
 }
 
+.section3 .footer-cta .btn-link {
+    background: -webkit-gradient(linear, left top, right top, from(#303248), color-stop(99%, #df054e));
+    background: linear-gradient(to right, #303248 0%, #df054e 99%)
+}
+
 /* Video Section */
 
 .section4 {
@@ -1784,6 +1789,11 @@ a:hover {
 
 .section4 .sample-video p {
     margin-bottom: 20px
+}
+
+.section4 .sample-video .btn-link {
+    background: -webkit-gradient(linear, left top, right top, from(#626790), color-stop(99%, #df054e));
+    background: linear-gradient(to right, #303248 0%, #df054e 99%)
 }
 
 
@@ -2899,19 +2909,19 @@ input {
 .section11 .investor-form .form-wrap .form-btn {
     padding: 0;
     margin: auto auto 20px;
-    text-align: center;
-    width: 100px
+    text-align: center
 }
 
 .section11 .investor-form .form-wrap .form-btn .submit-form-btn {
-    border: 1px solid gray;
-    border-radius: 10px;
-    padding: 15px;
-    background-color: lightgray;
-    width: 100%;
-    font-size: 16px;
-    color: #47484a;
-    background-color: white
+    border: 1px solid #626790;
+    padding: 14px 28px;
+    background: #21d1e3
+}
+
+@media (min-width: 1024px) {
+    .section11 .investor-form .form-wrap .form-btn .submit-form-btn {
+        padding: 20px 35px
+    }
 }
 
 /* Team Module */
