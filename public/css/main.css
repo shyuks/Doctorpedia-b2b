@@ -2786,7 +2786,7 @@ a:hover {
 .section11 .investor-form {
     /* background: linear-gradient(to bottom, #dcdfe5 0%, #e7eaf1 50%, #dcdfe5 100%); */
     padding: 40px 20px;
-    background-color: #7ca9d9
+    background-color: #4432a7
 }
 
 @media (min-width: 1024px) {
@@ -3170,7 +3170,7 @@ input {
 
 .footer {
     padding: 60px 20px;
-    background-color: #293344
+    background-color: #303248
 }
 
 @media (min-width: 768px) {
@@ -3178,6 +3178,10 @@ input {
         padding-top: 145px;
         padding-bottom: 50px
     }
+}
+
+.footer-logo-img {
+    size: 50%
 }
 
 .footer-top {
@@ -3388,7 +3392,7 @@ input {
 .modal-content h1 {
     font-size: 30px;
     line-height: 1em;
-    color: #364156;
+    color: #df054e;
     text-align: center;
     margin: 0 0 30px
 }
@@ -3403,7 +3407,7 @@ input {
     font-family: "PlainBlack", sans-serif;
     font-size: 20px;
     line-height: 2em;
-    color: #5c9fb1;
+    color: #303248;
     padding: 0;
     margin: 0
 }
