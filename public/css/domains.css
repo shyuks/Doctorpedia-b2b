@@ -441,12 +441,12 @@ a:hover {
 }
 
 .dropdown-menu.show {
-    background-color: #7ca9d9;
+    background-color: #303248;
     padding: 10px !important
 }
 
 #dropdownMenuButton {
-    color: #47484a;
+    color: #626790;
     background-color: white;
     border-color: #47484a;
     box-shadow: none;
@@ -457,7 +457,7 @@ a:hover {
     width: 2.65rem;
     border-color: gray;
     background-color: #fff;
-    color: #47484a;
+    color: #626790;
     font-size: 1rem
 }
 
@@ -493,7 +493,7 @@ a:hover {
 
 .filterDomain .letterHeading {
     font-size: 1.5rem;
-    background-color: #7ca9d9;
+    background-color: #df054e;
     color: #fff;
     margin: 0 auto !important;
     padding-left: .75rem
@@ -582,28 +582,28 @@ table {
 }
 
 .table .thead-dark th {
-    background-color: #47484a !important;
-    border-color: #47484a !important
+    background-color: #303248 !important;
+    border-color: #303248 !important
 }
 
 .domain-column {
     display: none;
-    color: #7ca9d9
+    color: #303248
 }
 
 .condition-column {
     width: 75%;
-    color: #7ca9d9
+    color: #303248
 }
 
 .monthly-column {
     width: 25%;
-    color: #7ca9d9
+    color: #303248
 }
 
 .related-column {
     display: none;
-    color: #7ca9d9
+    color: #303248
 }
 
 @media (min-width: 768px) {
@@ -641,7 +641,7 @@ table {
 
 .footer {
     padding: 60px 20px;
-    background-color: #293344
+    background-color: #303248
 }
 
 @media (min-width: 768px) {
@@ -818,7 +818,7 @@ table {
 .modal-content h1 {
     font-size: 30px;
     line-height: 1em;
-    color: #364156;
+    color: #df054e;
     text-align: center;
     margin: 0 0 30px
 }
@@ -833,7 +833,7 @@ table {
     font-family: "PlainBlack", sans-serif;
     font-size: 20px;
     line-height: 2em;
-    color: #5c9fb1;
+    color: #303248;
     padding: 0;
     margin: 0
 }
