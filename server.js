@@ -6,14 +6,14 @@ var bodyParser = require('body-parser');
 var db = require('./db/connection.js');
 var favicon = require('serve-favicon');
 var sendmail = require('sendmail')();
-var basicAuth = require('express-basic-auth')
+// var basicAuth = require('express-basic-auth')
 
 var app = express();
 
-app.use(basicAuth({
-    users: { 'admin': 'success123' },
-    challenge: true
-}))
+// app.use(basicAuth({
+//     users: { 'admin': 'success123' },
+//     challenge: true
+// }))
 app.use(favicon(path.join(__dirname, './public/images/favicon.png')))
 
 // app.use(express.favicon(__dirname + './public/img/favicon.ico'));
@@ -68,12 +68,12 @@ app.post('/', function(req, res) {
         from: 'team@doctorpedia.com',
         to: 'jeremy@doctorpedia.com',
         subject: 'New Potential INVESTOR ' + info.firstName + ' ' + info.lastName,
-        html: "Hello, " + "<br><br>" + 'A new INVESTOR has submitted his information via joindoctorpedia.com.' + "<br><br>" +
+        html: "Hello, " + "<br><br>" + 'A new INVESTOR has submitted his information via doctorpedia.com.' + "<br><br>" +
               "First Name: " + info.firstName + "<br>" +
               "Last Name: " + info.lastName + "<br>" +
               "Email: " + email.emailAddress + "<br>" +
               "Invite Code: " + info.inviteCode + "<br><br>" +
-              "Automated message from joindoctorpedia.com."
+              "Automated message from doctorpedia.com."
     }), function(err, reply) {
             console.log(err && err.stack);
             console.dir(reply);
