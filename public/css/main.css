@@ -3199,10 +3199,6 @@ input {
     }
 }
 
-.footer-logo-img {
-    size: 50%
-}
-
 .footer-top {
     max-width: 730px;
     margin: 0 auto;
@@ -3222,7 +3218,7 @@ input {
 
 @media (min-width: 768px) {
     .footer-top h1 img {
-        width: auto
+        width: 400px
     }
 }
 
