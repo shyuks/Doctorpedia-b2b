@@ -609,7 +609,7 @@ a:hover {
 }
 
 .nav-menu-item {
-    display: block;
+    display: none;
     margin: 0 30px;
     -webkit-transition: all 300ms ease-out 200ms;
     transition: all 300ms ease-out 200ms;
@@ -617,6 +617,7 @@ a:hover {
 }
 
 .scrolled .nav-menu-item {
+    display: block;
     margin: 0 20px;
     -webkit-transition: all 300ms ease-in-out 0ms;
     transition: all 300ms ease-in-out 0ms
@@ -884,7 +885,7 @@ a:hover {
 @media (min-width: 1024px) {
     .hero {
         height: 100vh;
-        width: 99vw;
+        width: 100vw;
         display: flex;
         align-items: center;
         /* max-width: 960px; */
@@ -935,7 +936,7 @@ a:hover {
     .hero-overlay {
         display: inherit;
         height: 100vh;
-        width: 99vw;
+        width: 100vw;
         position: absolute;
         top: 0;
         left: 0;
